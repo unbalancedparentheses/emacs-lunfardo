@@ -42,6 +42,9 @@
 ;; Remove text in active region if inserting text
 (delete-selection-mode 1)
 
+;; Don't backupfiles
+(setq make-backup-files nil)
+
 ;; Always display line and column numbers
 (setq line-number-mode t)
 (setq column-number-mode t)

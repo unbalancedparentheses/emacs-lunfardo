@@ -20,6 +20,8 @@
 (require 'package)
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+  '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 (require 'cl)
@@ -31,10 +33,10 @@
     whitespace-cleanup-mode
     restclient
     httprepl
-    smartparens
     flycheck
     projectile
     project-explorer
+    smartparens
     yasnippet
     jedi
     ido-vertical-mode
@@ -63,9 +65,7 @@
 
 (add-to-list 'load-path user-emacs-directory)
 (require 'sane-defaults)
-
-(global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(require 'key-bindings)
 
 (require 'ido)
 (ido-mode 1)

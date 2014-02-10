@@ -24,4 +24,5 @@
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
 
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (provide 'key-bindings)

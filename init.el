@@ -47,10 +47,13 @@
     undo-tree
     flx-ido
     elixir-mode
+    erlang
     python-mode
     powerline
     helm
-    rvm)
+    helm-projectile
+    rvm
+    exec-path-from-shell)
   "List of packages needs to be installed at launch")
 
 (defun has-package-not-installed ()
@@ -66,6 +69,9 @@
   (dolist (p packages-list)
     (when (not (package-installed-p p))
       (package-install p))))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 (add-to-list 'load-path user-emacs-directory)
 (require 'sane-defaults)
@@ -83,3 +89,8 @@
 (ido-vertical-mode 1)
 (global-linum-mode 1)
 (powerline-default-theme)
+(global-rainbow-delimiters-mode 1)
+(global-auto-complete-mode 1)
+(global-whitespace-cleanup-mode 1)
+
+(require 'erlang-brew)

@@ -81,3 +81,5 @@
 
 (projectile-global-mode)
 (ido-vertical-mode 1)
+(global-linum-mode 1)
+(powerline-default-theme)

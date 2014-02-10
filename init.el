@@ -27,7 +27,7 @@
 (require 'cl)
 ;; Guarantee all packages are installed on start
 (defvar packages-list
-  '(rainbow-mode
+  '(auto-complete
     rainbow-delimiters
     multiple-cursors
     whitespace-cleanup-mode

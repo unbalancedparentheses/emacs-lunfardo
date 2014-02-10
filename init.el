@@ -46,6 +46,10 @@
     smex
     undo-tree
     flx-ido
+    elixir-mode
+    python-mode
+    powerline
+    helm
     rvm)
   "List of packages needs to be installed at launch")
 

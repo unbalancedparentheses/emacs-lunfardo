@@ -44,6 +44,7 @@
 
 ;; Don't backupfiles
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;; Always display line and column numbers
 (setq line-number-mode t)

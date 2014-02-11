@@ -25,4 +25,8 @@
 (global-set-key (kbd "C-c u") 'uncomment-region)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
+
+;; Opens up the beatiful helm-projectile
+(global-set-key (kbd "C-c h") 'helm-projectile)
+
 (provide 'key-bindings)

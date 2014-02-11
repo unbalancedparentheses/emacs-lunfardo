@@ -28,6 +28,7 @@
 ;; Guarantee all packages are installed on start
 (defvar packages-list
   '(auto-complete
+    ag
     rainbow-delimiters
     multiple-cursors
     whitespace-cleanup-mode
@@ -39,6 +40,16 @@
     smartparens
     yasnippet
     jedi
+    elpy
+    json-mode
+    robe
+    skewer-mode
+    move-text
+    simple-httpd
+    buffer-move
+    web-mode
+    volatile-highlights
+    js2-mode
     ido-vertical-mode
     ace-jump-mode
     highlight-indentation

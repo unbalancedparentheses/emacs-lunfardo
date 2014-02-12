@@ -21,6 +21,7 @@
     flycheck
     helm
     helm-projectile
+    helm-spotify
     highlight-indentation
     highlight-symbol
     httprepl

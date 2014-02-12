@@ -1,7 +1,7 @@
 lunfardo
 ========
 
-In the mid XIX century, Buenos Aires was pullulating with immigrants, mainly Spanish and Italian, who came fleeing the devastation that succeded the First World War. Many of them were impoverished and blended in with 
+In the mid XIX century, Buenos Aires was pullulating with immigrants, mainly Spanish and Italian. Many of them were impoverished and blended in with 
 the already-poor locals: the descendents of aborigins and african slaves.
 
 From the amalgam of the newcomers' languages with Argentina's 'castilian', emerged ther slang known as Lunfardo.

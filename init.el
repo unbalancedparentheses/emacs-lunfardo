@@ -1,88 +1,17 @@
-;; Prevent the cursor from blinking
 (blink-cursor-mode 0)
-;; Don't use messages that you don't read
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
-;; Don't let Emacs hurt your ears
-
-;; You need to set `inhibit-startup-echo-area-message' from the
-;; customization interface:
-;; M-x customize-variable RET inhibit-startup-echo-area-message RET
-;; then enter your username
-(setq inhibit-startup-echo-area-message "guerry")
+(setq inhibit-startup-echo-area-message "pyotrgalois")
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
-(load-theme 'misterioso)
-
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-  '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
-(require 'cl)
-;; Guarantee all packages are installed on start
-(defvar packages-list
-  '(auto-complete
-    ag
-    rainbow-delimiters
-    multiple-cursors
-    whitespace-cleanup-mode
-    restclient
-    httprepl
-    flycheck
-    projectile
-    project-explorer
-    smartparens
-    yasnippet
-    jedi
-    elpy
-    json-mode
-    robe
-    skewer-mode
-    move-text
-    simple-httpd
-    buffer-move
-    web-mode
-    volatile-highlights
-    js2-mode
-    ido-vertical-mode
-    ace-jump-mode
-    highlight-indentation
-    highlight-symbol
-    smex
-    undo-tree
-    flx-ido
-    elixir-mode
-    erlang
-    python-mode
-    powerline
-    helm
-    helm-projectile
-    rvm
-    exec-path-from-shell)
-  "List of packages needs to be installed at launch")
-
-(defun has-package-not-installed ()
-  (loop for p in packages-list
-        when (not (package-installed-p p)) do (return t)
-        finally (return nil)))
-(when (has-package-not-installed)
-  ;; Check for new packages (package versions)
-  (message "%s" "Get latest versions of all packages...")
-  (package-refresh-contents)
-  (message "%s" " done.")
-  ;; Install the missing packages
-  (dolist (p packages-list)
-    (when (not (package-installed-p p))
-      (package-install p))))
-
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+(require 'setup-package)
+(load-theme 'solarized-light)
 
 (add-to-list 'load-path user-emacs-directory)
 (require 'sane-defaults)
@@ -91,7 +20,7 @@
 (require 'ido)
 (ido-mode 1)
 (ido-everywhere 1)
-
+(ido-vertical-
 (require 'flx-ido)
 (flx-ido-mode 1)
 (setq ido-use-faces nil)
@@ -105,3 +34,16 @@
 (global-whitespace-cleanup-mode 1)
 
 (require 'erlang-brew)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

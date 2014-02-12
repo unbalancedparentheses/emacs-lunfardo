@@ -21,7 +21,7 @@
 (require 'ido)
 (ido-mode 1)
 (ido-everywhere 1)
-(ido-vertical-
+(ido-vertical-mode 1)
 (require 'flx-ido)
 (flx-ido-mode 1)
 (setq ido-use-faces nil)

@@ -7,13 +7,14 @@
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
+(add-to-list 'load-path user-emacs-directory)
+(require 'setup-package)
+
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(require 'setup-package)
 (load-theme 'solarized-light)
 
-(add-to-list 'load-path user-emacs-directory)
 (require 'sane-defaults)
 (require 'key-bindings)
 

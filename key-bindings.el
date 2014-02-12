@@ -1,3 +1,11 @@
+;; Font size
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
+(global-set-key (kbd "C-x O") (lambda ()
+                                (interactive)
+                                (other-window -1)))
+
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -9,8 +17,6 @@
 (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
 (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
-;; Quickly jump in document with ace-jump-mode
-(define-key global-map (kbd "M-j") 'ace-jump-mode)
 (global-set-key (kbd "C-z") 'shell)
 
 ;; Easier text scale
@@ -28,5 +34,20 @@
 
 ;; Opens up the beatiful helm-projectile
 (global-set-key (kbd "C-c h") 'helm-projectile)
+
+;; Line movement
+(global-set-key (kbd "<C-M-down>") 'move-text-down)
+(global-set-key (kbd "<C-M-up>") 'move-text-up)
+
+;; make some use of the Super key
+(define-key global-map [?\s-d] 'projectile-find-dir)
+(define-key global-map [?\s-f] 'projectile-find-file)
+(define-key global-map [?\s-p] 'projectile-switch-project)
+(define-key global-map [?\s-g] 'projectile-grep)
+(define-key global-map [?\s-l] 'goto-line)
+(define-key global-map [?\s-e] 'er/expand-region)
+(define-key global-map [?\s-m] 'magit-status)
+(define-key global-map [?\s-w] 'delete-frame)
+(define-key global-map [?\s-x] 'exchange-point-and-mark)
 
 (provide 'key-bindings)

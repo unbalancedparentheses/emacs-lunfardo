@@ -17,6 +17,7 @@
 
 (require 'sane-defaults)
 (require 'key-bindings)
+(require 'key-chord-slang)
 
 (require 'ido)
 (ido-mode 1)

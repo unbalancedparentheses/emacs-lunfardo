@@ -12,6 +12,7 @@
     ace-jump-mode
     ag
     auto-complete
+    browse-kill-ring
     buffer-move
     elixir-mode
     elpy
@@ -30,6 +31,7 @@
     jedi
     js2-mode
     json-mode
+    key-chord
     move-text
     multiple-cursors
     powerline

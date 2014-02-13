@@ -12,10 +12,6 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-;; Experimental multiple-cursors
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
-(global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
 (global-set-key (kbd "C-z") 'shell)
 
@@ -39,8 +35,13 @@
 (global-set-key (kbd "<C-M-down>") 'move-text-down)
 (global-set-key (kbd "<C-M-up>") 'move-text-up)
 
+;; Experimental multiple-cursors
+(global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
+(global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
+(global-set-key (kbd "C-S-l") 'mc/edit-lines)
+
 ;; make some use of the Super key
-(define-key global-map [?\s-d] 'projectile-find-dir)
+(define-key global-map [?\s-d] 'mc/mark-all-like-this)
 (define-key global-map [?\s-f] 'projectile-find-file)
 (define-key global-map [?\s-p] 'projectile-switch-project)
 (define-key global-map [?\s-g] 'projectile-grep)

@@ -13,12 +13,6 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(load-theme 'solarized-light)
-
-(require 'sane-defaults)
-(require 'key-bindings)
-(require 'key-chord-slang)
-
 (require 'ido)
 (ido-mode 1)
 (ido-everywhere 1)
@@ -36,3 +30,11 @@
 (global-whitespace-cleanup-mode 1)
 
 (require 'erlang-brew)
+(require 'multiple-cursors)
+(require 'expand-region)
+
+(require 'sane-defaults)
+(require 'key-bindings)
+(require 'key-chord-slang)
+
+(load-theme 'solarized-light)

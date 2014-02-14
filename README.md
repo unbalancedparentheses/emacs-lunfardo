@@ -54,7 +54,7 @@ Keybinding         | Description
 <kbd>C-c p z</kbd> | Adds the currently visited to the cache.
 <kbd>C-c p s</kbd> | Display a list of known projects you can switch to.
 
-Prelude adds some extra keybindings:
+Lunfardo adds some extra keybindings:
 
 Keybinding         | Command
 -------------------|------------------------------------------------------------

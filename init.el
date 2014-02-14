@@ -28,6 +28,8 @@
 (global-rainbow-delimiters-mode 1)
 (global-auto-complete-mode 1)
 (global-whitespace-cleanup-mode 1)
+(highlight-indentation-mode 1)
+(global-hl-line-mode 1)
 
 (require 'erlang-brew)
 (require 'multiple-cursors)

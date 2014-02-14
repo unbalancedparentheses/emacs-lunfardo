@@ -10,6 +10,7 @@
 (defvar packages-list
   '(
     ace-jump-mode
+    highlight-indentation
     ag
     auto-complete
     browse-kill-ring

@@ -9,4 +9,4 @@
 
 (key-chord-mode +1)
 
-(provide 'key-chord-slang)
+(provide 'lunfardo-keychords)

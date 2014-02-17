@@ -1,42 +1,28 @@
-(blink-cursor-mode 0)
-(setq initial-scratch-message "")
-(setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message "pyotrgalois")
+(defvar current-user
+      (getenv
+       (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
+(message "Lunfardo is powering up... Be patient, Master %s!" current-user)
 
 (add-to-list 'load-path user-emacs-directory)
-(require 'setup-package)
+(require 'lunfardo-packages)
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(require 'ido)
-(ido-mode 1)
-(ido-everywhere 1)
-(ido-vertical-mode 1)
-(require 'flx-ido)
-(flx-ido-mode 1)
-(setq ido-use-faces nil)
+(require 'sane-defaults)
+(require 'lunfardo-ui)
 
-(projectile-global-mode)
-(ido-vertical-mode 1)
-(global-linum-mode 1)
-(powerline-default-theme)
-(global-rainbow-delimiters-mode 1)
-(global-auto-complete-mode 1)
-(global-whitespace-cleanup-mode 1)
-(highlight-indentation-mode 1)
-(global-hl-line-mode 1)
-
-(require 'erlang-brew)
+(require 'lunfardo-ido)
 (require 'multiple-cursors)
 (require 'expand-region)
-
-(require 'sane-defaults)
 (require 'key-bindings)
-(require 'key-chord-slang)
+(require 'lunfardo-keychords)
 
-(load-theme 'solarized-light)
+(require 'erlang-brew)
+
+(projectile-global-mode)
+(global-auto-complete-mode 1)
+(global-whitespace-cleanup-mode 1)
+
+(global-hl-line-mode 1)

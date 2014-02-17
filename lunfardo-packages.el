@@ -71,4 +71,4 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-(provide 'setup-package)
+(provide 'lunfardo-packages)

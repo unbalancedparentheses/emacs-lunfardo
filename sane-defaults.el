@@ -86,7 +86,6 @@
 (setq undo-tree-mode-lighter "")
 (require 'undo-tree)
 (global-undo-tree-mode)
-
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
 

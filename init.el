@@ -4,7 +4,12 @@
 
 (message "Lunfardo is powering up... Be patient, Master %s!" current-user)
 
+(defvar lunfardo-dir (file-name-directory load-file-name))
+(defvar lunfardo-core-dir (expand-file-name "core" lunfardo-dir))
+
 (add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path lunfardo-core-dir)
+
 (require 'lunfardo-packages)
 
 (when (memq window-system '(mac ns))

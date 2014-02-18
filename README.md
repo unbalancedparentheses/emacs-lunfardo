@@ -1,4 +1,5 @@
-lunfardo. got emacs?
+
+lunfardo
 ========
 
 In the mid XIX century, Buenos Aires was pullulating with immigrants, mainly Spanish and Italian. Many of them were impoverished and blended in with 
@@ -24,6 +25,10 @@ following command:
 ```bash
 curl -L http://git.io/nR5Y9w | sh
 ```
+
+
+### got emacs?
+![](https://raw2.github.com/pyotrgalois/lunfardo/master/images/text_editors.jpg)
 
 ## key bindings
 M-SPC reduces the space between words to just one space. This is what I would've used if the point was between the words and I wanted to delete the extra space separating the words.

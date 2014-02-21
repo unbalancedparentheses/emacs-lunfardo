@@ -10,7 +10,6 @@
 (defvar packages-list
   '(
     ace-jump-mode
-    highlight-indentation
     ag
     auto-complete
     browse-kill-ring
@@ -25,6 +24,7 @@
     helm
     helm-projectile
     helm-spotify
+    highlight-indentation
     highlight-indentation
     highlight-symbol
     httprepl
@@ -53,6 +53,7 @@
     volatile-highlights
     web-mode
     whitespace-cleanup-mode
+    whole-line-or-region
     yasnippet
 )
 "List of packages needs to be installed at launch")

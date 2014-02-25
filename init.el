@@ -25,7 +25,9 @@
 (require 'lunfardo-keychords)
 
 (require 'erlang-brew)
+(require 'highlight-80+)
 
+(smartparens-global-mode 1)
 (projectile-global-mode)
 (global-auto-complete-mode 1)
 (global-whitespace-cleanup-mode 1)

@@ -1,4 +1,3 @@
-
 lunfardo
 ========
 
@@ -35,9 +34,9 @@ M-SPC reduces the space between words to just one space. This is what I would've
 
 M-\ removes all horizontal space. This will join two words separated by space.
 
-### Projectile
+### Features
 
-Here's a list of functionality provided by [Projectile](https://github.com/bbatsov/projectile):
+Here's a list of functionality provided by [Lunfardo](https://github.com/bbatsov/projectile):
 
 Keybinding         | Description
 -------------------|------------------------------------------------------------

@@ -22,7 +22,8 @@
 (global-rainbow-delimiters-mode 1)
 
 (highlight-indentation-mode 1)
+(rainbow-mode 1)
 
-(load-theme 'solarized-light)
+(load-theme 'solarized-dark)
 
 (provide 'lunfardo-ui)

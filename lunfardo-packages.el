@@ -41,6 +41,7 @@
     projectile
     python-mode
     rainbow-delimiters
+    rainbow-mode
     restclient
     robe
     rvm

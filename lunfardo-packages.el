@@ -24,6 +24,7 @@
     helm
     helm-projectile
     helm-spotify
+    highlight-80+
     highlight-indentation
     highlight-indentation
     highlight-symbol

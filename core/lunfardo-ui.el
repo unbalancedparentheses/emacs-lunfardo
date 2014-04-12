@@ -24,6 +24,6 @@
 (highlight-indentation-mode 1)
 (rainbow-mode 1)
 
-(load-theme 'solarized-dark)
+(load-theme 'solarized-dark t)
 
 (provide 'lunfardo-ui)

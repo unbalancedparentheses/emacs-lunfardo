@@ -35,6 +35,9 @@
     js2-mode
     json-mode
     key-chord
+    less-css-mode
+    magit
+    markdown-mode
     move-text
     multiple-cursors
     powerline

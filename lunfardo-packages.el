@@ -16,6 +16,7 @@
     buffer-move
     elixir-mode
     elpy
+    ensime
     erlang
     exec-path-from-shell
     expand-region
@@ -49,6 +50,7 @@
     restclient
     robe
     rvm
+    scala-mode2
     simple-httpd
     skewer-mode
     smartparens

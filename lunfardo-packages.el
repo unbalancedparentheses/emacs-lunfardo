@@ -44,11 +44,14 @@
     powerline
     project-explorer
     projectile
+    projectile-rails
     python-mode
     rainbow-delimiters
     rainbow-mode
     restclient
+    rinari
     robe
+    ruby-tools
     rvm
     scala-mode2
     simple-httpd
@@ -61,6 +64,7 @@
     web-mode
     whitespace-cleanup-mode
     whole-line-or-region
+    yari
     yasnippet
 )
 "List of packages needs to be installed at launch")

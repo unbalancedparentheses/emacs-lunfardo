@@ -32,3 +32,4 @@
 (global-whitespace-cleanup-mode 1)
 (helm-mode 1)
 (global-hl-line-mode 1)
+(global-visual-line-mode 1)

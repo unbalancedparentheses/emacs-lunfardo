@@ -12,11 +12,8 @@
     ace-jump-mode
     ag
     auto-complete
-    browse-kill-ring
-    buffer-move
     elixir-mode
     elpy
-    ensime
     erlang
     exec-path-from-shell
     expand-region
@@ -24,12 +21,6 @@
     flycheck
     helm
     helm-projectile
-    helm-spotify
-    highlight-80+
-    highlight-indentation
-    highlight-indentation
-    highlight-symbol
-    httprepl
     ido-vertical-mode
     jade-mode
     jedi
@@ -42,30 +33,24 @@
     move-text
     multiple-cursors
     powerline
-    project-explorer
     projectile
     projectile-rails
     python-mode
     rainbow-delimiters
     rainbow-mode
-    restclient
     rinari
     robe
     ruby-tools
     rvm
-    scala-mode2
-    simple-httpd
     skewer-mode
     smartparens
     smex
     solarized-theme
+    zenburn-theme
     undo-tree
-    volatile-highlights
     web-mode
     whitespace-cleanup-mode
-    whole-line-or-region
     yari
-    yasnippet
 )
 "List of packages needs to be installed at launch")
 

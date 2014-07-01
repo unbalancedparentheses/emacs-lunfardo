@@ -21,9 +21,8 @@
 (powerline-default-theme)
 (global-rainbow-delimiters-mode 1)
 
-(highlight-indentation-mode 1)
 (rainbow-mode 1)
 
-(load-theme 'solarized-dark t)
+(load-theme 'zenburn t)
 
 (provide 'lunfardo-ui)

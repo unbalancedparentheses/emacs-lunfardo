@@ -1,6 +1,5 @@
 (require 'cl)
 (require 'powerline)
-(require 'highlight-indentation)
 
 (blink-cursor-mode 0)
 (setq initial-scratch-message "")

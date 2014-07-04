@@ -12,12 +12,7 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-
 (global-set-key (kbd "C-z") 'shell)
-
-;; Easier text scale
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
 
 ;; Completion at point
 (global-set-key (kbd "C-<tab>") 'completion-at-point)

@@ -1,20 +1,27 @@
 (require 'package)
+(require 'cl)
+
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-(require 'cl)
+
+
 ;; Guarantee all packages are installed on start
-(defvar packages-list
+(defvar lunfardo-packages
   '(
     ace-jump-mode
+    ace-window
+    ack-and-a-half
     ag
+    anzu
+    dash
+    guru-mode
     auto-complete
-    elixir-mode
-    elpy
-    erlang
+    diff-hl
+    discover-my-major
     exec-path-from-shell
     expand-region
     flx-ido
@@ -22,50 +29,67 @@
     helm
     helm-projectile
     ido-vertical-mode
-    jade-mode
-    jedi
-    js2-mode
-    json-mode
     key-chord
-    less-css-mode
     magit
-    markdown-mode
     move-text
     multiple-cursors
     powerline
     projectile
-    projectile-rails
-    python-mode
     rainbow-delimiters
     rainbow-mode
-    rinari
-    robe
-    ruby-tools
-    rvm
     skewer-mode
     smartparens
     smex
-    solarized-theme
-    zenburn-theme
     undo-tree
-    web-mode
     whitespace-cleanup-mode
+    zenburn-theme
+
+    less-css-mode
+    js2-mode
+    json-mode
+    markdown-mode
+    python-mode
+    rinari
     yari
+    web-mode
+    robe
+    rvm
+    ruby-tools
+    projectile-rails
+    jedi
+    elixir-mode
+    elpy
+    erlang
+    jade-mode
 )
 "List of packages needs to be installed at launch")
 
-(defun has-package-not-installed ()
-  (loop for p in packages-list
-        when (not (package-installed-p p)) do (return t)
-        finally (return nil)))
-(when (has-package-not-installed)
-  ;; Check for new packages (package versions)
-  (message "%s" "Get latest versions of all packages...")
-  (package-refresh-contents)
-  (message "%s" " done.")
-  ;; Install the missing packages
-  (dolist (p packages-list)
-    (when (not (package-installed-p p))
-      (package-install p))))
+(defun lunfardo-packages-installed-p ()
+  "Check if all packages in `prelude-packages' are installed."
+  (every #'package-installed-p lunfardo-packages))
+
+(defun lunfardo-require-package (package)
+  "Install PACKAGE unless already installed."
+  (unless (memq package lunfardo-packages)
+    (add-to-list 'lunfardo-packages package))
+  (unless (package-installed-p package)
+    (package-install package)))
+
+(defun lunfardo-require-packages (packages)
+  "Ensure PACKAGES are installed.
+Missing packages are installed automatically."
+  (mapc #'lunfardo-require-package packages))
+
+(defun lunfardo-install-packages ()
+  "Install all packages listed in `lunfardo-packages'."
+  (unless (lunfardo-packages-installed-p)
+    ;; check for new packages (package versions)
+    (message "%s" "Emacs Lunfardo is now refreshing its package database...")
+    (package-refresh-contents)
+    (message "%s" " done.")
+    ;; install the missing packages
+    (lunfardo-require-packages lunfardo-packages)))
+
+(lunfardo-install-packages)
 
 (provide 'lunfardo-packages)

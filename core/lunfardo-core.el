@@ -2,8 +2,6 @@
 
 (require 'multiple-cursors)
 (require 'expand-region)
-(require 'key-bindings)
-(require 'erlang-brew)
 
 (smartparens-global-mode 1)
 (projectile-global-mode)

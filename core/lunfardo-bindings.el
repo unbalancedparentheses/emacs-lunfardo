@@ -46,4 +46,4 @@
 (define-key global-map [?\s-w] 'delete-frame)
 (define-key global-map [?\s-x] 'exchange-point-and-mark)
 
-(provide 'key-bindings)
+(provide 'lunfardo-bindings)

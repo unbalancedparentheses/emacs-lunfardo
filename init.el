@@ -10,6 +10,7 @@
 
 (require 'lunfardo-packages)
 (require 'lunfardo-ui)
+(require 'lunfardo-bindings)
 (require 'lunfardo-keychords)
 (require 'lunfardo-ido)
 

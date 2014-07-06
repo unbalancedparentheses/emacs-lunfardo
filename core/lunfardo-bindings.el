@@ -32,6 +32,8 @@
 
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
+(global-set-key [remap kill-ring-save] 'easy-kill)
+
 ;; make some use of the Super key
 (define-key global-map [?\s-d] 'mc/mark-all-like-this)
 (define-key global-map [?\s-f] 'projectile-find-file)

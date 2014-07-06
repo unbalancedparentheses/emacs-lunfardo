@@ -15,15 +15,18 @@
     ack-and-a-half
     ag
     anzu
-    dash
-    guru-mode
     auto-complete
+    dash
     diff-hl
+    restclient
     discover-my-major
+    easy-kill
     exec-path-from-shell
     expand-region
     flx-ido
     flycheck
+    git-timemachine
+    guru-mode
     helm
     helm-projectile
     ido-vertical-mode
@@ -41,24 +44,6 @@
     undo-tree
     whitespace-cleanup-mode
     zenburn-theme
-
-    less-css-mode
-    js2-mode
-    json-mode
-    markdown-mode
-    python-mode
-    rinari
-    yari
-    web-mode
-    robe
-    rvm
-    ruby-tools
-    projectile-rails
-    jedi
-    elixir-mode
-    elpy
-    erlang
-    jade-mode
 )
 "List of packages needs to be installed at launch")
 

@@ -1,12 +1,32 @@
+(require 'anzu)
+(global-anzu-mode 1)
+
+(require 'multiple-cursors)
+
+(require 'expand-region)
+
+(projectile-global-mode)
+(global-auto-complete-mode 1)
+(global-whitespace-cleanup-mode 1)
+(helm-mode 1)
+
 (global-rainbow-delimiters-mode 1)
 (rainbow-mode 1)
 (show-smartparens-global-mode t)
 
+;; use shift + arrow keys to switch between visible buffers
+(require 'windmove)
+(windmove-default-keybindings)
+
+(require 'midnight)
+
+;; smarter kill-ring navigation
+(require 'browse-kill-ring)
+
+(electric-indent-mode 1)
+
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
-
-;; Auto refresh buffers
-(global-auto-revert-mode 1)
 
 ;; Also auto refresh dired, but be quiet about it
 (setq global-auto-revert-non-file-buffers t)
@@ -104,17 +124,6 @@
 
 (require 'saveplace)
 (setq-default save-place t)
-
-(require 'multiple-cursors)
-(require 'expand-region)
-
-(smartparens-global-mode 1)
-(projectile-global-mode)
-(global-auto-complete-mode 1)
-(global-whitespace-cleanup-mode 1)
-(helm-mode 1)
-(global-hl-line-mode 1)
-(global-visual-line-mode 1)
 
 ;; When popping the mark, continue popping until the cursor actually moves
 ;; Also, if the last command was a copy - skip past all the expand-region cruft.

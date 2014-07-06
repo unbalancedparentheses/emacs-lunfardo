@@ -1,3 +1,6 @@
+;; debug on error
+(setq debug-on-error t)
+
 (defvar current-user
       (getenv
        (if (equal system-type 'windows-nt) "USERNAME" "USER")))

@@ -7,8 +7,6 @@
   '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-
-
 ;; Guarantee all packages are installed on start
 (defvar lunfardo-packages
   '(

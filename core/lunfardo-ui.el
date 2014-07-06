@@ -1,5 +1,9 @@
 (lunfardo-require-packages '(popwin))
 
+;; popwin is a popup window manager for Emacs
+(require 'popwin)
+(popwin-mode 1)
+
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message 'current-user)
@@ -28,10 +32,6 @@
 
 (require 'powerline)
 (powerline-default-theme)
-
-;; popwin is a popup window manager for Emacs
-(require 'popwin)
-(popwin-mode 1)
 
 (load-theme 'zenburn t)
 

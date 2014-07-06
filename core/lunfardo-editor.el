@@ -1,53 +1,83 @@
-(require 'anzu)
-(global-anzu-mode 1)
-
 (require 'multiple-cursors)
-
 (require 'expand-region)
 
-(projectile-global-mode)
-(global-auto-complete-mode 1)
-(global-whitespace-cleanup-mode 1)
 (helm-mode 1)
 
+;; rainbow Delimiters is a “rainbow parentheses”-like mode which highlights
+;; parentheses, brackets, and braces according to their depth
+(require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode 1)
-(rainbow-mode 1)
+
+;; deals with parens pairs and tries to be smart about it
+(require 'smartparens-config)
 (show-smartparens-global-mode t)
+
+;; sets background color to strings that match color names
+;; e.g. #0000ff is displayed in white with a blue background
+(require 'rainbow-mode)
+(rainbow-mode 1)
+
+;; Add parts of each file's directory to the buffer name if not unique
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+(require 'saveplace)
+(setq-default save-place t)
+
+;; whitespace-mode config
+(require 'whitespace)
+(global-whitespace-mode 1)
+(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-style '(face tabs empty trailing lines-tail))
+;; lines should be 80 characters wide, not 72
+(setq fill-column 80)
+
+;; smart tab behavior - indent or complete
+(setq tab-always-indent 'complete)
+
+;; projectile is a project management mode
+(require 'projectile)
+(projectile-global-mode t)
+
+;; anzu-mode enhances isearch by showing total matches and current match position
+(require 'anzu)
+(global-anzu-mode)
+
+;; represent undo-history as an actual tree (visualize with C-x u)
+(require 'undo-tree)
+(setq undo-tree-mode-lighter "")
+(global-undo-tree-mode)
 
 ;; use shift + arrow keys to switch between visible buffers
 (require 'windmove)
 (windmove-default-keybindings)
 
-(require 'midnight)
-
-;; smarter kill-ring navigation
-(require 'browse-kill-ring)
-
+;; when enabled, typing certain characters(like newlines) triggers reindentation
 (electric-indent-mode 1)
 
-;; Allow pasting selection outside of Emacs
+;; allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
-;; Also auto refresh dired, but be quiet about it
+;; also auto refresh dired, but be quiet about it
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
-;; Show keystrokes in progress
+;; show keystrokes in progress
 (setq echo-keystrokes 0.1)
 
-;; Move files to trash when deleting
+;; move files to trash when deleting
 (setq delete-by-moving-to-trash t)
 
-;; Real emacs knights don't use shift to mark things
+;; real emacs knights don't use shift to mark things
 (setq shift-select-mode nil)
 
-;; Transparently open compressed files
+;; transparently open compressed files
 (auto-compression-mode t)
 
-;; Enable syntax highlighting for older Emacsen that have it off
+;; enable syntax highlighting for older Emacsen that have it off
 (global-font-lock-mode t)
 
-;; Revert buffers automatically when underlying files are changed externally
+;; revert buffers automatically when underlying files are changed externally
 (global-auto-revert-mode t)
 
 ;; UTF-8 please
@@ -57,73 +87,59 @@
 (set-selection-coding-system 'utf-8) ; please
 (prefer-coding-system 'utf-8) ; with sugar on top
 
-;; Show active region
+;; show active region
 (transient-mark-mode 1)
 (make-variable-buffer-local 'transient-mark-mode)
 (put 'transient-mark-mode 'permanent-local t)
 (setq-default transient-mark-mode t)
 
-;; Remove text in active region if inserting text
-(delete-selection-mode 1)
+;; remove text in active region if inserting text
+(delete-selection-mode t)
 
-;; Don't backupfiles
+;; don't backupfiles
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-;; Lines should be 80 characters wide, not 72
-(setq fill-column 80)
-
-;; Save a list of recent files visited. (open recent file with C-x f)
+;; save a list of recent files visited. (open recent file with C-x f)
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
-;; Save minibuffer history
+;; save minibuffer history
 (savehist-mode 1)
 (setq history-length 1000)
 
-;; Undo/redo window configuration with C-c <left>/<right>
+;; undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 
-;; Never insert tabs
+;; never insert tabs
 (set-default 'indent-tabs-mode nil)
 
-;; Show me empty lines after buffer end
+;; show me empty lines after buffer end
 (set-default 'indicate-empty-lines t)
 
-;; Easily navigate sillycased words
+;; easily navigate sillycased words
 (global-subword-mode 1)
 
-;; Don't break lines for me, please
+;; don't break lines for me, please
 (setq-default truncate-lines t)
 
-;; Allow recursive minibuffers
+;; allow recursive minibuffers
 (setq enable-recursive-minibuffers t)
 
-;; Don't be so stingy on the memory, we have lots now. It's the distant future.
+;; don't be so stingy on the memory, we have lots now. It's the distant future.
 (setq gc-cons-threshold 20000000)
 
-;; Represent undo-history as an actual tree (visualize with C-x u)
-(setq undo-tree-mode-lighter "")
-(require 'undo-tree)
-(global-undo-tree-mode)
-;; Sentences do not need double spaces to end. Period.
+;; sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
 
-;; Add parts of each file's directory to the buffer name if not unique
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
-;; A saner ediff
+;; a saner ediff
 (setq ediff-diff-options "-w")
 (setq ediff-split-window-function 'split-window-horizontally)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
-;; Nic says eval-expression-print-level needs to be set to nil (turned off) so
+;; nic says eval-expression-print-level needs to be set to nil (turned off) so
 ;; that you can always see what's happening.
 (setq eval-expression-print-level nil)
-
-(require 'saveplace)
-(setq-default save-place t)
 
 ;; When popping the mark, continue popping until the cursor actually moves
 ;; Also, if the last command was a copy - skip past all the expand-region cruft.

@@ -9,11 +9,12 @@
 (add-to-list 'load-path lunfardo-core-dir)
 
 (require 'lunfardo-packages)
-(require 'lunfardo-core)
 (require 'lunfardo-ui)
+(require 'lunfardo-editor)
+(require 'lunfardo-core)
 (require 'lunfardo-bindings)
 (require 'lunfardo-keychords)
 (require 'lunfardo-ido)
 
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+(when (eq system-type 'darwin)
+  (require 'lunfardo-osx))

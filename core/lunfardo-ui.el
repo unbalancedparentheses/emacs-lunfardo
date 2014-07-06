@@ -1,10 +1,10 @@
-(require 'cl)
 (require 'powerline)
 
-(blink-cursor-mode 0)
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message "pyotrgalois")
+(setq inhibit-startup-echo-area-message 'current-user)
+
+(blink-cursor-mode 0)
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)
@@ -15,12 +15,14 @@
       scroll-preserve-screen-position 1)
 
 (line-number-mode t)
+(line-number-mode t)
+(column-number-mode t)
 
 (global-linum-mode 1)
 (powerline-default-theme)
-(global-rainbow-delimiters-mode 1)
 
-(rainbow-mode 1)
+;; Answering just 'y' or 'n' will do
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (load-theme 'zenburn t)
 

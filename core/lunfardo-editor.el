@@ -1,3 +1,7 @@
+(global-rainbow-delimiters-mode 1)
+(rainbow-mode 1)
+(show-smartparens-global-mode t)
+
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
@@ -23,8 +27,8 @@
 ;; Enable syntax highlighting for older Emacsen that have it off
 (global-font-lock-mode t)
 
-;; Answering just 'y' or 'n' will do
-(defalias 'yes-or-no-p 'y-or-n-p)
+;; Revert buffers automatically when underlying files are changed externally
+(global-auto-revert-mode t)
 
 ;; UTF-8 please
 (setq locale-coding-system 'utf-8) ; pretty
@@ -45,10 +49,6 @@
 ;; Don't backupfiles
 (setq make-backup-files nil)
 (setq auto-save-default nil)
-
-;; Always display line and column numbers
-(setq line-number-mode t)
-(setq column-number-mode t)
 
 ;; Lines should be 80 characters wide, not 72
 (setq fill-column 80)
@@ -105,6 +105,17 @@
 (require 'saveplace)
 (setq-default save-place t)
 
+(require 'multiple-cursors)
+(require 'expand-region)
+
+(smartparens-global-mode 1)
+(projectile-global-mode)
+(global-auto-complete-mode 1)
+(global-whitespace-cleanup-mode 1)
+(helm-mode 1)
+(global-hl-line-mode 1)
+(global-visual-line-mode 1)
+
 ;; When popping the mark, continue popping until the cursor actually moves
 ;; Also, if the last command was a copy - skip past all the expand-region cruft.
 (defadvice pop-to-mark-command (around ensure-new-position activate)
@@ -116,4 +127,4 @@
     (dotimes (i 10)
       (when (= p (point)) ad-do-it))))
 
-(provide 'sane-defaults)
+(provide 'lunfardo-editor)

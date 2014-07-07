@@ -44,5 +44,6 @@
 (define-key global-map [?\s-m] 'magit-status)
 (define-key global-map [?\s-w] 'delete-frame)
 (define-key global-map [?\s-x] 'exchange-point-and-mark)
+(define-key global-map [?\s-u] 'undo-tree-visualize)
 
 (provide 'lunfardo-bindings)

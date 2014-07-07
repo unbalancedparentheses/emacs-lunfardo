@@ -21,3 +21,4 @@ session*
 .cask
 tramp
 /var/pcache
+elpa/

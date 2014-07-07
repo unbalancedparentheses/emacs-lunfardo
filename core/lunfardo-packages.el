@@ -15,10 +15,9 @@
     ack-and-a-half
     ag
     anzu
-    auto-complete
+    company
     dash
     diff-hl
-    restclient
     discover-my-major
     easy-kill
     exec-path-from-shell
@@ -38,6 +37,7 @@
     projectile
     rainbow-delimiters
     rainbow-mode
+    restclient
     skewer-mode
     smartparens
     smex

@@ -3,25 +3,29 @@
 
 (helm-mode 1)
 
+;; modular in-buffer completion framework for Emacs
+(require 'company)
+(global-company-mode)
+
 ;; diff-hl
 (require 'diff-hl)
 (global-diff-hl-mode +1)
-
-;; rainbow Delimiters is a “rainbow parentheses”-like mode which highlights
+ 
+;; rainbow delimiters is a “rainbow parentheses”-like mode which highlights
 ;; parentheses, brackets, and braces according to their depth
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode 1)
 
 ;; deals with parens pairs and tries to be smart about it
 (require 'smartparens-config)
-(show-smartparens-global-mode t)
+(smartparens-global-mode t)
 
 ;; sets background color to strings that match color names
-;; e.g. #0000ff is displayed in white with a blue background
 (require 'rainbow-mode)
 (rainbow-mode 1)
+;; e.g. #0000ff is displayed in white with a blue background
 
-;; Add parts of each file's directory to the buffer name if not unique
+;; add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 

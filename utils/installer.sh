@@ -1,5 +1,5 @@
 LUNFARDO_VERBOSE='true';
-[ -z $LUNFARDO_URL ] && LUNFARDO_URL="https://github.com/pyotrgalois/lunfardo.git"
+[ -z $LUNFARDO_URL ] && LUNFARDO_URL="https://github.com/unbalancedparentheses/spawnedshelter.git"
 [ -z "$LUNFARDO_INSTALL_DIR" ] && LUNFARDO_INSTALL_DIR="$HOME/.emacs.d"
 
 install_lunfardo () {

@@ -24,7 +24,7 @@ can skip the whole manual and just type in your favorite shell the
 following command:
 
 ```bash
-curl -L http://git.io/nR5Y9w | sh
+curl -L https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/utils/installer.sh | sh
 ```
 
 

@@ -44,6 +44,7 @@
     undo-tree
     whitespace-cleanup-mode
     zenburn-theme
+    monokai-theme
 )
 "List of packages needs to be installed at launch")
 

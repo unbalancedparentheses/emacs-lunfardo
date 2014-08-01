@@ -33,6 +33,6 @@
 (require 'powerline)
 (powerline-default-theme)
 
-(load-theme 'zenburn t)
+(load-theme 'monokai t)
 
 (provide 'lunfardo-ui)

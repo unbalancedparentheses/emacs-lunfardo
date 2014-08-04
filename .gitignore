@@ -21,4 +21,6 @@ session*
 .cask
 tramp
 /var/pcache
-elpa/
+elpa
+history
+ac-comphist.dat

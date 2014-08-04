@@ -35,10 +35,11 @@
 (global-set-key [remap kill-ring-save] 'easy-kill)
 
 ;; make some use of the Super key
-(define-key global-map [?\s-d] 'mc/mark-all-like-this)
-(define-key global-map [?\s-f] 'projectile-find-file)
+(define-key global-map [?\s-d] 'mc/mark-next-like-this)
+(define-key global-map [?\s-f] 'helm-projectile)
 (define-key global-map [?\s-p] 'projectile-switch-project)
 (define-key global-map [?\s-g] 'projectile-grep)
+(define-key global-map [?\s-t] 'helm-semantic-or-imenu)
 (define-key global-map [?\s-l] 'goto-line)
 (define-key global-map [?\s-e] 'er/expand-region)
 (define-key global-map [?\s-m] 'magit-status)

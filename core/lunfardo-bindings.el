@@ -41,6 +41,7 @@
 (define-key global-map [?\s-g] 'projectile-grep)
 (define-key global-map [?\s-t] 'helm-semantic-or-imenu)
 (define-key global-map [?\s-l] 'goto-line)
+(define-key global-map [?\s-L] 'discover-my-major)
 (define-key global-map [?\s-e] 'er/expand-region)
 (define-key global-map [?\s-m] 'magit-status)
 (define-key global-map [?\s-w] 'delete-frame)

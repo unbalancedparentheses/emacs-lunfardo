@@ -3,6 +3,11 @@
 
 (helm-mode 1)
 
+;; it makes backspace and C-d erase all consecutive white space
+;; in a given direction instead of just one
+(require 'hungry-delete)
+(global-hungry-delete-mode)
+
 ;; modular in-buffer completion framework for Emacs
 (require 'company)
 (global-company-mode)
@@ -10,7 +15,7 @@
 ;; diff-hl
 (require 'diff-hl)
 (global-diff-hl-mode +1)
- 
+
 ;; rainbow delimiters is a “rainbow parentheses”-like mode which highlights
 ;; parentheses, brackets, and braces according to their depth
 (require 'rainbow-delimiters)
@@ -18,7 +23,7 @@
 
 ;; deals with parens pairs and tries to be smart about it
 (require 'smartparens-config)
-(smartparens-global-mode t)
+(show-smartparens-global-mode t)
 
 ;; sets background color to strings that match color names
 (require 'rainbow-mode)
@@ -120,6 +125,9 @@
 ;; don't backupfiles
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
+;; i hate lockfiles, aka .#file
+(setq create-lockfiles nil)
 
 ;; save a list of recent files visited. (open recent file with C-x f)
 (recentf-mode 1)

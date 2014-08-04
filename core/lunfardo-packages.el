@@ -29,6 +29,7 @@
     helm
     helm-projectile
     ido-vertical-mode
+    hungry-delete
     key-chord
     magit
     move-text

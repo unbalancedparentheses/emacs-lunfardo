@@ -28,10 +28,11 @@
     guru-mode
     helm
     helm-projectile
-    ido-vertical-mode
     hungry-delete
+    ido-vertical-mode
     key-chord
     magit
+    monokai-theme
     move-text
     multiple-cursors
     powerline
@@ -45,7 +46,6 @@
     undo-tree
     whitespace-cleanup-mode
     zenburn-theme
-    monokai-theme
 )
 "List of packages needs to be installed at launch")
 

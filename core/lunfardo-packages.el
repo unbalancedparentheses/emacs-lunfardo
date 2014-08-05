@@ -22,6 +22,7 @@
     easy-kill
     exec-path-from-shell
     expand-region
+    buffer-move
     flx-ido
     flycheck
     git-timemachine

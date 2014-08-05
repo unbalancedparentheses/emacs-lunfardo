@@ -34,6 +34,12 @@
 
 (global-set-key [remap kill-ring-save] 'easy-kill)
 
+;; buffer move
+(global-set-key (kbd "<s-up>") 'buf-move-up)
+(global-set-key (kbd "<s-down>") 'buf-move-down)
+(global-set-key (kbd "<s-left>") 'buf-move-left)
+(global-set-key (kbd "<s-right>") 'buf-move-right)
+
 ;; make some use of the Super key
 (define-key global-map [?\s-d] 'mc/mark-next-like-this)
 (define-key global-map [?\s-f] 'helm-projectile)

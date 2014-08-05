@@ -3,7 +3,11 @@
 
 (helm-mode 1)
 
+;; yo, check my syntax
 (global-flycheck-mode t)
+
+;; bling bling, cool scroll bar
+(global-yascroll-bar-mode)
 
 ;; it makes backspace and C-d erase all consecutive white space
 ;; in a given direction instead of just one

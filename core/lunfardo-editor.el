@@ -3,6 +3,8 @@
 
 (helm-mode 1)
 
+(global-yascroll-bar-mode)
+
 ;; it makes backspace and C-d erase all consecutive white space
 ;; in a given direction instead of just one
 (require 'hungry-delete)

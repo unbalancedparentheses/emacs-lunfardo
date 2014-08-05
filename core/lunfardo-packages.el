@@ -45,6 +45,7 @@
     smex
     undo-tree
     whitespace-cleanup-mode
+    yascroll
     zenburn-theme
 )
 "List of packages needs to be installed at launch")

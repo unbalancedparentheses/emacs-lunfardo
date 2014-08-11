@@ -17,6 +17,7 @@
 (require 'lunfardo-bindings)
 (require 'lunfardo-keychords)
 (require 'lunfardo-ido)
+(require 'lunfardo-company)
 (require 'lunfardo-modules)
 
 (when (eq system-type 'darwin)

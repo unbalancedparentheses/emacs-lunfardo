@@ -1,3 +1,6 @@
+;; smart new line
+(global-set-key (kbd "<S-return>") 'smart-open-line)
+
 ;; Font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
@@ -42,7 +45,7 @@
 
 ;; make some use of the Super key
 (define-key global-map [?\s-d] 'mc/mark-next-like-this)
-(define-key global-map [?\s-f] 'helm-projectile)
+(define-key global-map [?\s-f] 'projectile-find-file)
 (define-key global-map [?\s-p] 'projectile-switch-project)
 (define-key global-map [?\s-g] 'projectile-grep)
 (define-key global-map [?\s-t] 'helm-semantic-or-imenu)

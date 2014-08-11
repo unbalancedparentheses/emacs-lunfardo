@@ -15,14 +15,15 @@
     ack-and-a-half
     ag
     anzu
+    buffer-move
     company
     dash
     diff-hl
     discover-my-major
     easy-kill
+    erlang
     exec-path-from-shell
     expand-region
-    buffer-move
     flx-ido
     flycheck
     git-timemachine
@@ -45,6 +46,7 @@
     smartparens
     smex
     undo-tree
+    use-package
     whitespace-cleanup-mode
     yascroll
     zenburn-theme
@@ -78,5 +80,7 @@ Missing packages are installed automatically."
     (lunfardo-require-packages lunfardo-packages)))
 
 (lunfardo-install-packages)
+
+(require 'use-package)
 
 (provide 'lunfardo-packages)

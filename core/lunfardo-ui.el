@@ -1,5 +1,3 @@
-(lunfardo-require-packages '(popwin))
-
 ;; popwin is a popup window manager for Emacs
 (require 'popwin)
 (popwin-mode 1)

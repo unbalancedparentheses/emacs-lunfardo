@@ -42,6 +42,7 @@
     rainbow-delimiters
     rainbow-mode
     restclient
+    popwin
     skewer-mode
     smartparens
     smex

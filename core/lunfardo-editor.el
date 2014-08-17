@@ -37,6 +37,10 @@
 (rainbow-mode 1)
 ;; e.g. #0000ff is displayed in white with a blue background
 
+;; drag Stuff is a minor mode for Emacs that makes it possible to drag stuff (words, region, lines)
+(require 'drag-stuff)
+(drag-stuff-global-mode t)
+
 ;; add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)

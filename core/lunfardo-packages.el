@@ -20,6 +20,7 @@
     dash
     diff-hl
     discover-my-major
+    drag-stuff
     easy-kill
     erlang
     exec-path-from-shell
@@ -37,12 +38,12 @@
     monokai-theme
     move-text
     multiple-cursors
+    popwin
     powerline
     projectile
     rainbow-delimiters
     rainbow-mode
     restclient
-    popwin
     skewer-mode
     smartparens
     smex

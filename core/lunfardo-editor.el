@@ -6,6 +6,10 @@
 ;; yo, check my syntax
 (global-flycheck-mode t)
 
+(require 'flycheck-color-mode-line)
+(eval-after-load "flycheck"
+  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+
 ;; bling bling, cool scroll bar
 (global-yascroll-bar-mode)
 

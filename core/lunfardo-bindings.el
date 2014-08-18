@@ -26,9 +26,6 @@
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
 
-;; Opens up the beatiful helm-projectile
-(global-set-key (kbd "C-c h") 'helm-projectile)
-
 ;; Line movement
 (global-set-key (kbd "<C-M-down>") 'move-text-down)
 (global-set-key (kbd "<C-M-up>") 'move-text-up)
@@ -48,6 +45,8 @@
 (global-set-key (kbd "s-p") 'projectile-switch-project)
 (global-set-key (kbd "s-g") 'projectile-grep)
 (global-set-key (kbd "s-t") 'helm-semantic-or-imenu)
+(global-set-key (kbd "s-s") 'helm-swoop)
+(global-set-key (kbd "s-c") 'helm-flycheck)
 (global-set-key (kbd "s-l") 'goto-line)
 (global-set-key (kbd "s-L") 'discover-my-major)
 (global-set-key (kbd "s-e") 'er/expand-region)
@@ -55,4 +54,5 @@
 (global-set-key (kbd "s-w") 'delete-frame)
 (global-set-key (kbd "s-x") 'exchange-point-and-mark)
 (global-set-key (kbd "s-u") 'undo-tree-visualize)
+
 (provide 'lunfardo-bindings)

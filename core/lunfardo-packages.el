@@ -27,9 +27,12 @@
     expand-region
     flx-ido
     flycheck
+    flycheck-color-mode-line
     git-timemachine
     guru-mode
     helm
+    helm-flycheck
+    helm-swoop
     helm-projectile
     hungry-delete
     ido-vertical-mode
@@ -53,7 +56,7 @@
     yascroll
     zenburn-theme
 )
-"List of packages needs to be installed at launch")
+"List of packages needs to be installed at launch.")
 
 (defun lunfardo-packages-installed-p ()
   "Check if all packages in `prelude-packages' are installed."

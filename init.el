@@ -17,6 +17,7 @@
 (require 'lunfardo-bindings)
 (require 'lunfardo-keychords)
 (require 'lunfardo-ido)
+(require 'lunfardo-helm)
 (require 'lunfardo-company)
 (require 'lunfardo-modules)
 

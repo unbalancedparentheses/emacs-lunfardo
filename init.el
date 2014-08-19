@@ -18,6 +18,7 @@
 (require 'lunfardo-keychords)
 (require 'lunfardo-ido)
 (require 'lunfardo-helm)
+(require 'lunfardo-yasnippet)
 (require 'lunfardo-company)
 (require 'lunfardo-modules)
 

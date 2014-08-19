@@ -54,6 +54,8 @@
     use-package
     whitespace-cleanup-mode
     yascroll
+    yasnippet
+    yasnippet-bundle
     zenburn-theme
 )
 "List of packages needs to be installed at launch.")

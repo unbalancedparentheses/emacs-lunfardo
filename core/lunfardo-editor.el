@@ -1,3 +1,5 @@
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
 (require 'multiple-cursors)
 (require 'expand-region)
 

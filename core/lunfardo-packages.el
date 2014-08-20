@@ -30,10 +30,11 @@
     flycheck-color-mode-line
     git-timemachine
     guru-mode
+    guru-mode
     helm
     helm-flycheck
-    helm-swoop
     helm-projectile
+    helm-swoop
     hungry-delete
     ido-vertical-mode
     key-chord

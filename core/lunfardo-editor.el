@@ -1,5 +1,9 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+(require 'guru-mode)
+(guru-global-mode +1)
+(setq guru-warn-only t)
+
 (require 'multiple-cursors)
 (require 'expand-region)
 

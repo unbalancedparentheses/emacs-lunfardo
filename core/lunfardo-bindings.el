@@ -30,8 +30,6 @@
 (global-set-key (kbd "<C-M-down>") 'move-text-down)
 (global-set-key (kbd "<C-M-up>") 'move-text-up)
 
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-
 (global-set-key [remap kill-ring-save] 'easy-kill)
 
 ;; buffer move
@@ -51,8 +49,9 @@
 (global-set-key (kbd "s-h") 'discover-my-major)
 (global-set-key (kbd "s-e") 'er/expand-region)
 (global-set-key (kbd "s-m") 'magit-status)
+(global-set-key (kbd "s-u") 'undo-tree-visualize)
 (global-set-key (kbd "s-w") 'delete-frame)
 (global-set-key (kbd "s-x") 'exchange-point-and-mark)
-(global-set-key (kbd "s-u") 'undo-tree-visualize)
+(global-set-key (kbd "s-y") 'helm-show-kill-ring)
 
 (provide 'lunfardo-bindings)

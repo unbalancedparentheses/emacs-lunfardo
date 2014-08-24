@@ -32,6 +32,7 @@
     guru-mode
     guru-mode
     helm
+    helm-dash
     helm-flycheck
     helm-projectile
     helm-swoop

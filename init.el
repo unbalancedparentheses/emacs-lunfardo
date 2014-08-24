@@ -11,6 +11,7 @@
 (add-to-list 'load-path lunfardo-modules)
 
 (require 'lunfardo-packages)
+(require 'lunfardo-core)
 (require 'lunfardo-ui)
 (require 'lunfardo-editor)
 (require 'lunfardo-core)

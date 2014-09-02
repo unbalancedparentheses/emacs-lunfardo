@@ -29,6 +29,7 @@
     flycheck
     flycheck-color-mode-line
     git-timemachine
+    god-mode
     guru-mode
     guru-mode
     helm
@@ -46,6 +47,7 @@
     popwin
     powerline
     projectile
+    quickrun
     rainbow-delimiters
     rainbow-mode
     restclient

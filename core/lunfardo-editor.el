@@ -1,5 +1,19 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+(require 'god-mode)
+(global-set-key (kbd "<escape>") 'god-mode-all)
+
+(defun my-update-cursor ()
+  (setq cursor-type (if (or god-local-mode buffer-read-only)
+                        'box
+                      'bar)))
+
+(add-hook 'god-mode-enabled-hook 'my-update-cursor)
+(add-hook 'god-mode-disabled-hook 'my-update-cursor)
+
+;; quickrun.el is a extension to execute editing buffer
+(require 'quickrun)
+
 (require 'guru-mode)
 (guru-global-mode +1)
 (setq guru-warn-only t)

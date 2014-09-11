@@ -34,6 +34,7 @@
     guru-mode
     guru-mode
     helm
+    helm-ag
     helm-dash
     helm-descbinds
     helm-flycheck

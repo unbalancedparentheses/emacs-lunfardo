@@ -1,7 +1,7 @@
 ;; smart new line
 (global-set-key (kbd "<S-return>") 'smart-open-line)
 
-(global-set-key (kbd "M-x") 'helm-M-x)
+;;(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
@@ -36,7 +36,8 @@
 
 (global-set-key (kbd "s-d") 'mc/mark-next-like-this)
 (global-set-key (kbd "s-f") 'helm-for-files)
-(global-set-key (kbd "s-p") 'projectile-switch-project)
+(global-set-key (kbd "s-p") 'helm-projectile)
+(global-set-key (kbd "s-P") 'projectile-switch-project)
 (global-set-key (kbd "s-g") 'helm-do-ag)
 (global-set-key (kbd "s-t") 'helm-semantic-or-imenu)
 (global-set-key (kbd "s-s") 'helm-swoop)

@@ -21,8 +21,6 @@
 (require 'multiple-cursors)
 (require 'expand-region)
 
-(helm-mode 1)
-
 ;; yo, check my syntax
 (global-flycheck-mode t)
 

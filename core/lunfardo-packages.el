@@ -29,11 +29,13 @@
     flycheck
     flycheck-color-mode-line
     git-timemachine
+    github-browse-file
     god-mode
     guru-mode
     guru-mode
     helm
     helm-dash
+    helm-descbinds
     helm-flycheck
     helm-projectile
     helm-swoop

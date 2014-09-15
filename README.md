@@ -27,6 +27,13 @@ following command:
 curl -L http://git.io/Rr3kZw | sh
 ```
 
+### haven't you used emacs before?
+- Being productive with emacs [part I](http://web.psung.name/emacs/2009/part1.html) and [part II](http://web.psung.name/emacs/2009/part2.html)
+- [emacs4developers](https://github.com/pierre-lecocq/emacs4developers)
+- [elisp guide](https://github.com/chrisdone/elisp-guide)
+- [awesome emacs](https://github.com/emacs-tw/awesome-emacs)
+
+That is all you need!
 
 ### got emacs?
 ![](https://raw2.github.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)

@@ -51,7 +51,8 @@ Keybinding         | Command
 -------------------|------------------------------------------------------------
 <kbd>Super-f</kbd> | Find file
 <kbd>Super-p</kbd> | Switch projects
-<kbd>Super-g</kbd> | Run ag incrementally. You need to have[ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
+<kbd>Super-P</kbd> | Find file inside project
+<kbd>Super-g</kbd> | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
 <kbd>Super-l</kbd> | Go to line
 <kbd>Super-d</kbd> | Mark next like this
 <kbd>Super-e</kbd> | Expand selection

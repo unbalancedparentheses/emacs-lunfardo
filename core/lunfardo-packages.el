@@ -30,7 +30,6 @@
     flycheck-color-mode-line
     git-timemachine
     github-browse-file
-    god-mode
     guru-mode
     guru-mode
     helm

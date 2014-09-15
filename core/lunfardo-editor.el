@@ -1,3 +1,5 @@
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
 ;; quickrun.el is a extension to execute editing buffer
 (require 'quickrun)
 

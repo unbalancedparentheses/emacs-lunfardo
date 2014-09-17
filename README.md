@@ -29,9 +29,19 @@ curl -L http://git.io/Rr3kZw | sh
 
 ### haven't you used emacs before?
 - Being productive with emacs [part I](http://web.psung.name/emacs/2009/part1.html) and [part II](http://web.psung.name/emacs/2009/part2.html)
+- [Emacs Mini Manual](https://tuhdo.github.io/emacs-tutor.html)
 - [emacs4developers](https://github.com/pierre-lecocq/emacs4developers)
-- [elisp guide](https://github.com/chrisdone/elisp-guide)
 - [awesome emacs](https://github.com/emacs-tw/awesome-emacs)
+- [Why Atom Can’t Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
+
+### basic elisp
+- [elisp guide](https://github.com/chrisdone/elisp-guide)
+- [When to use 'quote in Lisp](https://stackoverflow.com/questions/134887/when-to-use-quote-in-lisp)
+
+### if you come from the best modal editor
+- [Emacs as My <Leader>: Vim Survival Guide](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
+- [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
+- [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
 
 That is all you need!
 

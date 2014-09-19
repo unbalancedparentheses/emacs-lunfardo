@@ -1,7 +1,7 @@
 ;; smart new line
 (global-set-key (kbd "<S-return>") 'smart-open-line)
 
-;;(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Font size
 (global-set-key (kbd "C-+") 'text-scale-increase)

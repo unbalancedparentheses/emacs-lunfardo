@@ -28,9 +28,19 @@
 
 (global-hl-line-mode 1)
 
-(require 'powerline)
-(powerline-default-theme)
+;; moe-theme config
+(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
+(add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
 
-(load-theme 'monokai t)
+;; Confirm that (require 'powerline) must before (require 'moe-theme).
+;; Otherwise, powerline-moe-theme will not be initallized.
+(require 'powerline)
+(require 'moe-theme)
+
+(powerline-default-theme)
+(load-theme 'moe-dark t)
+
+(setq moe-theme-mode-line-color 'purple)
+(powerline-moe-theme)
 
 (provide 'lunfardo-ui)

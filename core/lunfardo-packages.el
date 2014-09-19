@@ -43,6 +43,7 @@
     ido-vertical-mode
     key-chord
     magit
+    moe-theme
     monokai-theme
     move-text
     multiple-cursors

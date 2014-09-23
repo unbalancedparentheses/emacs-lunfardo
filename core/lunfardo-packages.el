@@ -23,6 +23,7 @@
     drag-stuff
     easy-kill
     erlang
+    evil
     exec-path-from-shell
     expand-region
     flx-ido
@@ -41,7 +42,6 @@
     helm-swoop
     hungry-delete
     ido-vertical-mode
-    key-chord
     magit
     moe-theme
     monokai-theme

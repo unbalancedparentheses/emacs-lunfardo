@@ -16,7 +16,6 @@
 (require 'lunfardo-editor)
 (require 'lunfardo-core)
 (require 'lunfardo-bindings)
-(require 'lunfardo-keychords)
 (require 'lunfardo-ido)
 (require 'lunfardo-helm)
 (require 'lunfardo-yasnippet)

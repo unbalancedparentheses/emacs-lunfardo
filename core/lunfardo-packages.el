@@ -94,6 +94,4 @@ Missing packages are installed automatically."
 
 (lunfardo-install-packages)
 
-(require 'use-package)
-
 (provide 'lunfardo-packages)

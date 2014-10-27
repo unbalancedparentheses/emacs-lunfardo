@@ -1,4 +1,5 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
 ;; quickrun.el is a extension to execute editing buffer
 (require 'quickrun)
@@ -108,9 +109,6 @@
 ;; use shift + arrow keys to switch between visible buffers
 (require 'windmove)
 (windmove-default-keybindings)
-
-;; when enabled, typing certain characters(like newlines) triggers reindentation
-(electric-indent-mode 1)
 
 ;; allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)

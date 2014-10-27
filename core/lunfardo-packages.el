@@ -2,7 +2,7 @@
 (require 'cl)
 
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
@@ -14,6 +14,7 @@
     ace-window
     ack-and-a-half
     ag
+    aggressive-indent
     anzu
     buffer-move
     company
@@ -22,7 +23,7 @@
     discover-my-major
     drag-stuff
     easy-kill
-    erlang
+    evil
     exec-path-from-shell
     expand-region
     flx-ido
@@ -42,7 +43,6 @@
     highlight-symbol
     hungry-delete
     ido-vertical-mode
-    key-chord
     magit
     moe-theme
     monokai-theme
@@ -59,17 +59,16 @@
     smartparens
     smex
     undo-tree
-    use-package
     whitespace-cleanup-mode
     yascroll
     yasnippet
     yasnippet-bundle
     zenburn-theme
-)
-"List of packages needs to be installed at launch.")
+    )
+  "List of packages needs to be installed at launch.")
 
 (defun lunfardo-packages-installed-p ()
-  "Check if all packages in `prelude-packages' are installed."
+  "Check if all packages in `lunfardo-packages' are installed."
   (every #'package-installed-p lunfardo-packages))
 
 (defun lunfardo-require-package (package)
@@ -95,7 +94,5 @@ Missing packages are installed automatically."
     (lunfardo-require-packages lunfardo-packages)))
 
 (lunfardo-install-packages)
-
-(require 'use-package)
 
 (provide 'lunfardo-packages)

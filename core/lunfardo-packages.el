@@ -16,6 +16,7 @@
     ag
     aggressive-indent
     anzu
+    auto-highlight-symbol
     buffer-move
     company
     dash
@@ -40,7 +41,6 @@
     helm-flycheck
     helm-projectile
     helm-swoop
-    highlight-symbol
     hungry-delete
     ido-vertical-mode
     magit

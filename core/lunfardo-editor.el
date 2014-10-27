@@ -3,6 +3,20 @@
 ;; quickrun.el is a extension to execute editing buffer
 (require 'quickrun)
 
+;; highlight symbol
+(global-auto-highlight-symbol-mode t)
+
+;; display specified symbols as composed characters.
+;; Example: in Emacs Lisp mode this replaces the string
+;; lambda with the Greek lambda character
+(global-prettify-symbols-mode t)
+
+;; underscores, dashes and camel-case aware editing
+(global-subword-mode t)
+;; when superword mode enabled all complex/compound
+;; words are treated as single word
+(global-superword-mode 0)
+
 (require 'guru-mode)
 (guru-global-mode +1)
 (setq guru-warn-only t)

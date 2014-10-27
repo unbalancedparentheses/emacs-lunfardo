@@ -39,6 +39,7 @@
     helm-flycheck
     helm-projectile
     helm-swoop
+    highlight-symbol
     hungry-delete
     ido-vertical-mode
     key-chord

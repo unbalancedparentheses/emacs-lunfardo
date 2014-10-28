@@ -1,6 +1,8 @@
 ;; smart new line
 (global-set-key (kbd "<S-return>") 'smart-open-line)
 
+(global-set-key (kbd "C-<tab>") 'switch-to-previous-buffer)
+
 (global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Font size

@@ -43,6 +43,9 @@ curl -L http://git.io/Rr3kZw | sh
 - [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
 - [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
 
+### emacs package growth
+![](http://tracker.endlessparentheses.com/newPackagePlotEver.png)
+
 That is all you need!
 
 ### got emacs?

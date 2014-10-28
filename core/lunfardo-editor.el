@@ -50,10 +50,6 @@
 (require 'drag-stuff)
 (drag-stuff-global-mode t)
 
-;; add parts of each file's directory to the buffer name if not unique
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
 (require 'saveplace)
 (setq-default save-place t)
 

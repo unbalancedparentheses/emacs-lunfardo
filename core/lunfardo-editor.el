@@ -16,7 +16,7 @@
 (global-subword-mode t)
 ;; when superword mode enabled all complex/compound
 ;; words are treated as single word
-(global-superword-mode 0)
+(global-superword-mode nil)
 
 (require 'guru-mode)
 (guru-global-mode +1)
@@ -56,10 +56,10 @@
 ;; whitespace-mode config
 (require 'whitespace)
 (global-whitespace-mode 1)
-(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-line-column 90) ;; limit line length
 (setq whitespace-style '(face tabs empty trailing lines-tail))
 ;; lines should be 80 characters wide, not 72
-(setq fill-column 80)
+(setq fill-column 90)
 
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
@@ -113,9 +113,6 @@
 ;; transparently open compressed files
 (auto-compression-mode t)
 
-;; enable syntax highlighting for older Emacsen that have it off
-(global-font-lock-mode t)
-
 ;; revert buffers automatically when underlying files are changed externally
 (global-auto-revert-mode t)
 
@@ -159,10 +156,6 @@
 ;; show me empty lines after buffer end
 (set-default 'indicate-empty-lines t)
 
-;; easily navigate sillycased words
-(global-subword-mode 1)
-
-;; don't break lines for me, please
 (setq-default truncate-lines t)
 
 ;; allow recursive minibuffers
@@ -179,28 +172,6 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
-;; nic says eval-expression-print-level needs to be set to nil (turned off) so
-;; that you can always see what's happening.
 (setq eval-expression-print-level nil)
-
-;; when popping the mark, continue popping until the cursor actually moves
-;; also, if the last command was a copy - skip past all the expand-region cruft.
-(defadvice pop-to-mark-command (around ensure-new-position activate)
-  (let ((p (point)))
-    (when (eq last-command 'save-region-or-current-line)
-      ad-do-it
-      ad-do-it
-      ad-do-it)
-    (dotimes (i 10)
-      (when (= p (point)) ad-do-it))))
-
-;; insert an empty line after the current line.
-;; iosition the cursor at its beginning, according to the current mode."
-(defun smart-open-line ()
-  (interactive)
-  (move-end-of-line nil)
-  (newline-and-indent))
-
-(global-set-key [(shift return)] 'smart-open-line)
 
 (provide 'lunfardo-editor)

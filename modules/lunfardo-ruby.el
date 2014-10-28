@@ -27,12 +27,12 @@
 
 (eval-after-load 'ruby-mode
   '(progn
-     (defun prelude-ruby-mode-hook ()
+     (defun lunfardo-ruby-mode-hook ()
        (inf-ruby-minor-mode t)
        (ruby-tools-mode t)
 
      (add-hook 'ruby-mode-hook (lambda ()
-                                 (run-hooks 'prelude-ruby-mode-hook))))
+                                 (run-hooks 'lunfardo-ruby-mode-hook))))
      )
   )
 

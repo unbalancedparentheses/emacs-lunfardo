@@ -58,7 +58,7 @@ M-\ removes all horizontal space. This will join two words separated by space.
 
 ### Features
 
-Here's a list of functionality provided by [Lunfardo](https://github.com/bbatsov/projectile):
+Here's a list of key bindings
 
 Keybinding         | Command
 -------------------|------------------------------------------------------------

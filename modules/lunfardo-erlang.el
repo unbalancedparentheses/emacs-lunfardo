@@ -1,3 +1,5 @@
+(require 'lunfardo-programming)
+
 (lunfardo-require-packages '(erlang))
 
 (add-to-list 'auto-mode-alist '("\\.erl\\'" . erlang-mode))

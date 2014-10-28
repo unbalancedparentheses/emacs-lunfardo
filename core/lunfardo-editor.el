@@ -25,13 +25,6 @@
 (require 'multiple-cursors)
 (require 'expand-region)
 
-;; yo, check my syntax
-(global-flycheck-mode t)
-
-(require 'flycheck-color-mode-line)
-(eval-after-load "flycheck"
-  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
-
 ;; bling bling, cool scroll bar
 (global-yascroll-bar-mode)
 
@@ -52,11 +45,6 @@
 ;; deals with parens pairs and tries to be smart about it
 (require 'smartparens-config)
 (show-smartparens-global-mode t)
-
-;; sets background color to strings that match color names
-(require 'rainbow-mode)
-(rainbow-mode 1)
-;; e.g. #0000ff is displayed in white with a blue background
 
 ;; drag Stuff is a minor mode for Emacs that makes it possible to drag stuff (words, region, lines)
 (require 'drag-stuff)

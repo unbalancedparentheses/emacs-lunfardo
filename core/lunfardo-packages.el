@@ -16,6 +16,7 @@
     ag
     aggressive-indent
     anzu
+    f
     auto-highlight-symbol
     buffer-move
     company

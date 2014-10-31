@@ -14,6 +14,7 @@
                                 (other-window -1)))
 
 (global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-set-key (kbd "C-z") 'shell)
@@ -46,6 +47,7 @@
 (global-set-key (kbd "s-C") 'helm-flycheck)
 (global-set-key (kbd "s-y") 'helm-show-kill-ring)
 (global-set-key (kbd "s-l") 'goto-line)
+(global-set-key (kbd "s-k") 'lunfardo-kill-whole-line)
 (global-set-key (kbd "s-h") 'helm-descbinds)
 (global-set-key (kbd "s-H") 'discover-my-major)
 (global-set-key (kbd "s-e") 'er/expand-region)

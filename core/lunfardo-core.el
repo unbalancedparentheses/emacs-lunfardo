@@ -11,4 +11,11 @@ Repeated invocations toggle between the two most recently open buffers."
   (move-end-of-line nil)
   (newline-and-indent))
 
+(defun lunfardo-kill-whole-line (&optional arg)
+  "A simple wrapper around command `kill-whole-line' that respects indentation.
+Passes ARG to command `kill-whole-line' when provided."
+  (interactive "p")
+  (kill-whole-line arg)
+  (back-to-indentation))
+
 (provide 'lunfardo-core)

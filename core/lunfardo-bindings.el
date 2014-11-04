@@ -37,6 +37,8 @@
 (global-set-key (kbd "<s-left>") 'buf-move-left)
 (global-set-key (kbd "<s-right>") 'buf-move-right)
 
+(global-set-key (kbd "s-z") 'undo-tree-undo)
+(global-set-key (kbd "s-r") 'undo-tree-redo)
 (global-set-key (kbd "s-d") 'mc/mark-next-like-this)
 (global-set-key (kbd "s-f") 'helm-for-files)
 (global-set-key (kbd "s-p") 'helm-projectile)

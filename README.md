@@ -61,20 +61,19 @@ M-\ removes all horizontal space. This will join two words separated by space.
 
 Here's a list of key bindings
 
-Keybinding         | Command
--------------------|------------------------------------------------------------
-<kbd>Super-f</kbd> | Find file
-<kbd>Super-p</kbd> | Switch projects
-<kbd>Super-P</kbd> | Find file inside project
-<kbd>Super-g</kbd> | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
-<kbd>Super-l</kbd> | Go to line
-<kbd>Super-d</kbd> | Mark next like this
-<kbd>Super-e</kbd> | Expand selection
-<kbd>Super-u</kbd> | Undo tree
-<kbd>Super-T</kbd> | Git timemachine
-<kbd>Super-B</kbd> | Browse file in github
-
-
+Keybinding            | Command
+----------------------|------------------------------------------------------------
+<kbd>Super-f</kbd>    | Find file
+<kbd>Super-p</kbd>    | Switch projects
+<kbd>Super-P</kbd>    | Find file inside project
+<kbd>Super-g</kbd>    | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
+<kbd>Super-l</kbd>    | Go to line
+<kbd>Super-d</kbd>    | Mark next like this
+<kbd>Super-e</kbd>    | Expand selection
+<kbd>Super-u</kbd>    | Undo tree
+<kbd>Super-T</kbd>    | Git timemachine
+<kbd>Super-B</kbd>    | Browse file in github
+<kbd>Ctrl-x space</kbd> | Region mark mode
 
 
 

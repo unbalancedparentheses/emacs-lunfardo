@@ -24,3 +24,5 @@
 
 (when (eq system-type 'darwin)
   (require 'lunfardo-osx))
+
+(toggle-frame-maximized)

@@ -1,5 +1,4 @@
 ;; yo, check my syntax
-(global-flycheck-mode t)
 
 (require 'flycheck-color-mode-line)
 (eval-after-load "flycheck"
@@ -7,6 +6,7 @@
 
 (defun lunfardo-prog-mode-defaults ()
   (rainbow-delimiters-mode t)
+  (flycheck-mode t)
   )
 
 (setq lunfardo-prog-mode-hook 'lunfardo-prog-mode-defaults)

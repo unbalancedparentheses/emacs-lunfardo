@@ -7,6 +7,7 @@
 
 (setq erlang-indent-level 2)
 
+(add-hook 'erlang-mode-hook 'lunfardo-prog-mode-defaults)
 (add-hook 'erlang-mode-hook #'aggressive-indent-mode)
 
 (provide 'lunfardo-erlang)

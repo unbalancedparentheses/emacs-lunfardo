@@ -20,8 +20,7 @@
 (global-set-key (kbd "C-z") 'shell)
 
 ;; Comment/uncomment block
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c u") 'uncomment-region)
+(global-set-key (kbd "C-c c") 'evilnc-comment-or-uncomment-lines)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
 
@@ -38,6 +37,7 @@
 (global-set-key (kbd "<s-right>") 'buf-move-right)
 
 (global-set-key (kbd "s-B") 'github-browse-file)
+(global-set-key (kbd "s-G") 'helm-google-suggest)
 (global-set-key (kbd "s-C") 'helm-flycheck)
 (global-set-key (kbd "s-F") 'helm-do-ag)
 (global-set-key (kbd "s-H") 'helm-descbinds)

@@ -50,7 +50,7 @@ curl -L http://git.io/Rr3kZw | sh
 That is all you need!
 
 ### got emacs?
-![](https://raw2.github.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)
+![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)
 
 ## key bindings
 M-SPC reduces the space between words to just one space. This is what I would've used if the point was between the words and I wanted to delete the extra space separating the words.

@@ -91,3 +91,4 @@ Keybinding            | Command
 <kbd>Ctrl-x 2</kbd>     | Split window vertically
 <kbd>Ctrl-x 3</kbd>     | Split window horizontally
 <kbd>Ctrl-x +</kbd>     | Balance windows
+<kbd>Ctrl-Tab</kbd>     | Switch to previous buffer

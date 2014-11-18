@@ -76,6 +76,7 @@ Keybinding            | Command
 <kbd>Super-f</kbd>      | Find file
 <kbd>Super-F</kbd>      | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
 <kbd>Super-G</kbd>      | Google suggest
+<kbd>Super-I</kbd>      | Opens init file
 <kbd>Super-P</kbd>      | Find file inside project or switch projects
 <kbd>Super-l</kbd>      | Go to line
 <kbd>Super-e</kbd>      | Expand selection

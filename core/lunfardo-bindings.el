@@ -37,6 +37,7 @@
 (global-set-key (kbd "s-H") 'helm-descbinds)
 (global-set-key (kbd "s-I") 'find-user-init-file)
 (global-set-key (kbd "s-P") 'projectile-switch-project)
+(global-set-key (kbd "s-Y") 'gist-region-private)
 (global-set-key (kbd "s-T") 'git-timemachine)
 (global-set-key (kbd "s-d") 'mc/mark-next-like-this)
 (global-set-key (kbd "s-e") 'er/expand-region)

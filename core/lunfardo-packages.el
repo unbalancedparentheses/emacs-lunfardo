@@ -27,17 +27,18 @@
     easy-kill
     evil
     evil-args
+    evil-escape
     evil-matchit
     evil-nerd-commenter
-    evil-visualstar
     evil-surround
-    evil-escape
+    evil-visualstar
     exec-path-from-shell
     expand-region
     f
     flx-ido
     flycheck
     flycheck-color-mode-line
+    gist
     git-timemachine
     github-browse-file
     guru-mode

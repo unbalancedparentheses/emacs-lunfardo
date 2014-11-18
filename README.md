@@ -66,6 +66,7 @@ Here's a list of key bindings
 
 Keybinding            | Command
 ----------------------|------------------------------------------------------------
+fd          | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
 <kbd>Super-f</kbd>    | Find file
 <kbd>Super-p</kbd>    | Switch projects
 <kbd>Super-P</kbd>    | Find file inside project

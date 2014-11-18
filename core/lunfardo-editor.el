@@ -53,14 +53,6 @@
 (require 'saveplace)
 (setq-default save-place t)
 
-;; whitespace-mode config
-(require 'whitespace)
-(global-whitespace-mode 1)
-(setq whitespace-line-column 90) ;; limit line length
-(setq whitespace-style '(face tabs empty trailing lines-tail))
-;; lines should be 80 characters wide, not 72
-(setq fill-column 90)
-
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
 

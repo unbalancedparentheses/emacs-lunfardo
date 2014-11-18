@@ -30,6 +30,8 @@ curl -L http://git.io/Rr3kZw | sh
 ```
 
 ### haven't you used emacs before?
+![](http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png)
+
 - Being productive with emacs [part I](http://web.psung.name/emacs/2009/part1.html) and [part II](http://web.psung.name/emacs/2009/part2.html)
 - [Emacs Mini Manual](https://tuhdo.github.io/emacs-tutor.html)
 - [emacs4developers](https://github.com/pierre-lecocq/emacs4developers)

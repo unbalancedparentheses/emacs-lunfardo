@@ -14,6 +14,7 @@ It was created by criminals, mainly to avoid being understood by prison guards.
 It was disseminated thanks to 'tango' lyrics, a music which was born as suburban, marginal and was swiftly forbidden by the Church and higher classes. Tango was played and danced in ports, brothels, bars and prisons.
 
 Nowadays, Lunfardo has blended into the castilian language and is part of its idiosincrasy.
+![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/lunfardo.png)
 
 ---
 
@@ -29,6 +30,8 @@ curl -L http://git.io/Rr3kZw | sh
 ```
 
 ### haven't you used emacs before?
+![](http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png)
+
 - Being productive with emacs [part I](http://web.psung.name/emacs/2009/part1.html) and [part II](http://web.psung.name/emacs/2009/part2.html)
 - [Emacs Mini Manual](https://tuhdo.github.io/emacs-tutor.html)
 - [emacs4developers](https://github.com/pierre-lecocq/emacs4developers)
@@ -63,6 +66,7 @@ Here's a list of key bindings
 
 Keybinding            | Command
 ----------------------|------------------------------------------------------------
+fd          | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
 <kbd>Super-f</kbd>    | Find file
 <kbd>Super-p</kbd>    | Switch projects
 <kbd>Super-P</kbd>    | Find file inside project
@@ -77,6 +81,6 @@ Keybinding            | Command
 <kbd>Ctrl-x space</kbd> | Region mark mode
 
 #it's a kind of [magit](https://github.com/magit/magit)
-- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git
+- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
 - [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
 - [Meet Magit](http://vimeo.com/2871241)

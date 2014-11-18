@@ -16,18 +16,25 @@
     ag
     aggressive-indent
     anzu
-    f
     auto-highlight-symbol
     buffer-move
     company
     dash
     diff-hl
     discover-my-major
+    dockerfile-mode
     drag-stuff
     easy-kill
     evil
+    evil-args
+    evil-matchit
+    evil-nerd-commenter
+    evil-visualstar
+    evil-surround
+    evil-escape
     exec-path-from-shell
     expand-region
+    f
     flx-ido
     flycheck
     flycheck-color-mode-line
@@ -45,6 +52,7 @@
     hungry-delete
     ido-vertical-mode
     magit
+    manage-minor-mode
     moe-theme
     monokai-theme
     move-text

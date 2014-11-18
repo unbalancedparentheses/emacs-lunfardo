@@ -13,14 +13,8 @@
                                 (interactive)
                                 (other-window -1)))
 
-(global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-
-(global-set-key (kbd "C-z") 'shell)
-
-;; Comment/uncomment block
-(global-set-key (kbd "C-c c") 'evilnc-comment-or-uncomment-lines)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
 
@@ -37,10 +31,11 @@
 (global-set-key (kbd "<s-right>") 'buf-move-right)
 
 (global-set-key (kbd "s-B") 'github-browse-file)
-(global-set-key (kbd "s-G") 'helm-google-suggest)
 (global-set-key (kbd "s-C") 'helm-flycheck)
 (global-set-key (kbd "s-F") 'helm-do-ag)
+(global-set-key (kbd "s-G") 'helm-google-suggest)
 (global-set-key (kbd "s-H") 'helm-descbinds)
+(global-set-key (kbd "s-I") 'find-user-init-file)
 (global-set-key (kbd "s-P") 'projectile-switch-project)
 (global-set-key (kbd "s-T") 'git-timemachine)
 (global-set-key (kbd "s-d") 'mc/mark-next-like-this)

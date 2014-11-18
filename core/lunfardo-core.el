@@ -11,6 +11,11 @@ Repeated invocations toggle between the two most recently open buffers."
   (move-end-of-line nil)
   (newline-and-indent))
 
+(defun find-user-init-file ()
+  "Edit the `user-init-file', in another window."
+  (interactive)
+  (find-file-other-window user-init-file))
+
 (defun lunfardo-kill-whole-line (&optional arg)
   "A simple wrapper around command `kill-whole-line' that respects indentation.
 Passes ARG to command `kill-whole-line' when provided."

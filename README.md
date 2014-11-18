@@ -74,12 +74,12 @@ Keybinding            | Command
 <kbd>Ctrl-g</kbd>       | Cancel partially typed or accidental command
 <kbd>fd</kbd>           | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
 <kbd>Super-f</kbd>      | Find file
-<kbd>Super-p</kbd>      | Switch projects
-<kbd>Super-P</kbd>      | Find file inside project
-<kbd>Super-g</kbd>      | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
+<kbd>Super-F</kbd>      | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
+<kbd>Super-G</kbd>      | Google suggest
+<kbd>Super-P</kbd>      | Find file inside project or switch projects
 <kbd>Super-l</kbd>      | Go to line
-<kbd>Super-d</kbd>      | Mark next like this
 <kbd>Super-e</kbd>      | Expand selection
+<kbd>Super-d</kbd>      | Mark next like this
 <kbd>Super-u</kbd>      | Undo tree
 <kbd>Super-T</kbd>      | Git timemachine
 <kbd>Super-B</kbd>      | Browse file in github

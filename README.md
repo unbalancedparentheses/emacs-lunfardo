@@ -47,6 +47,11 @@ curl -L http://git.io/Rr3kZw | sh
 - [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
 - [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
 
+###it's a kind of [magit](https://github.com/magit/magit)
+- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
+- [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
+- [Meet Magit](http://vimeo.com/2871241)
+
 ### emacs package growth
 ![](http://tracker.endlessparentheses.com/newPackagePlotEver.png)
 
@@ -66,21 +71,22 @@ Here's a list of key bindings
 
 Keybinding            | Command
 ----------------------|------------------------------------------------------------
-fd          | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
-<kbd>Super-f</kbd>    | Find file
-<kbd>Super-p</kbd>    | Switch projects
-<kbd>Super-P</kbd>    | Find file inside project
-<kbd>Super-g</kbd>    | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
-<kbd>Super-l</kbd>    | Go to line
-<kbd>Super-d</kbd>    | Mark next like this
-<kbd>Super-e</kbd>    | Expand selection
-<kbd>Super-u</kbd>    | Undo tree
-<kbd>Super-T</kbd>    | Git timemachine
-<kbd>Super-B</kbd>    | Browse file in github
-<kbd>Super-m</kbd>    | Magit status
+<kbd>Ctrl-g</kbd>       | Cancel partially typed or accidental command
+<kbd>fd</kbd>           | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
+<kbd>Super-f</kbd>      | Find file
+<kbd>Super-p</kbd>      | Switch projects
+<kbd>Super-P</kbd>      | Find file inside project
+<kbd>Super-g</kbd>      | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
+<kbd>Super-l</kbd>      | Go to line
+<kbd>Super-d</kbd>      | Mark next like this
+<kbd>Super-e</kbd>      | Expand selection
+<kbd>Super-u</kbd>      | Undo tree
+<kbd>Super-T</kbd>      | Git timemachine
+<kbd>Super-B</kbd>      | Browse file in github
+<kbd>Super-m</kbd>      | Magit status
 <kbd>Ctrl-x space</kbd> | Region mark mode
-
-#it's a kind of [magit](https://github.com/magit/magit)
-- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
-- [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
-- [Meet Magit](http://vimeo.com/2871241)
+<kbd>Ctrl-x 0</kbd>     | Delete window
+<kbd>Ctrl-x 1</kbd>     | Delete all other windows
+<kbd>Ctrl-x 2</kbd>     | Split window vertically
+<kbd>Ctrl-x 3</kbd>     | Split window horizontally
+<kbd>Ctrl-x +</kbd>     | Balance windows

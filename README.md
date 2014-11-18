@@ -78,6 +78,6 @@ Keybinding            | Command
 <kbd>Ctrl-x space</kbd> | Region mark mode
 
 #it's a kind of [magit](https://github.com/magit/magit)
-- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git
+- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
 - [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
 - [Meet Magit](http://vimeo.com/2871241)

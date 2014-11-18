@@ -3,6 +3,7 @@ lunfardo
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/unbalancedparentheses/lunfardo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/buenosaires.jpg)
+![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/lunfardo.png)
 
 In the mid XIX century, Buenos Aires was pullulating with immigrants, mainly Spanish and Italian. Many of them were impoverished and blended in with 
 the already-poor locals: the descendents of aborigins and african slaves.

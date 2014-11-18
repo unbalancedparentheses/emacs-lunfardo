@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Lunfardo by unbalancedparentheses</title>
+    <meta name="description" content="Lunfardo : got emacs?">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Lunfardo</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Lunfardo</h1>
-        <p>got emacs?</p>
 
-        <p class="view"><a href="https://github.com/unbalancedparentheses/lunfardo">View the Project on GitHub <small>unbalancedparentheses/lunfardo</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/unbalancedparentheses/lunfardo">View on GitHub</a>
 
+          <h1 id="project_title">Lunfardo</h1>
+          <h2 id="project_tagline">got emacs?</h2>
 
-        <ul>
-          <li><a href="https://github.com/unbalancedparentheses/lunfardo/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/unbalancedparentheses/lunfardo/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/unbalancedparentheses/lunfardo">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/unbalancedparentheses/lunfardo/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/unbalancedparentheses/lunfardo/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a id="lunfardo" class="anchor" href="#lunfardo" aria-hidden="true"><span class="octicon octicon-link"></span></a>lunfardo</h1>
 
@@ -89,6 +92,16 @@ following command:</p>
 </ul>
 
 <h3>
+<a id="its-a-kind-of-magit" class="anchor" href="#its-a-kind-of-magit" aria-hidden="true"><span class="octicon octicon-link"></span></a>it's a kind of <a href="https://github.com/magit/magit">magit</a>
+</h3>
+
+<ul>
+<li><a href="http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git">Learn you some magit</a></li>
+<li><a href="http://daemianmack.com/magit-cheatsheet.html">Magit Cheatsheet</a></li>
+<li><a href="http://vimeo.com/2871241">Meet Magit</a></li>
+</ul>
+
+<h3>
 <a id="emacs-package-growth" class="anchor" href="#emacs-package-growth" aria-hidden="true"><span class="octicon octicon-link"></span></a>emacs package growth</h3>
 
 <p><img src="http://tracker.endlessparentheses.com/newPackagePlotEver.png" alt=""></p>
@@ -121,7 +134,11 @@ following command:</p>
 </thead>
 <tbody>
 <tr>
-<td>fd</td>
+<td><kbd>Ctrl-g</kbd></td>
+<td>Cancel partially typed or accidental command</td>
+</tr>
+<tr>
+<td><kbd>fd</kbd></td>
 <td>Press fd quickly to escape from insert state and everything else thanks to <a href="https://github.com/syl20bnr/evil-escape">evil escape</a>
 </td>
 </tr>
@@ -130,28 +147,28 @@ following command:</p>
 <td>Find file</td>
 </tr>
 <tr>
-<td><kbd>Super-p</kbd></td>
-<td>Switch projects</td>
+<td><kbd>Super-F</kbd></td>
+<td>Run ag incrementally. You need to have <a href="https://github.com/ggreer/the_silver_searcher">ag</a> installed. Execute <kbd>C-z</kbd> to see the file content temporarily</td>
+</tr>
+<tr>
+<td><kbd>Super-G</kbd></td>
+<td>Google suggest</td>
 </tr>
 <tr>
 <td><kbd>Super-P</kbd></td>
-<td>Find file inside project</td>
-</tr>
-<tr>
-<td><kbd>Super-g</kbd></td>
-<td>Run ag incrementally. You need to have <a href="https://github.com/ggreer/the_silver_searcher">ag</a> installed. Execute <kbd>C-z</kbd> to see the file content temporarily</td>
+<td>Find file inside project or switch projects</td>
 </tr>
 <tr>
 <td><kbd>Super-l</kbd></td>
 <td>Go to line</td>
 </tr>
 <tr>
-<td><kbd>Super-d</kbd></td>
-<td>Mark next like this</td>
-</tr>
-<tr>
 <td><kbd>Super-e</kbd></td>
 <td>Expand selection</td>
+</tr>
+<tr>
+<td><kbd>Super-d</kbd></td>
+<td>Mark next like this</td>
 </tr>
 <tr>
 <td><kbd>Super-u</kbd></td>
@@ -173,25 +190,40 @@ following command:</p>
 <td><kbd>Ctrl-x space</kbd></td>
 <td>Region mark mode</td>
 </tr>
+<tr>
+<td><kbd>Ctrl-x 0</kbd></td>
+<td>Delete window</td>
+</tr>
+<tr>
+<td><kbd>Ctrl-x 1</kbd></td>
+<td>Delete all other windows</td>
+</tr>
+<tr>
+<td><kbd>Ctrl-x 2</kbd></td>
+<td>Split window vertically</td>
+</tr>
+<tr>
+<td><kbd>Ctrl-x 3</kbd></td>
+<td>Split window horizontally</td>
+</tr>
+<tr>
+<td><kbd>Ctrl-x +</kbd></td>
+<td>Balance windows</td>
+</tr>
 </tbody>
 </table>
-
-<h1>
-<a id="its-a-kind-of-magit" class="anchor" href="#its-a-kind-of-magit" aria-hidden="true"><span class="octicon octicon-link"></span></a>it's a kind of <a href="https://github.com/magit/magit">magit</a>
-</h1>
-
-<ul>
-<li><a href="http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git">Learn you some magit</a></li>
-<li><a href="http://daemianmack.com/magit-cheatsheet.html">Magit Cheatsheet</a></li>
-<li><a href="http://vimeo.com/2871241">Meet Magit</a></li>
-</ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/unbalancedparentheses">unbalancedparentheses</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Lunfardo maintained by <a href="https://github.com/unbalancedparentheses">unbalancedparentheses</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>

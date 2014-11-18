@@ -73,7 +73,10 @@ Keybinding            | Command
 <kbd>Super-u</kbd>    | Undo tree
 <kbd>Super-T</kbd>    | Git timemachine
 <kbd>Super-B</kbd>    | Browse file in github
+<kbd>Super-m</kbd>    | Magit status
 <kbd>Ctrl-x space</kbd> | Region mark mode
 
-
-
+#it's a kind of [magit](https://github.com/magit/magit)
+- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git
+- [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
+- [Meet Magit](http://vimeo.com/2871241)

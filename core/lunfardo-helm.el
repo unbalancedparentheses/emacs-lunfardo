@@ -10,4 +10,10 @@
 ;; Split direcion. 'split-window-vertically or 'split-window-horizontally
 (setq helm-swoop-split-direction 'split-window-horizontally)
 
+(setq helm-split-window-in-side-p           t
+      helm-buffers-fuzzy-matching           t
+      helm-move-to-line-cycle-in-source     t
+      helm-ff-search-library-in-sexp        t
+      helm-ff-file-name-history-use-recentf t)
+
 (provide 'lunfardo-helm)

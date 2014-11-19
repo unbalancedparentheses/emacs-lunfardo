@@ -73,7 +73,8 @@ Keybinding            | Command
 ----------------------|------------------------------------------------------------
 <kbd>Ctrl-g</kbd>       | Cancel partially typed or accidental command
 <kbd>fd</kbd>           | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
-<kbd>Super-f</kbd>      | Find file
+<kbd>Super-O</kbd>      | Open file. <kbd>C-z</kbd> will  performs the default action, which is different depending on the context. When you are on a file it will show only this file-name in the helm buffer. On a directory it will step down into this directory to continue searching in it. <kbd>C-.</kbd>will navigate to the root of current dir or to precedent level of dir.
+<kbd>Super-f</kbd>      | Find in file
 <kbd>Super-F</kbd>      | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
 <kbd>Super-G</kbd>      | Google suggest
 <kbd>Super-I</kbd>      | Opens init file

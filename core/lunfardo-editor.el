@@ -4,9 +4,6 @@
 ;; quickrun.el is a extension to execute editing buffer
 (require 'quickrun)
 
-;; highlight symbol
-(global-auto-highlight-symbol-mode t)
-
 ;; display specified symbols as composed characters.
 ;; Example: in Emacs Lisp mode this replaces the string
 ;; lambda with the Greek lambda character

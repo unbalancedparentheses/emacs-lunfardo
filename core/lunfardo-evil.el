@@ -30,6 +30,8 @@
 
 (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
 
+(global-evil-surround-mode 1)
+
 (setq evil-default-state 'emacs)
 (evil-mode t)
 

@@ -16,7 +16,6 @@
       helm-ff-search-library-in-sexp        t
       helm-ff-file-name-history-use-recentf t)
 
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
-(define-key helm-map (kbd "<RET>") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 (provide 'lunfardo-helm)

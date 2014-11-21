@@ -13,10 +13,14 @@
                                 (interactive)
                                 (other-window -1)))
 
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-word-mode)
+
+(global-set-key (kbd "C-h f") 'helm-apropos)
+(global-set-key (kbd "C-h r") 'helm-info-emacs)
+(global-set-key (kbd "C-h C-l") 'helm-locate-library)
 
 ;; Line movement
 (global-set-key (kbd "<C-M-down>") 'move-text-down)

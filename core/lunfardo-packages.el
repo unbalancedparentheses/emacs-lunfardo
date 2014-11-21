@@ -25,14 +25,6 @@
     drag-stuff
     easy-kill
     epl
-    evil
-    evil-args
-    evil-escape
-    evil-exchange
-    evil-matchit
-    evil-nerd-commenter
-    evil-surround
-    evil-visualstar
     exec-path-from-shell
     expand-region
     f
@@ -42,7 +34,6 @@
     gist
     git-timemachine
     github-browse-file
-    guru-mode
     guru-mode
     helm
     helm-ag

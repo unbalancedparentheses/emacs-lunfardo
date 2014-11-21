@@ -1,3 +1,11 @@
+(lunfardo-require-packages '(evil
+                             evil-args
+                             evil-escape
+                             evil-exchange
+                             evil-matchit
+                             evil-nerd-commenter
+                             evil-surround evil-visualstar
+                             ))
 ;; Press fd quickly to escape from insert state and everything else in Emacs
 (evil-escape-mode t)
 

@@ -18,6 +18,11 @@ Nowadays, Lunfardo has blended into the castilian language and is part of its id
 
 ---
 
+**Table of Contents**
+
+- [ready, steady, go!](#ready-steady-go)
+- [haven't you used emacs before?](#havent-you-used-emacs-before)
+
 ## ready, steady, go!
 
 Assuming you're using an Unix-like OS (`*BSD`, `GNU/Linux`, `OS X`, `Solaris`,

@@ -25,6 +25,16 @@ Nowadays, Lunfardo has blended into the castilian language and is part of its id
 
 ## ready, steady, go!
 
+###Installing Emacs
+
+**Mac OS X**
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install caskroom/cask/brew-cask
+brew cask install emacs
+```
+
+###Installing Lunfardo
 Assuming you're using an Unix-like OS (`*BSD`, `GNU/Linux`, `OS X`, `Solaris`,
 etc), you already have Emacs 24 installed, as well as `git` & `curl` you
 can skip the whole manual and just type in your favorite shell the
@@ -34,7 +44,7 @@ following command:
 curl -L http://git.io/Rr3kZw | sh
 ```
 
-### haven't you used emacs before?
+## haven't you used emacs before?
 ![](http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png)
 
 - Being productive with emacs [part I](http://web.psung.name/emacs/2009/part1.html) and [part II](http://web.psung.name/emacs/2009/part2.html)
@@ -52,18 +62,10 @@ curl -L http://git.io/Rr3kZw | sh
 - [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
 - [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
 
-###it's a kind of [magit](https://github.com/magit/magit)
+##it's a kind of [magit](https://github.com/magit/magit)
 - [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
 - [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
 - [Meet Magit](http://vimeo.com/2871241)
-
-### emacs package growth
-![](http://tracker.endlessparentheses.com/newPackagePlotEver.png)
-
-That is all you need!
-
-### got emacs?
-![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)
 
 ## key bindings
 Here's a list of key bindings
@@ -108,3 +110,9 @@ Keybinding            | Command
 <kbd>Super-down</kbd>   | Move buffer down
 <kbd>Super-left</kbd>   | Move buffer left
 <kbd>Super-right</kbd>  | Move buffer right
+
+### got emacs?
+![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)
+
+### emacs package growth
+![](http://tracker.endlessparentheses.com/newPackagePlotEver.png)

@@ -69,8 +69,8 @@ M-\ removes all horizontal space. This will join two words separated by space.
 
 Here's a list of key bindings
 
-Keybinding            | Command
-----------------------|------------------------------------------------------------
+Keybinding              | Command
+------------------------|------------------------------------------------------------
 <kbd>Ctrl-g</kbd>       | Cancel partially typed or accidental command
 <kbd>fd</kbd>           | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
 <kbd>Super-O</kbd>      | Open file. <kbd>C-z</kbd> or <kbd>TAB</kbd> or will  performs the default action, which is different depending on the context. When you are on a file it will show only this file-name in the helm buffer. On a directory it will step down into this directory to continue searching in it. <kbd>C-.</kbd>will navigate to the root of current dir or to precedent level of dir.
@@ -94,9 +94,17 @@ Keybinding            | Command
 <kbd>Super-G</kbd>      | Google suggest
 <kbd>Super-H</kbd>      | Describe bindings
 <kbd>Ctrl-x space</kbd> | Region mark mode
+
+#### Window and buffer management
+Keybinding            | Command
+----------------------|------------------------------------------------------------
 <kbd>Ctrl-x 0</kbd>     | Delete window
 <kbd>Ctrl-x 1</kbd>     | Delete all other windows
 <kbd>Ctrl-x 2</kbd>     | Split window vertically
 <kbd>Ctrl-x 3</kbd>     | Split window horizontally
 <kbd>Ctrl-x +</kbd>     | Balance windows
 <kbd>Ctrl-Tab</kbd>     | Switch to previous buffer
+<kbd>Super-up</kbd>     | Move buffer up
+<kbd>Super-down</kbd>   | Move buffer down
+<kbd>Super-left</kbd>   | Move buffer left
+<kbd>Super-right</kbd>  | Move buffer right

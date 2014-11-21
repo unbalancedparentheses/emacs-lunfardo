@@ -39,6 +39,7 @@
     flx-ido
     flycheck
     flycheck-color-mode-line
+    epl
     gist
     git-timemachine
     github-browse-file

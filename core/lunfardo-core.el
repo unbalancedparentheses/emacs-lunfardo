@@ -23,4 +23,17 @@ Passes ARG to command `kill-whole-line' when provided."
   (kill-whole-line arg)
   (back-to-indentation))
 
+(require 'epl)
+
+(defun prelude-update ()
+  "Update Lunfardo to its latest version."
+  (interactive)
+  (when (y-or-n-p "Do you want to update Lunfardo? ")
+    (message "Updating installed packages...")
+    (epl-upgrade)
+    (message "Updating Lunfardo...")
+    (cd lunfardo-dir)
+    (shell-command "git pull")
+    (message "Update finished. Restart Emacs to complete the process.")))
+
 (provide 'lunfardo-core)

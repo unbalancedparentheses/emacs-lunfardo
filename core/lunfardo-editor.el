@@ -151,7 +151,7 @@
 (setq enable-recursive-minibuffers t)
 
 ;; don't be so stingy on the memory, we have lots now. It's the distant future.
-(setq gc-cons-threshold 20000000)
+(setq gc-cons-threshold 50000000)
 
 ;; sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)

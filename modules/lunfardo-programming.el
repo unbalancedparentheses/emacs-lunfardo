@@ -12,7 +12,7 @@
   (rainbow-delimiters-mode t)
   (flycheck-mode t)
   (whitespace-mode t)
-  (auto-highlight-symbol-mode t)
+  (highlight-symbol-mode t)
   )
 
 (setq lunfardo-prog-mode-hook 'lunfardo-prog-mode-defaults)

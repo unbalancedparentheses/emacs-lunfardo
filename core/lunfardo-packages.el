@@ -16,7 +16,7 @@
     ag
     aggressive-indent
     anzu
-    auto-highlight-symbol
+    highlight-symbol
     buffer-move
     company
     dash

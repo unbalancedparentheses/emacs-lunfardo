@@ -52,7 +52,7 @@
     helm-swoop
     hungry-delete
     ido-vertical-mode
-    lispy-mode
+    lispy
     magit
     manage-minor-mode
     moe-theme

@@ -28,6 +28,7 @@
     evil
     evil-args
     evil-escape
+    evil-exchange
     evil-matchit
     evil-nerd-commenter
     evil-surround

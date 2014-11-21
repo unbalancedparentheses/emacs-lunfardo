@@ -66,14 +66,9 @@ That is all you need!
 ![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)
 
 ## key bindings
-M-SPC reduces the space between words to just one space. This is what I would've used if the point was between the words and I wanted to delete the extra space separating the words.
-
-M-\ removes all horizontal space. This will join two words separated by space.
-
-### Features
-
 Here's a list of key bindings
 
+### Features
 Keybinding              | Command
 ------------------------|------------------------------------------------------------
 <kbd>Ctrl-g</kbd>       | Cancel partially typed or accidental command

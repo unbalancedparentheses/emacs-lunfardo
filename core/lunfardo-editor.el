@@ -1,6 +1,11 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
+;; brings visual feedback to some operations by
+;; highlighting portions relating to the operations.
+(require 'volatile-highlights)
+(volatile-highlights-mode t)
+
 ;; quickrun.el is a extension to execute editing buffer
 (require 'quickrun)
 

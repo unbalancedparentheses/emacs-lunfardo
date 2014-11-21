@@ -16,7 +16,6 @@
     ag
     aggressive-indent
     anzu
-    highlight-symbol
     buffer-move
     company
     dash
@@ -25,6 +24,7 @@
     dockerfile-mode
     drag-stuff
     easy-kill
+    epl
     evil
     evil-args
     evil-escape
@@ -39,7 +39,6 @@
     flx-ido
     flycheck
     flycheck-color-mode-line
-    epl
     gist
     git-timemachine
     github-browse-file
@@ -52,6 +51,7 @@
     helm-flycheck
     helm-projectile
     helm-swoop
+    highlight-symbol
     hungry-delete
     ido-vertical-mode
     lispy
@@ -72,6 +72,7 @@
     smartparens
     smex
     undo-tree
+    volatile-highlights
     whitespace-cleanup-mode
     yascroll
     yasnippet

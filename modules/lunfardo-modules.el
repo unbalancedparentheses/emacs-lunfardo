@@ -1,3 +1,4 @@
+(require 'lunfardo-lisp)
 (require 'lunfardo-erlang)
 (require 'lunfardo-ruby)
 

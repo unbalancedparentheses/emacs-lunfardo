@@ -35,13 +35,6 @@
     git-timemachine
     github-browse-file
     guru-mode
-    helm
-    helm-ag
-    helm-dash
-    helm-descbinds
-    helm-flycheck
-    helm-projectile
-    helm-swoop
     highlight-symbol
     hungry-delete
     ido-vertical-mode

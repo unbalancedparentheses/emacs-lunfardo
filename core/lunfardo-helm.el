@@ -1,3 +1,11 @@
+(lunfardo-require-packages '(helm
+                             helm-ag
+                             helm-dash
+                             helm-descbinds
+                             helm-flycheck
+                             helm-projectile
+                             helm-swoop))
+
 (require 'helm)
 (require 'helm-swoop)
 

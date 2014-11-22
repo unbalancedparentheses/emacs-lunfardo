@@ -29,8 +29,6 @@
     expand-region
     f
     flx-ido
-    flycheck
-    flycheck-color-mode-line
     gist
     git-timemachine
     github-browse-file

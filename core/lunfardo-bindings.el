@@ -61,4 +61,6 @@
 (global-set-key (kbd "s-y") 'helm-show-kill-ring)
 (global-set-key (kbd "s-z") 'undo-tree-undo)
 
+(global-set-key [tab] 'indent-or-complete)
+
 (provide 'lunfardo-bindings)

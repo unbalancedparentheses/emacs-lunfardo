@@ -16,6 +16,12 @@ Repeated invocations toggle between the two most recently open buffers."
   (interactive)
   (find-file-other-window user-init-file))
 
+(defun indent-or-complete ()
+    (interactive)
+    (if (looking-at "\\_>")
+        (company-complete-common)
+      (indent-according-to-mode)))
+
 (defun lunfardo-kill-whole-line (&optional arg)
   "A simple wrapper around command `kill-whole-line' that respects indentation.
 Passes ARG to command `kill-whole-line' when provided."

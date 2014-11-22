@@ -85,6 +85,7 @@ Keybinding              | Command
 <kbd>Super-Y</kbd>      | Copy region to private gist
 <kbd>Super-p</kbd>      | Find file inside project
 <kbd>Super-P</kbd>      | Find file inside project or switch projects
+<kbd>Super-/</kbd>      | Comment or uncomment
 <kbd>Super-l</kbd>      | Go to line
 <kbd>Super-e</kbd>      | Expand selection
 <kbd>Super-d</kbd>      | Mark next like this

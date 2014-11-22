@@ -1,10 +1,6 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
-;; Automatically save and restore sessions
-(setq desktop-save t)
-(desktop-save-mode 1)
-
 ;; brings visual feedback to some operations by
 ;; highlighting portions relating to the operations.
 (require 'volatile-highlights)

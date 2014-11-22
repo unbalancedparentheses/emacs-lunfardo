@@ -34,7 +34,6 @@
 ;; in a given direction instead of just one
 (require 'hungry-delete)
 (global-hungry-delete-mode t)
-(smartparens-global-mode t)
 
 ;; modular in-buffer completion framework for Emacs
 (require 'company)

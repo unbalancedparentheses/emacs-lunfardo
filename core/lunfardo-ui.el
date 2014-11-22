@@ -28,10 +28,6 @@
 
 (global-hl-line-mode 1)
 
-;; moe-theme config
-(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
-(add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
-
 ;; Confirm that (require 'powerline) must before (require 'moe-theme).
 ;; Otherwise, powerline-moe-theme will not be initallized.
 (require 'powerline)

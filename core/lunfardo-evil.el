@@ -5,6 +5,7 @@
                              evil-matchit
                              evil-nerd-commenter
                              evil-surround evil-visualstar
+                             evil-god-state
                              ))
 ;; Press fd quickly to escape from insert state and everything else in Emacs
 (evil-escape-mode t)
@@ -42,5 +43,8 @@
 
 (setq evil-default-state 'emacs)
 (evil-mode t)
+
+(evil-define-key 'normal global-map "," 'evil-execute-in-god-state)
+(evil-define-key 'god global-map [escape] 'evil-god-state-bail)
 
 (provide 'lunfardo-evil)

@@ -35,6 +35,7 @@
 (global-set-key (kbd "<s-left>") 'buf-move-left)
 (global-set-key (kbd "<s-right>") 'buf-move-right)
 
+(global-set-key (kbd "s-/") 'evilnc-comment-or-uncomment-lines)
 (global-set-key (kbd "s-B") 'github-browse-file)
 (global-set-key (kbd "s-C") 'helm-flycheck)
 (global-set-key (kbd "s-F") 'helm-do-ag)

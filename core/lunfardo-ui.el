@@ -20,13 +20,7 @@
       scroll-preserve-screen-position 1)
 
 (line-number-mode t)
-(line-number-mode t)
 (column-number-mode t)
-(global-linum-mode 1)
-
-(global-visual-line-mode 1)
-
-(global-hl-line-mode 1)
 
 ;; Confirm that (require 'powerline) must before (require 'moe-theme).
 ;; Otherwise, powerline-moe-theme will not be initallized.
@@ -38,5 +32,12 @@
 
 (setq moe-theme-mode-line-color 'purple)
 (powerline-moe-theme)
+
+(global-linum-mode 1)
+(global-visual-line-mode 1)
+
+(global-hl-line-mode 1)
+
+(set-face-attribute 'linum nil :height 100)
 
 (provide 'lunfardo-ui)

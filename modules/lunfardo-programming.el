@@ -16,6 +16,7 @@
   (rainbow-delimiters-mode t)
   (flycheck-mode t)
   (whitespace-mode t)
+  (whitespace-cleanup-mode t)
   (highlight-symbol-mode t)
   (smartparens-mode t))
 

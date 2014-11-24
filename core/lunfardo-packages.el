@@ -32,15 +32,11 @@
     gist
     git-timemachine
     github-browse-file
-    guru-mode
     highlight-symbol
     hungry-delete
     ido-vertical-mode
-    lispy
     magit
     manage-minor-mode
-    moe-theme
-    monokai-theme
     move-text
     multiple-cursors
     popwin
@@ -50,7 +46,6 @@
     rainbow-delimiters
     rainbow-mode
     restclient
-    skewer-mode
     smartparens
     smex
     undo-tree
@@ -59,7 +54,6 @@
     yascroll
     yasnippet
     yasnippet-bundle
-    zenburn-theme
     )
   "List of packages needs to be installed at launch.")
 

@@ -1,6 +1,9 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
+;; removes nasty bell
+(setq ring-bell-function 'ignore)
+
 ;; whitespace-mode config
 (require 'whitespace)
 (setq whitespace-line-column 90) ;; limit line length

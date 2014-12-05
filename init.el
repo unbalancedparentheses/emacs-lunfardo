@@ -1,6 +1,6 @@
 (defvar current-user
-      (getenv
-       (if (equal system-type 'windows-nt) "USERNAME" "USER")))
+  (getenv
+   (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
 (message "Lunfardo is powering up... Be patient, Master %s!" current-user)
 
@@ -20,8 +20,8 @@
 (require 'lunfardo-yasnippet)
 (require 'lunfardo-company)
 (require 'lunfardo-evil)
+(require 'lunfardo-keys)
 (require 'lunfardo-modules)
-(require 'lunfardo-bindings)
 
 (when (eq system-type 'darwin)
   (require 'lunfardo-osx))

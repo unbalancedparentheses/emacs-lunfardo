@@ -1,3 +1,8 @@
+(lunfardo-require-packages '(moe-theme
+                             monokai-theme
+                             zenburn-theme
+                             ))
+
 ;; popwin is a popup window manager for Emacs
 (require 'popwin)
 (popwin-mode 1)
@@ -16,11 +21,14 @@
 (scroll-bar-mode 0)
 
 (setq scroll-margin 0
+      scroll-step 1
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
 (line-number-mode t)
 (column-number-mode t)
+
+(setq redisplay-dont-pause t)
 
 ;; Confirm that (require 'powerline) must before (require 'moe-theme).
 ;; Otherwise, powerline-moe-theme will not be initallized.

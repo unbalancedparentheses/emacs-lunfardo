@@ -22,15 +22,11 @@
 ;; lambda with the Greek lambda character
 (global-prettify-symbols-mode t)
 
-;; underscores, dashes and camel-case aware editing
-(global-subword-mode t)
 ;; when superword mode enabled all complex/compound
 ;; words are treated as single word
 (global-superword-mode nil)
-
-(require 'guru-mode)
-(guru-global-mode +1)
-(setq guru-warn-only t)
+;; underscores, dashes and camel-case aware editing
+(global-subword-mode t)
 
 (require 'multiple-cursors)
 (require 'expand-region)
@@ -55,28 +51,11 @@
 (require 'smartparens-config)
 (show-smartparens-global-mode t)
 
-;; drag Stuff is a minor mode for Emacs that makes it possible to drag stuff (words, region, lines)
-(require 'drag-stuff)
-(drag-stuff-global-mode t)
-
 (require 'saveplace)
 (setq-default save-place t)
 
 ;; smart tab behavior - indent or complete
-(setq tab-always-indent 'complete)
-
-;; hippie expand is dabbrev expand on steroids
-(setq hippie-expand-try-functions-list '(try-expand-dabbrev
-                                         try-expand-dabbrev-all-buffers
-                                         try-expand-dabbrev-from-kill
-                                         try-complete-file-name-partially
-                                         try-complete-file-name
-                                         try-expand-all-abbrevs
-                                         try-expand-list
-                                         try-expand-line
-                                         try-complete-lisp-symbol-partially
-                                         try-complete-lisp-symbol))
-
+(setq tab-always-indent 'indent)
 
 ;; projectile is a project management mode
 (require 'projectile)
@@ -107,9 +86,6 @@
 
 ;; move files to trash when deleting
 (setq delete-by-moving-to-trash t)
-
-;; real emacs knights don't use shift to mark things
-(setq shift-select-mode nil)
 
 ;; transparently open compressed files
 (auto-compression-mode t)
@@ -158,9 +134,6 @@
 (set-default 'indicate-empty-lines t)
 
 (setq-default truncate-lines t)
-
-;; allow recursive minibuffers
-(setq enable-recursive-minibuffers t)
 
 ;; don't be so stingy on the memory, we have lots now. It's the distant future.
 (setq gc-cons-threshold 50000000)

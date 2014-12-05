@@ -14,9 +14,9 @@
 (setq evil-emacs-state-cursor '("red" box))
 (setq evil-normal-state-cursor '("green" box))
 (setq evil-visual-state-cursor '("orange" box))
-(setq evil-insert-state-cursor '("red" bar))
-(setq evil-replace-state-cursor '("red" bar))
-(setq evil-operator-state-cursor '("red" hollow))
+(setq evil-insert-state-cursor '("green" bar))
+(setq evil-replace-state-cursor '("green" bar))
+(setq evil-operator-state-cursor '("green" hollow))
 
 (require 'evil-exchange)
 (evil-exchange-install)

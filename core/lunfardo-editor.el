@@ -70,10 +70,6 @@
 (setq undo-tree-mode-lighter "")
 (global-undo-tree-mode)
 
-;; use shift + arrow keys to switch between visible buffers
-(require 'windmove)
-(windmove-default-keybindings)
-
 ;; allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 

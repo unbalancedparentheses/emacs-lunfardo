@@ -56,13 +56,6 @@ Repeated invocations toggle between the two most recently open buffers."
   (when killed-file-list
     (find-file (pop killed-file-list))))
 
-(defun lunfardo-kill-whole-line (&optional arg)
-  "A simple wrapper around command `kill-whole-line' that respects indentation.
-Passes ARG to command `kill-whole-line' when provided."
-  (interactive "p")
-  (kill-whole-line arg)
-  (back-to-indentation))
-
 (defun lunfardo-escape-quit ()
   "Forcefully closes the minibuffer window."
   (interactive)

@@ -63,6 +63,13 @@ Repeated invocations toggle between the two most recently open buffers."
     (select-window (active-minibuffer-window)))
   (keyboard-escape-quit))
 
+(defun kill-line-or-region ()
+  "kill region if active only or kill line normally"
+  (interactive)
+  (if (region-active-p)
+      (call-interactively 'kill-region)
+    (call-interactively 'kill-whole-line)))
+
 (require 'epl)
 
 (defun prelude-update ()

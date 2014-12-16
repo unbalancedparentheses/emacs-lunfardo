@@ -1,5 +1,5 @@
 (defvar zxcv-mode-keymap (make-keymap) "zxcv-mode keymap.")
-(define-key zxcv-mode-keymap (kbd "C-x")         'kill-region)
+(define-key zxcv-mode-keymap (kbd "C-x")         'kill-line-or-region)
 (define-key zxcv-mode-keymap [(control c)]       'easy-kill)
 (define-key zxcv-mode-keymap [(control v)]       'yank)
 (define-key zxcv-mode-keymap (kbd "C-S-z")       'undo-tree-redo)
@@ -47,9 +47,9 @@
   :keymap zxcv-mode-keymap
   :global t)
 
-(defconst global-minor-mode-alist (list (cons    'zxcv-mode
+(defconst global-minor-mode-alist (list (cons 'zxcv-mode
                                               zxcv-mode-keymap)))
-(add-to-ordered-list                             'emulation-mode-map-alists 'global-minor-mode-alist)
+(add-to-ordered-list 'emulation-mode-map-alists 'global-minor-mode-alist)
 (zxcv-mode t)
 
 (global-set-key [escape]                         'keyboard-escape-quit)
@@ -84,4 +84,4 @@
 
 (global-set-key (kbd "<C-S-mouse-1>")            'mc/add-cursor-on-click)
 
-(provide                                         'lunfardo-keys)
+(provide 'lunfardo-keys)

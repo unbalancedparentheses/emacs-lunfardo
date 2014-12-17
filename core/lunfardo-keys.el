@@ -11,8 +11,10 @@
 
 (define-key zxcv-mode-keymap (kbd "C-o")         'ido-find-file)
 (define-key zxcv-mode-keymap (kbd "C-<tab>")     'switch-to-previous-buffer)
-(define-key zxcv-mode-keymap (kbd "C-q")         'kmacro-start-macro)
-(define-key zxcv-mode-keymap (kbd "C-S-q")       'kmacro-end-or-call-macro)
+(define-key zxcv-mode-keymap (kbd "C-q")         'save-buffers-kill-emacs)
+
+(define-key zxcv-mode-keymap (kbd "<f3>")        'kmacro-start-macro)
+(define-key zxcv-mode-keymap (kbd "<f4>")        'kmacro-end-or-call-macro)
 (define-key zxcv-mode-keymap (kbd "C-S-t")       'reopen-killed-file)
 (define-key zxcv-mode-keymap (kbd "C-n")         'generate-buffer)
 (define-key zxcv-mode-keymap (kbd "C-<SPC>")     'company-complete)

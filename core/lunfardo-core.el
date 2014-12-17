@@ -72,7 +72,7 @@ Repeated invocations toggle between the two most recently open buffers."
 
 (require 'epl)
 
-(defun prelude-update ()
+(defun lunfardo-update ()
   "Update Lunfardo to its latest version."
   (interactive)
   (when (y-or-n-p "Do you want to update Lunfardo? ")

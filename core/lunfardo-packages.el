@@ -23,6 +23,7 @@
     discover-my-major
     dockerfile-mode
     drag-stuff
+    dtrt-indent
     easy-kill
     epl
     exec-path-from-shell
@@ -39,6 +40,7 @@
     manage-minor-mode
     move-text
     multiple-cursors
+    paradox
     popwin
     powerline
     projectile

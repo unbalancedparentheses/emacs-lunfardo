@@ -1,6 +1,10 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
+;; auto-detecting indentation style
+(require 'dtrt-indent)
+(dtrt-indent-mode t)
+
 ;; removes nasty bell
 (setq ring-bell-function 'ignore)
 

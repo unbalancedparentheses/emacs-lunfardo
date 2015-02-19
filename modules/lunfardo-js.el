@@ -1,6 +1,9 @@
-(lunfardo-require-packages '(js2-mode json-mode skewer simple-httpd))
+(lunfardo-require-packages '(js2-mode json-mode skewer-mode simple-httpd))
 
 (require 'js2-mode)
+
+(setq js2-highlight-level 3)
+
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.pac\\'"   . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))

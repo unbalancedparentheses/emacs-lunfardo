@@ -1,4 +1,4 @@
-(lunfardo-require-packages '(js2-mode json-mode js2-mode simple-httpd))
+(lunfardo-require-packages '(js2-mode json-mode skewer simple-httpd))
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js2-mode))

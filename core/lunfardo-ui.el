@@ -1,6 +1,7 @@
 (lunfardo-require-packages '(moe-theme
                              monokai-theme
                              zenburn-theme
+                             noctilux-theme
                              ))
 
 ;; popwin is a popup window manager for Emacs
@@ -36,7 +37,7 @@
 (require 'moe-theme)
 
 (powerline-default-theme)
-(load-theme 'moe-dark t)
+(load-theme 'noctilux t)
 
 (setq moe-theme-mode-line-color 'purple)
 (powerline-moe-theme)

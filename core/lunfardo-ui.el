@@ -37,7 +37,7 @@
 (require 'moe-theme)
 
 (powerline-default-theme)
-(load-theme 'noctilux t)
+(load-theme 'monokai t)
 
 (setq moe-theme-mode-line-color 'purple)
 (powerline-moe-theme)

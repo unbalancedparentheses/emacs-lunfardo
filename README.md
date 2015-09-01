@@ -18,21 +18,10 @@ Nowadays, Lunfardo has blended into the castilian language and is part of its id
 
 ---
 
-**Table of Contents**
-
-- [ready, steady, go!](#ready-steady-go)
-- [haven't you used emacs before?](#havent-you-used-emacs-before)
-
 ## ready, steady, go!
 
 ###Installing Emacs
-
-**Mac OS X**
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install caskroom/cask/brew-cask
-brew cask install emacs
-```
+To use the Lunfardo you have to install Emacsfirst. Have a look at the [WikiEmacs articles on installing Emacs](http://wikemacs.org/index.php/Installing_Emacs).
 
 ###Installing Lunfardo
 Assuming you're using an Unix-like OS (`*BSD`, `GNU/Linux`, `OS X`, `Solaris`,
@@ -41,31 +30,8 @@ can skip the whole manual and just type in your favorite shell the
 following command:
 
 ```bash
-curl -L http://git.io/Rr3kZw | sh
+curl -L https://raw.githubusercontent.com/unbalancedparentheses/emacs-lunfardo/master/utils/installer.sh | sh
 ```
-
-## haven't you used emacs before?
-![](http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png)
-
-- Being productive with emacs [part I](http://web.psung.name/emacs/2009/part1.html) and [part II](http://web.psung.name/emacs/2009/part2.html)
-- [Emacs Mini Manual](https://tuhdo.github.io/emacs-tutor.html)
-- [emacs4developers](https://github.com/pierre-lecocq/emacs4developers)
-- [awesome emacs](https://github.com/emacs-tw/awesome-emacs)
-- [Why Atom Can’t Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
-
-### basic elisp
-- [elisp guide](https://github.com/chrisdone/elisp-guide)
-- [When to use 'quote in Lisp](https://stackoverflow.com/questions/134887/when-to-use-quote-in-lisp)
-
-### if you come from the best modal editor
-- [Emacs as My <Leader>: Vim Survival Guide](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
-- [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
-- [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
-
-##it's a kind of [magit](https://github.com/magit/magit)
-- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
-- [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
-- [Meet Magit](http://vimeo.com/2871241)
 
 ## key bindings
 Here's a list of key bindings
@@ -111,6 +77,23 @@ Keybinding            | Command
 <kbd>Super-down</kbd>   | Move buffer down
 <kbd>Super-left</kbd>   | Move buffer left
 <kbd>Super-right</kbd>  | Move buffer right
+
+## haven't you used emacs before?
+- [Why Atom Can’t Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
+
+### basic elisp
+- [elisp guide](https://github.com/chrisdone/elisp-guide)
+- [When to use 'quote in Lisp](https://stackoverflow.com/questions/134887/when-to-use-quote-in-lisp)
+
+### if you come from the best modal editor
+- [Emacs as My <Leader>: Vim Survival Guide](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
+- [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
+- [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
+
+##it's a kind of [magit](https://github.com/magit/magit)
+- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
+- [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
+- [Meet Magit](http://vimeo.com/2871241)
 
 ### got emacs?
 ![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/images/text_editors.jpg)

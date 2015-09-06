@@ -36,50 +36,7 @@ curl -L https://raw.githubusercontent.com/unbalancedparentheses/emacs-lunfardo/m
 ## key bindings
 Here's a list of key bindings
 
-### Features
-Keybinding              | Command
-------------------------|------------------------------------------------------------
-<kbd>Ctrl-g</kbd>       | Cancel partially typed or accidental command
-<kbd>fd</kbd>           | Press fd quickly to escape from insert state and everything else thanks to [evil escape](https://github.com/syl20bnr/evil-escape)
-<kbd>Super-o</kbd>      | Open file. <kbd>C-z</kbd> or <kbd>TAB</kbd> or will  performs the default action, which is different depending on the context. When you are on a file it will show only this file-name in the helm buffer. On a directory it will step down into this directory to continue searching in it. <kbd>C-.</kbd>will navigate to the root of current dir or to precedent level of dir.
-<kbd>Super-f</kbd>      | Find in file
-<kbd>Super-F</kbd>      | Run ag incrementally. You need to have [ag](https://github.com/ggreer/the_silver_searcher) installed. Execute <kbd>C-z</kbd> to see the file content temporarily
-<kbd>Super-z</kbd>      | Undo
-<kbd>Super-r</kbd>      | Redo
-<kbd>Super-u</kbd>      | Undo tree
-<kbd>Super-I</kbd>      | Opens init file
-<kbd>Super-Y</kbd>      | Copy region to private gist
-<kbd>Super-p</kbd>      | Find file inside project
-<kbd>Super-P</kbd>      | Find file inside project or switch projects
-<kbd>Super-/</kbd>      | Comment or uncomment
-<kbd>Super-l</kbd>      | Go to line
-<kbd>Super-e</kbd>      | Expand selection
-<kbd>Super-d</kbd>      | Mark next like this
-<kbd>Super-u</kbd>      | Undo tree
-<kbd>Super-T</kbd>      | Git timemachine
-<kbd>Super-B</kbd>      | Browse file in github
-<kbd>Super-t</kbd>      | Interface to both Semantic and Imenu at the same time 
-<kbd>Super-m</kbd>      | Magit status
-<kbd>Super-G</kbd>      | Google suggest
-<kbd>Super-H</kbd>      | Describe bindings
-<kbd>Ctrl-x space</kbd> | Region mark mode
-
-#### Window and buffer management
-Keybinding            | Command
-----------------------|------------------------------------------------------------
-<kbd>Ctrl-x 0</kbd>     | Delete window
-<kbd>Ctrl-x 1</kbd>     | Delete all other windows
-<kbd>Ctrl-x 2</kbd>     | Split window vertically
-<kbd>Ctrl-x 3</kbd>     | Split window horizontally
-<kbd>Ctrl-x +</kbd>     | Balance windows
-<kbd>Ctrl-Tab</kbd>     | Switch to previous buffer
-<kbd>Super-up</kbd>     | Move buffer up
-<kbd>Super-down</kbd>   | Move buffer down
-<kbd>Super-left</kbd>   | Move buffer left
-<kbd>Super-right</kbd>  | Move buffer right
-
 ## haven't you used emacs before?
-- [Why Atom Can’t Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
 
 ### basic elisp
 - [elisp guide](https://github.com/chrisdone/elisp-guide)

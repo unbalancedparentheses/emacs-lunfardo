@@ -4,7 +4,7 @@
 (add-to-list 'package-archives
   '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
-  '("marmalade" . "https://marmalade-repo.org/packages/"))
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
 
@@ -100,9 +100,83 @@ Missing packages are installed automatically."
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
+(global-linum-mode 1)
+(global-visual-line-mode 1)
+(set-face-attribute 'linum nil :height 100)
+
+;; highlight current line
+(global-hl-line-mode 1)
+
 (global-prettify-symbols-mode 1)
+
+(cua-mode t)
+
+(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key  (kbd "C-+") 'text-scale-increase)
 
 (require 'use-package)
 (use-package magit
   :ensure t)
 
+(use-package flycheck
+  :ensure t)
+
+(use-package projectile
+  :ensure t)
+
+(use-package helm
+  :init
+  (setq helm-M-x-fuzzy-match t
+	helm-buffers-fuzzy-matching t
+	helm-recentf-fuzzy-match t)
+  :bind
+  (("M-y" . helm-show-kill-ring)
+   ("C-x b" .  helm-mini))
+  :ensure t)
+
+
+(use-package helm-projectile
+  :ensure t)
+
+(use-package helm-flycheck
+  :ensure t)
+
+(use-package swiper
+  :config
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-wrap t)
+  :bind
+  (("M-x" . counsel-M-x)
+   ("C-x C-f" . counsel-find-file))
+  :ensure t)
+
+(use-package aggressive-indent
+  :ensure t)
+
+(use-package auto-package-update
+  :init
+  (setq auto-package-update-delete-old-versions t)
+  (add-hook 'auto-package-update-before-hook
+	    (lambda () (message "I will update packages now")))
+  :config
+  (auto-package-update-maybe)
+  :ensure t)
+
+(use-package company
+  :init
+  (global-company-mode)
+  :config
+  (setq company-idle-delay 0.10
+	company-minimum-prefix-length 1
+	company-show-numbers t
+	company-tooltip-limit 20)
+  :bind ("C-<tab>" . company-complete)
+  :ensure t)
+
+(use-package erlang
+  :ensure t)
+
+(use-package powerline
+  :config
+  (powerline-default-theme)
+  :ensure t)

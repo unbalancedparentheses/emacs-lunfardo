@@ -1,5 +1,6 @@
 *~
 *.elc
+.last-package-update-day
 ido.last
 smex-items
 auto-save-list

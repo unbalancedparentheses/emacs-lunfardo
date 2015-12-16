@@ -2,7 +2,7 @@
 (require 'cl)
 
 (add-to-list 'package-archives
-  '("melpa" . "https://melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 
@@ -38,8 +38,6 @@ Missing packages are installed automatically."
     (lunfardo-require-packages lunfardo-packages)))
 
 (lunfardo-install-packages)
-
-(load-theme 'material t)
 
 ;; don't backupfiles
 (setq make-backup-files nil)
@@ -134,20 +132,22 @@ Missing packages are installed automatically."
    ("C-x b" .  helm-mini))
   :ensure t)
 
-
 (use-package helm-projectile
   :ensure t)
 
 (use-package helm-flycheck
   :ensure t)
 
+(use-package counsel
+  :bind
+  (("M-x" . counsel-M-x)
+   ("C-x C-f" . counsel-find-file))
+  :ensure t)
+
 (use-package swiper
   :config
   (setq ivy-use-virtual-buffers t)
   (setq ivy-wrap t)
-  :bind
-  (("M-x" . counsel-M-x)
-   ("C-x C-f" . counsel-find-file))
   :ensure t)
 
 (use-package aggressive-indent
@@ -173,10 +173,44 @@ Missing packages are installed automatically."
   :bind ("C-<tab>" . company-complete)
   :ensure t)
 
-(use-package erlang
+(use-package undo-tree
+  :init
+  (undo-tree-mode t)
+  :ensure t)
+
+(use-package hungry-delete
+  :ensure t)
+
+(use-package avy
+  :ensure t)
+
+(use-package diff-hl
+  :config
+  (global-diff-hl-mode t)
   :ensure t)
 
 (use-package powerline
   :config
   (powerline-default-theme)
+  :ensure t)
+
+(use-package material-theme
+  :init
+  (load-theme 'material t)
+  :ensure t)
+
+(use-package rainbow-delimiters
+  :ensure t)
+
+(use-package yascroll
+  :init
+  (yascroll-bar-mode t)
+  :ensure t)
+
+;; highlighting portions relating to the operations.
+(use-package volatile-highlights
+  :ensure t)
+
+;; languages
+(use-package erlang
   :ensure t)

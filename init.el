@@ -39,6 +39,11 @@ Missing packages are installed automatically."
 
 (lunfardo-install-packages)
 
+;; welcome message
+(setq initial-scratch-message "")
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message 'current-user)
+
 ;; don't backupfiles
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -81,15 +86,16 @@ Missing packages are installed automatically."
 ;; removes nasty bell
 (setq ring-bell-function 'ignore)
 
+;; when superword mode enabled all complex/compound
+;; words are treated as single word
+(global-superword-mode nil)
+;; underscores, dashes and camel-case aware editing
+(global-subword-mode t)
+
 ;; whitespace-mode config
 (require 'whitespace)
 (setq whitespace-line-column 90) ;; limit line length
 (setq whitespace-style '(face tabs empty trailing lines-tail))
-
-
-(setq initial-scratch-message "")
-(setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message 'current-user)
 
 ;; Answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -98,14 +104,17 @@ Missing packages are installed automatically."
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
-(global-linum-mode 1)
-(global-visual-line-mode 1)
-(set-face-attribute 'linum nil :height 100)
-
 ;; highlight current line
 (global-hl-line-mode 1)
 
 (global-prettify-symbols-mode 1)
+
+;; never insert tabs
+(set-default 'indent-tabs-mode nil)
+
+;; show me empty lines after buffer end
+(set-default 'indicate-empty-lines t)
+(setq-default truncate-lines t)
 
 (cua-mode t)
 
@@ -113,6 +122,7 @@ Missing packages are installed automatically."
 (global-set-key  (kbd "C-+") 'text-scale-increase)
 
 (require 'use-package)
+
 (use-package magit
   :ensure t)
 
@@ -151,6 +161,8 @@ Missing packages are installed automatically."
   :ensure t)
 
 (use-package aggressive-indent
+  :init
+  (global-aggressive-indent-mode 1)
   :ensure t)
 
 (use-package auto-package-update
@@ -162,23 +174,38 @@ Missing packages are installed automatically."
   (auto-package-update-maybe)
   :ensure t)
 
+
 (use-package company
   :init
   (global-company-mode)
   :config
-  (setq company-idle-delay 0.10
-	company-minimum-prefix-length 1
-	company-show-numbers t
-	company-tooltip-limit 20)
-  :bind ("C-<tab>" . company-complete)
+  (defun company-complete-common-or-cycle-backward ()
+    (interactive)
+    (company-complete-common-or-cycle -1))
+  (defun indent-or-complete ()
+    (interactive)
+    (if (looking-at "\\_>")
+        (company-complete-common)
+      (indent-according-to-mode)))
+  (setq company-idle-delay 0.1
+        company-minimum-prefix-length 3
+        company-show-numbers t
+        company-tooltip-limit 20)
+  (define-key company-active-map (kbd "TAB") 'company-complete-selection)
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+  (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "<S-tab>") 'company-complete-common-or-cycle-backward)
+  (define-key company-active-map (kbd "<backtab>") 'company-complete-common-or-cycle-backward)
+  :bind ("<tab>" . indent-or-complete)
   :ensure t)
 
 (use-package undo-tree
-  :init
-  (undo-tree-mode t)
+  :init (undo-tree-mode t)
   :ensure t)
 
 (use-package hungry-delete
+  :init (global-hungry-delete-mode t)
   :ensure t)
 
 (use-package avy
@@ -203,14 +230,33 @@ Missing packages are installed automatically."
   :ensure t)
 
 (use-package yascroll
-  :init
-  (yascroll-bar-mode t)
+  :init (global-yascroll-bar-mode)
   :ensure t)
 
 ;; highlighting portions relating to the operations.
 (use-package volatile-highlights
+  :if (display-graphic-p)
+  :init
+  (require 'volatile-highlights)
+  (volatile-highlights-mode t)
   :ensure t)
+
+;; cleanup whitespace on save
+(use-package whitespace-cleanup-mode
+  :init
+  (add-hook 'before-save-hook 'whitespace-cleanup)
+  :ensure t)
+
+;; auto save on lost focus
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+
+(global-linum-mode 1)
+(global-visual-line-mode 1)
+(set-face-attribute 'linum nil :height 100)
 
 ;; languages
 (use-package erlang
+  :mode
+  ("\\.erl\\'" . erlang-mode)
+  ("\\.hrl\\'" . erlang-mode)
   :ensure t)

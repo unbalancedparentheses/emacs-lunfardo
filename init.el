@@ -174,7 +174,6 @@ Missing packages are installed automatically."
   (auto-package-update-maybe)
   :ensure t)
 
-
 (use-package company
   :init
   (global-company-mode)
@@ -182,22 +181,19 @@ Missing packages are installed automatically."
   (defun company-complete-common-or-cycle-backward ()
     (interactive)
     (company-complete-common-or-cycle -1))
-  (defun indent-or-complete ()
-    (interactive)
-    (if (looking-at "\\_>")
-        (company-complete-common)
-      (indent-according-to-mode)))
   (setq company-idle-delay 0.1
         company-minimum-prefix-length 3
         company-show-numbers t
-        company-tooltip-limit 20)
+        company-tooltip-limit 10
+        company-selection-wrap-around t
+        company-tooltip-flip-when-above t)
   (define-key company-active-map (kbd "TAB") 'company-complete-selection)
   (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
   (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
   (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
   (define-key company-active-map (kbd "<S-tab>") 'company-complete-common-or-cycle-backward)
   (define-key company-active-map (kbd "<backtab>") 'company-complete-common-or-cycle-backward)
-  :bind ("<tab>" . indent-or-complete)
+  (global-set-key "\t" 'company-indent-or-complete-common)
   :ensure t)
 
 (use-package undo-tree
@@ -256,6 +252,9 @@ Missing packages are installed automatically."
 
 ;; languages
 (use-package erlang
+  :init
+  (add-hook 'erlang-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
+  (add-hook 'erlang-mode-hook 'flycheck-mode)
   :mode
   ("\\.erl\\'" . erlang-mode)
   ("\\.hrl\\'" . erlang-mode)

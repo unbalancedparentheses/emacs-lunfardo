@@ -119,10 +119,7 @@
 	helm-recentf-fuzzy-match t)
   :bind
   (("M-y" . helm-show-kill-ring)
-   ("C-x b" .  helm-mini))
-  :ensure t)
-
-(use-package helm-projectile
+   )
   :ensure t)
 
 (use-package helm-flycheck
@@ -131,13 +128,23 @@
 (use-package counsel
   :bind
   (("M-x" . counsel-M-x)
-   ("C-x C-f" . counsel-find-file))
+   ("C-x C-f" . counsel-find-file)
+   ("C-c C-f" . counsel-git)
+   ("C-c f" . counsel-describe-function)
+   ("C-c g" . counsel-git-grep)
+   ("C-c a" . counsel-ag))
   :ensure t)
 
 (use-package swiper
+  :init
+  (ivy-mode 1)
   :config
   (setq ivy-use-virtual-buffers t)
   (setq ivy-wrap t)
+  :bind
+  (("C-s" . swiper)
+   ("C-c r" . swiper-query-replace)
+   ("C-x b" . ivy-switch-buffer))
   :ensure t)
 
 (use-package aggressive-indent
@@ -192,19 +199,6 @@
   (global-diff-hl-mode t)
   :ensure t)
 
-(use-package powerline
-  :config
-  (powerline-default-theme)
-  :ensure t)
-
-(use-package material-theme
-  :init
-  (load-theme 'material t)
-  :ensure t)
-
-(use-package rainbow-delimiters
-  :ensure t)
-
 (use-package yascroll
   :init (global-yascroll-bar-mode)
   :ensure t)
@@ -225,6 +219,19 @@
 
 ;; auto save on lost focus
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+
+(use-package powerline
+  :config
+  (powerline-default-theme)
+  :ensure t)
+
+(use-package material-theme
+  :init
+  (load-theme 'material t)
+  :ensure t)
+
+(use-package rainbow-delimiters
+  :ensure t)
 
 (global-linum-mode 1)
 (global-visual-line-mode 1)

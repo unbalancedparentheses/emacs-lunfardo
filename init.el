@@ -1,23 +1,14 @@
 (require 'package)
-(require 'cl)
-
- (setq
-   package-archives
-   '(("melpa-stable" . "http://stable.melpa.org/packages/")
-     ("melpa" . "http://melpa.org/packages/")
-     ("marmalade"   . "http://marmalade-repo.org/packages/")
-     ("org"         . "http://orgmode.org/elpa/")
-     ("gnu"         . "http://elpa.gnu.org/packages/")))
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
-(unless package-archive-contents
-  (package-refresh-contents))
-
+;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
+  (package-refresh-contents)
   (package-install 'use-package))
-
-(require 'use-package)
 
 ;; welcome message
 (setq initial-scratch-message "")
@@ -36,7 +27,7 @@
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
 ;; don't be so stingy on the memory, we have lots now. It's the distant future.
-(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 500000000)
 
 ;; when superword mode enabled all complex/compound
 ;; words are treated as single word
@@ -65,12 +56,6 @@
 
 ;; removes nasty bell
 (setq ring-bell-function 'ignore)
-
-;; when superword mode enabled all complex/compound
-;; words are treated as single word
-(global-superword-mode nil)
-;; underscores, dashes and camel-case aware editing
-(global-subword-mode t)
 
 ;; whitespace-mode config
 (require 'whitespace)
@@ -104,6 +89,7 @@
 (set-face-attribute 'default nil :height 180)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key  (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "RET") 'newline-and-indent)
 
 (require 'use-package)
 
@@ -150,6 +136,31 @@
    ("C-c r" . swiper-query-replace)
    ("C-x b" . ivy-switch-buffer))
   :ensure t)
+
+(use-package ivy
+  :config
+  (defun ivy-imenu-get-candidates-from (alist  &optional prefix)
+    (cl-loop for elm in alist
+             nconc (if (imenu--subalist-p elm)
+                       (ivy-imenu-get-candidates-from
+                        (cl-loop for (e . v) in (cdr elm) collect
+                                 (cons e (if (integerp v) (copy-marker v) v)))
+                        (concat prefix (if prefix ".") (car elm)))
+                     (and (cdr elm) ; bug in imenu, should not be needed.
+                          (setcdr elm (copy-marker (cdr elm))) ; Same as [1].
+                          (list (cons (concat prefix (if prefix ".") (car elm))
+                                      (copy-marker (cdr elm))))))))
+
+  (defun ivy-imenu-goto ()
+    "Go to buffer position"
+    (interactive)
+    (let ((imenu-auto-rescan t) items)
+      (unless (featurep 'imenu)
+        (require 'imenu nil t))
+      (setq items (imenu--make-index-alist t))
+      (ivy-read "imenu items:"
+                (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
+                :action (lambda (k) (goto-char k))))))
 
 (use-package aggressive-indent
   :init
@@ -218,7 +229,7 @@
 ;; cleanup whitespace on save
 (use-package whitespace-cleanup-mode
   :init
-  (add-hook 'before-save-hook 'whitespace-cleanup)
+  (global-whitespace-cleanup-mode t)
   :ensure t)
 
 ;; auto save on lost focus
@@ -236,7 +247,19 @@
 
 (use-package rainbow-delimiters
   :init
-  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  :ensure t)
+
+(use-package smartparens
+  :init
+  (smartparens-global-mode t)
+  :ensure t)
+
+(use-package fill-column-indicator
+  :init
+  (add-hook 'prog-mode-hook 'fci-mode)
+  :config
+  (setq fci-rule-column 90)
   :ensure t)
 
 (global-linum-mode 1)

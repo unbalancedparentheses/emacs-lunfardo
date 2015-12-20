@@ -101,6 +101,7 @@
 
 (cua-mode t)
 
+(set-face-attribute 'default nil :height 180)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key  (kbd "C-+") 'text-scale-increase)
 

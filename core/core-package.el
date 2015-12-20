@@ -10,4 +10,6 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(require 'use-package)
+
 (provide 'core-package)

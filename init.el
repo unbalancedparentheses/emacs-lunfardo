@@ -88,12 +88,11 @@
 (require 'use-package)
 
 (use-package magit
+  :bind
+  (("<f10>" . magit-status))
   :ensure t)
 
 (use-package flycheck
-  :ensure t)
-
-(use-package projectile
   :ensure t)
 
 (use-package helm
@@ -242,6 +241,11 @@
 (use-package rainbow-delimiters
   :init
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  :ensure t)
+
+(use-package highlight-symbol
+  :init
+  (add-hook 'prog-mode-hook 'highlight-symbol-mode)
   :ensure t)
 
 (use-package smartparens

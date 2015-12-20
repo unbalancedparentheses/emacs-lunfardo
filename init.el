@@ -65,6 +65,9 @@
 ;; Answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; no blinking cursor
+(blink-cursor-mode -1)
+
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
@@ -261,6 +264,12 @@
 (global-linum-mode 1)
 (global-visual-line-mode 1)
 (set-face-attribute 'linum nil :height 100)
+
+(use-package beacon
+  :init (beacon-mode 1)
+  :config
+  (setq beacon-push-mark 35)
+  :ensure t)
 
 ;; languages
 (use-package erlang

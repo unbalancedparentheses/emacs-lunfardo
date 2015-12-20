@@ -2,8 +2,8 @@
   (add-to-list 'load-path dir))
 
 (mapc 'add-to-load-path
-      (mapcar '(lambda (dir)
-                 (concat user-emacs-directory dir))
+      (mapcar #'(lambda (dir)
+                  (concat user-emacs-directory dir))
               '("core/" "modules/")
               ))
 

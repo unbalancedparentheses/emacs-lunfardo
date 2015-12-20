@@ -251,11 +251,19 @@ Missing packages are installed automatically."
   :ensure t)
 
 (use-package rainbow-delimiters
+  :init
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
   :ensure t)
 
 (global-linum-mode 1)
 (global-visual-line-mode 1)
 (set-face-attribute 'linum nil :height 100)
+
+(use-package beacon
+  :init (beacon-mode 1)
+  :config
+  (setq beacon-push-mark 35)
+  :ensure t)
 
 ;; languages
 (use-package erlang

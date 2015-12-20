@@ -1,14 +1,5 @@
-(require 'package)
-(setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-
-(package-initialize)
-
-;; Bootstrap `use-package'
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+(load-file (concat user-emacs-directory "core/core-path.el"))
+(require 'core-package)
 
 ;; welcome message
 (setq initial-scratch-message "")
@@ -90,6 +81,9 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key  (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "RET") 'newline-and-indent)
+
+(global-set-key  (kbd "C-<tab>") 'next-buffer)
+(global-set-key  (kbd "<C-iso-lefttab>") 'previous-buffer)
 
 (require 'use-package)
 

@@ -1,5 +1,6 @@
 (require 'core-package)
 (require 'core-editor)
+(require 'core-ui)
 
 (use-package magit
   :bind
@@ -145,10 +146,6 @@
   (global-diff-hl-mode t)
   :ensure t)
 
-(use-package yascroll
-  :init (global-yascroll-bar-mode)
-  :ensure t)
-
 ;; highlighting portions relating to the operations.
 (use-package volatile-highlights
   :if (display-graphic-p)
@@ -166,21 +163,6 @@
 ;; auto save on lost focus
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
-(use-package powerline
-  :config
-  (powerline-default-theme)
-  :ensure t)
-
-(use-package material-theme
-  :init
-  (load-theme 'material t)
-  :ensure t)
-
-(use-package rainbow-delimiters
-  :init
-  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-  :ensure t)
-
 (use-package highlight-symbol
   :init
   (add-hook 'prog-mode-hook 'highlight-symbol-mode)
@@ -189,23 +171,6 @@
 (use-package smartparens
   :init
   (smartparens-global-mode t)
-  :ensure t)
-
-(use-package fill-column-indicator
-  :init
-  (add-hook 'prog-mode-hook 'fci-mode)
-  :config
-  (setq fci-rule-column 90)
-  :ensure t)
-
-(global-linum-mode 1)
-(global-visual-line-mode 1)
-(set-face-attribute 'linum nil :height 100)
-
-(use-package beacon
-  :init (beacon-mode 1)
-  :config
-  (setq beacon-push-mark 35)
   :ensure t)
 
 (use-package circe

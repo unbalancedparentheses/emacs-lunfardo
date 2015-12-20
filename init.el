@@ -1,43 +1,23 @@
 (require 'package)
 (require 'cl)
 
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+ (setq
+   package-archives
+   '(("melpa-stable" . "http://stable.melpa.org/packages/")
+     ("melpa" . "http://melpa.org/packages/")
+     ("marmalade"   . "http://marmalade-repo.org/packages/")
+     ("org"         . "http://orgmode.org/elpa/")
+     ("gnu"         . "http://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
-(defvar lunfardo-packages
-  '(use-package))
+(unless package-archive-contents
+  (package-refresh-contents))
 
-(defun lunfardo-packages-installed-p ()
-  "Check if all packages in `lunfardo-packages' are installed."
-  (every #'package-installed-p lunfardo-packages))
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
 
-(defun lunfardo-require-package (package)
-  "Install PACKAGE unless already installed."
-  (unless (memq package lunfardo-packages)
-    (add-to-list 'lunfardo-packages package))
-  (unless (package-installed-p package)
-    (package-install package)))
-
-(defun lunfardo-require-packages (packages)
-  "Ensure PACKAGES are installed.
-Missing packages are installed automatically."
-  (mapc #'lunfardo-require-package packages))
-
-(defun lunfardo-install-packages ()
-  "Install all packages listed in `lunfardo-packages'."
-  (unless (lunfardo-packages-installed-p)
-    ;; check for new packages (package versions)
-    (message "%s" "Emacs Lunfardo is now refreshing its package database...")
-    (package-refresh-contents)
-    (message "%s" " done.")
-    ;; install the missing packages
-    (lunfardo-require-packages lunfardo-packages)))
-
-(lunfardo-install-packages)
+(require 'use-package)
 
 ;; welcome message
 (setq initial-scratch-message "")

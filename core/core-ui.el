@@ -2,6 +2,17 @@
 (global-visual-line-mode 1)
 (set-face-attribute 'linum nil :height 100)
 
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+
+;; highlight current line
+(global-hl-line-mode 1)
+
+(global-prettify-symbols-mode 1)
+
+(set-face-attribute 'default nil :height 120)
+
 (use-package powerline
   :config
   (powerline-default-theme)

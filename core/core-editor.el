@@ -56,15 +56,6 @@
 ;; no blinking cursor
 (blink-cursor-mode -1)
 
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-
-;; highlight current line
-(global-hl-line-mode 1)
-
-(global-prettify-symbols-mode 1)
-
 ;; never insert tabs
 (set-default 'indent-tabs-mode nil)
 
@@ -74,12 +65,14 @@
 
 (cua-mode t)
 
-(set-face-attribute 'default nil :height 180)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key  (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (global-set-key  (kbd "C-<tab>") 'next-buffer)
 (global-set-key  (kbd "<C-iso-lefttab>") 'previous-buffer)
+
+;; replace buffer-menu with ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (provide 'core-editor)

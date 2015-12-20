@@ -8,6 +8,8 @@
   :ensure t)
 
 (use-package flycheck
+  :init
+  (global-flycheck-mode)
   :ensure t)
 
 (use-package helm
@@ -21,6 +23,7 @@
   :ensure t)
 
 (use-package helm-flycheck
+  :bind ("<f12>" . helm-flycheck)
   :ensure t)
 
 (use-package counsel
@@ -45,9 +48,6 @@
   (("C-s" . swiper)
    ("C-x b" . ivy-switch-buffer))
   :ensure t)
-
-;; replace buffer-menu with ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (use-package ivy
   :config

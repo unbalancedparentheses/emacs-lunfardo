@@ -31,3 +31,27 @@ following command:
 ```bash
 git clone https://github.com/unbalancedparentheses/emacs-lunfardo.git ~/.emacs.d/ 
 ```
+## key bindings
+Here's a list of key bindings
+
+## haven't you used emacs before?
+
+### basic elisp
+- [elisp guide](https://github.com/chrisdone/elisp-guide)
+- [When to use 'quote in Lisp](https://stackoverflow.com/questions/134887/when-to-use-quote-in-lisp)
+
+### if you come from the best modal editor
+- [Emacs as My <Leader>: Vim Survival Guide](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
+- [Vim in Emacs Bootstrap](https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/)
+- [Evil Mode: How I Switched From VIM to Emacs](http://blog.jakubarnold.cz/2014/06/23/evil-mode-how-to-switch-from-vim-to-emacs.html)
+
+##it's a kind of [magit](https://github.com/magit/magit)
+- [Learn you some magit](http://www.masteringemacs.org/article/introduction-magit-emacs-mode-git)
+- [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
+- [Meet Magit](http://vimeo.com/2871241)
+
+### got emacs?
+![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/img/text_editors.jpg)
+
+### emacs package growth
+![](http://tracker.endlessparentheses.com/newPackagePlotEver.png)

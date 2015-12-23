@@ -32,13 +32,6 @@
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
   :ensure t)
 
-(use-package fill-column-indicator
-  :init
-  (add-hook 'prog-mode-hook 'fci-mode)
-  :config
-  (setq fci-rule-column 90)
-  :ensure t)
-
 (use-package beacon
   :init (beacon-mode 1)
   :config

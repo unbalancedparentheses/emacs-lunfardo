@@ -1,4 +1,6 @@
 (require 'core-package)
+(require 'core-osx)
+(require 'core-defun)
 (require 'core-editor)
 (require 'core-ui)
 

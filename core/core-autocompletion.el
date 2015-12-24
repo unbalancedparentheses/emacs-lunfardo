@@ -20,4 +20,20 @@
   (global-set-key "\t" 'company-indent-or-complete-common)
   :ensure t)
 
+;; adds fuzzy matching to company powered by flx
+(use-package company-flx-mode
+  :init (company-flx-mode +1)
+  :ensure t)
+
+;; sort completion candidates by previous completion choices
+(use-package company-statistics
+  :init
+  (company-statistics-mode)
+  :ensure t)
+
+(use-package yasnippet
+  :init
+  (yas-global-mode)
+  :ensure t)
+
 (provide 'core-autocompletion)

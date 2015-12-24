@@ -121,4 +121,9 @@ Otherwise point moves to beginning of line."
     (switch-to-buffer buf)
     (funcall (and initial-major-mode))))
 
+(defun indent-buffer ()
+  "Indent the current buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
 (provide 'core-defun)

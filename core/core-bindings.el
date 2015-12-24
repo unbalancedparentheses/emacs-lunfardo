@@ -26,5 +26,6 @@
 
 (global-set-key (kbd "s-N") 'switch-to-scratch)
 (global-set-key (kbd "s-n") 'new-empty-buffer)
+(global-set-key (kbd "<f9>") 'indent-buffer)
 
 (provide 'core-bindings)

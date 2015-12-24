@@ -66,4 +66,8 @@
 (set-default 'indicate-empty-lines t)
 (setq-default truncate-lines t)
 
+;; see matching pairs of parentheses and other characters
+(show-paren-mode t)
+(setq show-paren-delay 0)
+
 (provide 'core-defaults)

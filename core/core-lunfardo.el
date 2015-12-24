@@ -54,4 +54,9 @@
    ("\\.html?\\'" . web-mode))
   :ensure t)
 
+(use-package emacs-lisp-mode
+  :init
+  (add-hook 'emacs-lisp-mode-hook #'(lambda ()
+                                      (smartparens-strict-mode))))
+
 (provide 'core-lunfardo)

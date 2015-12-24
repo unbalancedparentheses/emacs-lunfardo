@@ -12,8 +12,6 @@
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-set-key (kbd "C-/") 'comment-dwim)
-
 (global-set-key [(shift return)] 'open-line-below)
 (global-set-key [(control shift return)] 'open-line-above)
 

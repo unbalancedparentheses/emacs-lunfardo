@@ -32,10 +32,24 @@
 
 (use-package undo-tree
   :init (undo-tree-mode t)
+  :bind (("s-z" . undo-tree-undo)
+         ("s-Z" . undo-tree-redo)
+         ("s-u" . undo-tree-visualize))
   :ensure t)
 
 (use-package hungry-delete
   :init (global-hungry-delete-mode t)
+  :ensure t)
+
+(use-package anzu
+  :init
+  (global-anzu-mode +1)
+  :bind
+  (("s-h" . anzu-query-replace))
+  :ensure t)
+
+(use-package evil-nerd-commenter
+  :bind ("s-/" . evilnc-comment-or-uncomment-lines)
   :ensure t)
 
 (use-package counsel

@@ -4,7 +4,6 @@
 (mapc 'add-to-load-path
       (mapcar #'(lambda (dir)
                   (concat user-emacs-directory dir))
-              '("core/" "modules/")
-              ))
+              '("core/")))
 
 (provide 'core-path)

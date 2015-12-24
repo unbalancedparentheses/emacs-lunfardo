@@ -39,6 +39,9 @@
    ("C-x b" . ivy-switch-buffer))
   :ensure t)
 
+(use-package flx
+  :ensure t)
+
 (use-package ivy
   :config
   (defun ivy-imenu-get-candidates-from (alist  &optional prefix)
@@ -62,7 +65,8 @@
       (setq items (imenu--make-index-alist t))
       (ivy-read "imenu items:"
                 (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
-                :action (lambda (k) (goto-char k))))))
+                :action (lambda (k) (goto-char k)))))
+  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
 
 (use-package aggressive-indent
   :init

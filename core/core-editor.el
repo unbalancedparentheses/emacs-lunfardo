@@ -1,68 +1,3 @@
-;; welcome message
-(setq initial-scratch-message "")
-(setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message 'current-user)
-
-;; don't backupfiles
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
-;; i hate lockfiles, aka .#file
-(setq create-lockfiles nil)
-
-;; save a list of recent files visited. (open recent file with C-x f)
-(recentf-mode 1)
-(setq recentf-max-saved-items 100) ;; just 20 is too recent
-
-;; don't be so stingy on the memory, we have lots now. It's the distant future.
-(setq gc-cons-threshold 100000000)
-
-;; when superword mode enabled all complex/compound
-;; words are treated as single word
-(global-superword-mode nil)
-;; underscores, dashes and camel-case aware editing
-(global-subword-mode t)
-
-;; allow pasting selection outside of Emacs
-(setq x-select-enable-clipboard t)
-
-;; show keystrokes in progress
-(setq echo-keystrokes 0.1)
-
-;; revert buffers automatically when underlying files are changed externally
-(global-auto-revert-mode t)
-
-;; UTF-8 please
-(setq locale-coding-system 'utf-8) ; pretty
-(set-terminal-coding-system 'utf-8) ; pretty
-(set-keyboard-coding-system 'utf-8) ; pretty
-(set-selection-coding-system 'utf-8) ; please
-(prefer-coding-system 'utf-8) ; with sugar on top
-
-;; remove text in active region if inserting text
-(delete-selection-mode t)
-
-;; removes nasty bell
-(setq ring-bell-function 'ignore)
-
-;; whitespace-mode config
-(require 'whitespace)
-(setq whitespace-line-column 90) ;; limit line length
-(setq whitespace-style '(face tabs empty trailing lines-tail))
-
-;; Answering just 'y' or 'n' will do
-(defalias 'yes-or-no-p 'y-or-n-p)
-
-;; no blinking cursor
-(blink-cursor-mode -1)
-
-;; never insert tabs
-(set-default 'indent-tabs-mode nil)
-
-;; show me empty lines after buffer end
-(set-default 'indicate-empty-lines t)
-(setq-default truncate-lines t)
-
 ;; cleanup whitespace on save
 (use-package whitespace-cleanup-mode
   :init
@@ -89,5 +24,75 @@
   (require 'volatile-highlights)
   (volatile-highlights-mode t)
   :ensure t)
+
+(use-package aggressive-indent
+  :init
+  (global-aggressive-indent-mode 1)
+  :ensure t)
+
+(use-package undo-tree
+  :init (undo-tree-mode t)
+  :ensure t)
+
+(use-package hungry-delete
+  :init (global-hungry-delete-mode t)
+  :ensure t)
+
+(use-package counsel
+  :bind
+  (("M-x" . counsel-M-x)
+   ("C-x C-f" . counsel-find-file)
+   ("s-o" . counsel-find-file)
+   ("C-c C-f" . counsel-git)
+   ("s-O" . counsel-git)
+   ("C-c f" . counsel-describe-function)
+   ("C-c g" . counsel-git-grep)
+   ("C-c a" . counsel-ag)
+   ("C-S" . counsel-ag))
+  :ensure t)
+
+(use-package flx
+  :ensure t)
+
+(use-package swiper
+  :init
+  (ivy-mode 1)
+  :config
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-wrap t)
+  :bind
+  (("C-s" . swiper)
+   ("C-x b" . ivy-switch-buffer))
+  :ensure t)
+
+(use-package ivy
+  :config
+  (ivy-mode 1)
+  ;; show recently killed buffers when calling `ivy-switch-buffer'
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-re-builders-alist '((t . ivy--regex-plus))) ; default
+  ;; (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+  (defun ivy-imenu-get-candidates-from (alist  &optional prefix)
+    (cl-loop for elm in alist
+             nconc (if (imenu--subalist-p elm)
+                       (ivy-imenu-get-candidates-from
+                        (cl-loop for (e . v) in (cdr elm) collect
+                                 (cons e (if (integerp v) (copy-marker v) v)))
+                        (concat prefix (if prefix ".") (car elm)))
+                     (and (cdr elm) ; bug in imenu, should not be needed.
+                          (setcdr elm (copy-marker (cdr elm))) ; Same as [1].
+                          (list (cons (concat prefix (if prefix ".") (car elm))
+                                      (copy-marker (cdr elm))))))))
+
+  (defun ivy-imenu-goto ()
+    "Go to buffer position"
+    (interactive)
+    (let ((imenu-auto-rescan t) items)
+      (unless (featurep 'imenu)
+        (require 'imenu nil t))
+      (setq items (imenu--make-index-alist t))
+      (ivy-read "imenu items:"
+                (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
+                :action (lambda (k) (goto-char k))))))
 
 (provide 'core-editor)

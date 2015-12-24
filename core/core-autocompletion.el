@@ -21,7 +21,7 @@
   :ensure t)
 
 ;; adds fuzzy matching to company powered by flx
-(use-package company-flx-mode
+(use-package company-flx
   :init (company-flx-mode +1)
   :ensure t)
 

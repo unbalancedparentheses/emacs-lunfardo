@@ -1,5 +1,10 @@
 # emacs-lunfardo
+> Emacs struggles to replicate a heavy, graphically rich, programming GUI. Similarly, tools like Visual Studio struggle to replicate the flexibility and customizability of Emacs.
+
 :panda_face: got emacs? emacs distribution with sane defaults
+
+> The Zen of Emacs: Learn to love the power and ignore the arbitrariness
+
 
 ![](https://raw.githubusercontent.com/unbalancedparentheses/lunfardo/master/img/buenosaires.jpg)
 

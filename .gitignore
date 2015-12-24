@@ -27,3 +27,4 @@ elpa
 history
 ac-comphist.dat
 .mc-lists.el
+company-statistics-cache.el

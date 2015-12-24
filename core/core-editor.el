@@ -63,23 +63,6 @@
 (set-default 'indicate-empty-lines t)
 (setq-default truncate-lines t)
 
-(cua-mode t)
-
-(global-set-key (kbd "C--") 'text-scale-decrease)
-(global-set-key  (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "RET") 'newline-and-indent)
-
-(global-set-key  (kbd "C-<tab>") 'next-buffer)
-(global-set-key  (kbd "<C-iso-lefttab>") 'previous-buffer)
-
-;; replace buffer-menu with ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
-(global-set-key (kbd "C-/") 'comment-dwim)
-
-(global-set-key [(shift return)] 'open-line-below)
-(global-set-key [(control shift return)] 'open-line-above)
-
 ;; cleanup whitespace on save
 (use-package whitespace-cleanup-mode
   :init

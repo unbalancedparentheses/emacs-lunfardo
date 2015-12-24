@@ -6,16 +6,9 @@
 (require 'core-git)
 (require 'core-flycheck)
 (require 'core-helm)
-
-(use-package helm
-  :init
-  (setq helm-M-x-fuzzy-match t
-	helm-buffers-fuzzy-matching t
-	helm-recentf-fuzzy-match t)
-  :bind
-  (("M-y" . helm-show-kill-ring)
-   )
-  :ensure t)
+(require 'core-autocompletion)
+(require 'core-movement)
+(require 'core-bindings)
 
 (use-package counsel
   :bind
@@ -80,37 +73,6 @@
   (global-aggressive-indent-mode 1)
   :ensure t)
 
-(use-package auto-package-update
-  :init
-  (setq auto-package-update-delete-old-versions t)
-  (add-hook 'auto-package-update-before-hook
-	    (lambda () (message "I will update packages now")))
-  :config
-  (auto-package-update-maybe)
-  :ensure t)
-
-(use-package company
-  :init
-  (global-company-mode)
-  :config
-  (defun company-complete-common-or-cycle-backward ()
-    (interactive)
-    (company-complete-common-or-cycle -1))
-  (setq company-idle-delay 0.1
-        company-minimum-prefix-length 3
-        company-show-numbers t
-        company-tooltip-limit 10
-        company-selection-wrap-around t
-        company-tooltip-flip-when-above t)
-  (define-key company-active-map (kbd "TAB") 'company-complete-selection)
-  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
-  (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
-  (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
-  (define-key company-active-map (kbd "<S-tab>") 'company-complete-common-or-cycle-backward)
-  (define-key company-active-map (kbd "<backtab>") 'company-complete-common-or-cycle-backward)
-  (global-set-key "\t" 'company-indent-or-complete-common)
-  :ensure t)
-
 (use-package undo-tree
   :init (undo-tree-mode t)
   :ensure t)
@@ -130,12 +92,6 @@
 
 (use-package hungry-delete
   :init (global-hungry-delete-mode t)
-  :ensure t)
-
-(use-package avy
-  :bind
-  ("C-c j" . avy-goto-word-or-subword-1)
-  ("s-." . avy-goto-word-or-subword-1)
   :ensure t)
 
 (use-package circe

@@ -12,4 +12,13 @@
 
 (require 'use-package)
 
+(use-package auto-package-update
+  :init
+  (setq auto-package-update-delete-old-versions t)
+  (add-hook 'auto-package-update-before-hook
+	    (lambda () (message "I will update packages now")))
+  :config
+  (auto-package-update-maybe)
+  :ensure t)
+
 (provide 'core-package)

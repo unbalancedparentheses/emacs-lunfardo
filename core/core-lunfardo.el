@@ -6,8 +6,6 @@
 (require 'core-defaults)
 
 (require 'core-editor)
-(require 'core-ui)
-
 (require 'core-movement)
 
 (require 'core-git)
@@ -16,6 +14,8 @@
 (require 'core-autocompletion)
 
 (require 'core-bindings)
+
+(require 'core-ui)
 
 ;; IRC
 (use-package circe

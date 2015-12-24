@@ -3,6 +3,9 @@
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message 'current-user)
 
+;; fully redraw the display before it processes queued input events
+(setq redisplay-dont-pause t)
+
 ;; don't backupfiles
 (setq make-backup-files nil)
 (setq auto-save-default nil)

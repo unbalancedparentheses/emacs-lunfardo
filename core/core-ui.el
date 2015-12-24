@@ -38,4 +38,7 @@
   (setq beacon-push-mark 35)
   :ensure t)
 
+;; start maximized
+(toggle-frame-maximized)
+
 (provide 'core-ui)

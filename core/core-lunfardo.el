@@ -5,6 +5,7 @@
 (require 'core-ui)
 (require 'core-git)
 (require 'core-flycheck)
+(require 'core-helm)
 
 (use-package helm
   :init
@@ -25,7 +26,8 @@
    ("s-O" . counsel-git)
    ("C-c f" . counsel-describe-function)
    ("C-c g" . counsel-git-grep)
-   ("C-c a" . counsel-ag))
+   ("C-c a" . counsel-ag)
+   ("C-S" . counsel-ag))
   :ensure t)
 
 (use-package swiper
@@ -44,6 +46,11 @@
 
 (use-package ivy
   :config
+  (ivy-mode 1)
+  ;; show recently killed buffers when calling `ivy-switch-buffer'
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-re-builders-alist '((t . ivy--regex-plus))) ; default
+  ;; (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
   (defun ivy-imenu-get-candidates-from (alist  &optional prefix)
     (cl-loop for elm in alist
              nconc (if (imenu--subalist-p elm)
@@ -65,8 +72,8 @@
       (setq items (imenu--make-index-alist t))
       (ivy-read "imenu items:"
                 (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
-                :action (lambda (k) (goto-char k)))))
-  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
+                :action (lambda (k) (goto-char k))))))
+
 
 (use-package aggressive-indent
   :init
@@ -119,10 +126,6 @@
    ("s-D" . mc/mark-previous-like-this)
    ("s-L" . mc/edit-lines)
    )
-  :ensure t)
-
-(use-package drag-stuff
-  :init (drag-stuff-global-mode t)
   :ensure t)
 
 (use-package hungry-delete

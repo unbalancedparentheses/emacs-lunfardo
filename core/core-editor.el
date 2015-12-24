@@ -15,7 +15,7 @@
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
 ;; don't be so stingy on the memory, we have lots now. It's the distant future.
-(setq gc-cons-threshold 500000000)
+(setq gc-cons-threshold 100000000)
 
 ;; when superword mode enabled all complex/compound
 ;; words are treated as single word
@@ -74,6 +74,11 @@
 
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+(global-set-key (kbd "C-/") 'comment-dwim)
+
+(global-set-key [(shift return)] 'open-line-below)
+(global-set-key [(control shift return)] 'open-line-above)
 
 ;; cleanup whitespace on save
 (use-package whitespace-cleanup-mode

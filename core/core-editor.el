@@ -75,4 +75,31 @@
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; cleanup whitespace on save
+(use-package whitespace-cleanup-mode
+  :init
+  (global-whitespace-cleanup-mode t)
+  :ensure t)
+
+;; auto save on lost focus
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+
+(use-package highlight-symbol
+  :init
+  (add-hook 'prog-mode-hook 'highlight-symbol-mode)
+  :ensure t)
+
+(use-package smartparens
+  :init
+  (smartparens-global-mode t)
+  :ensure t)
+
+;; highlighting portions relating to the operations.
+(use-package volatile-highlights
+  :if (display-graphic-p)
+  :init
+  (require 'volatile-highlights)
+  (volatile-highlights-mode t)
+  :ensure t)
+
 (provide 'core-editor)

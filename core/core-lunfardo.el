@@ -3,16 +3,8 @@
 (require 'core-defun)
 (require 'core-editor)
 (require 'core-ui)
-
-(use-package magit
-  :bind
-  (("<f10>" . magit-status))
-  :ensure t)
-
-(use-package flycheck
-  :init
-  (global-flycheck-mode)
-  :ensure t)
+(require 'core-git)
+(require 'core-flycheck)
 
 (use-package helm
   :init
@@ -22,10 +14,6 @@
   :bind
   (("M-y" . helm-show-kill-ring)
    )
-  :ensure t)
-
-(use-package helm-flycheck
-  :bind ("<f12>" . helm-flycheck)
   :ensure t)
 
 (use-package counsel
@@ -141,38 +129,6 @@
   :bind
   ("C-c j" . avy-goto-word-or-subword-1)
   ("s-." . avy-goto-word-or-subword-1)
-  :ensure t)
-
-(use-package diff-hl
-  :config
-  (global-diff-hl-mode t)
-  :ensure t)
-
-;; highlighting portions relating to the operations.
-(use-package volatile-highlights
-  :if (display-graphic-p)
-  :init
-  (require 'volatile-highlights)
-  (volatile-highlights-mode t)
-  :ensure t)
-
-;; cleanup whitespace on save
-(use-package whitespace-cleanup-mode
-  :init
-  (global-whitespace-cleanup-mode t)
-  :ensure t)
-
-;; auto save on lost focus
-(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
-
-(use-package highlight-symbol
-  :init
-  (add-hook 'prog-mode-hook 'highlight-symbol-mode)
-  :ensure t)
-
-(use-package smartparens
-  :init
-  (smartparens-global-mode t)
   :ensure t)
 
 (use-package circe

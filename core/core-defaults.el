@@ -73,5 +73,4 @@
 ;; lines should be 80 characters wide, not 72
 (setq fill-column 80)
 
-
 (provide 'core-defaults)

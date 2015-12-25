@@ -1,5 +1,7 @@
-(require 'f)
-(require 's)
+(use-package f
+  :ensure t)
+(use-package s
+  :ensure t)
 
 (defun lunfardo/recompile-init ()
   "Byte-compile all your dotfiles again."

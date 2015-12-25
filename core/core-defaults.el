@@ -18,7 +18,7 @@
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
 ;; don't be so stingy on the memory, we have lots now. It's the distant future.
-(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 20000000)
 
 ;; when superword mode enabled all complex/compound
 ;; words are treated as single word
@@ -69,5 +69,9 @@
 ;; see matching pairs of parentheses and other characters
 (show-paren-mode t)
 (setq show-paren-delay 0)
+
+;; lines should be 80 characters wide, not 72
+(setq fill-column 80)
+
 
 (provide 'core-defaults)

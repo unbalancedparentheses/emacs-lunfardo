@@ -1,3 +1,6 @@
+(require 'f)
+(require 's)
+
 (defun lunfardo/recompile-init ()
   "Byte-compile all your dotfiles again."
   (interactive)
@@ -14,6 +17,17 @@
     (shell-command "git pull")
     (lunfardo/recompile-init)
     (message "Update finished. Restart Emacs to complete the process.")))
+
+(defun lunfardo/open-init ()
+  "Open Lunfardo init.el file"
+  (interactive)
+  (find-file (concat user-emacs-directory "init.el")))
+
+(defun lunfardo/load-layers ()
+  (mapc 'load-file
+        (f--files (concat user-emacs-directory "layers")
+                  (s-ends-with?  "config.el" it)
+                  t)))
 
 (defun open-line-above ()
   "Open a line above the line the point is at.

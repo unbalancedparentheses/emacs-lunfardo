@@ -28,4 +28,6 @@
 
 (global-set-key (kbd "<f9>") 'indent-buffer)
 
+(global-set-key (kbd "s-I") 'lunfardo/open-init)
+
 (provide 'core-bindings)

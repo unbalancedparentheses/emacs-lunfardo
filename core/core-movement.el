@@ -13,8 +13,7 @@
   :bind
   (("s-d" . mc/mark-next-like-this)
    ("s-D" . mc/mark-previous-like-this)
-   ("s-L" . mc/edit-lines)
-   )
+   ("s-L" . mc/edit-lines))
   :ensure t)
 
 (provide 'core-movement)

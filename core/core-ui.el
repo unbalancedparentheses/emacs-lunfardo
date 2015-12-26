@@ -1,4 +1,8 @@
-(global-linum-mode 1)
+(use-package nlinum
+  :init
+  (add-hook 'prog-mode-hook 'nlinum-mode)
+  :ensure t)
+
 (global-visual-line-mode 1)
 (set-face-attribute 'linum nil :height 100)
 

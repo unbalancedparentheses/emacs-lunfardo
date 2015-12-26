@@ -11,7 +11,6 @@
 
 (require 'core-git)
 (require 'core-flycheck)
-(require 'core-helm)
 (require 'core-autocompletion)
 
 (require 'core-bindings)

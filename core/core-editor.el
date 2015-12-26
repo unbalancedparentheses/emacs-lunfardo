@@ -57,12 +57,8 @@
   (("M-x" . counsel-M-x)
    ("C-x C-f" . counsel-find-file)
    ("s-o" . counsel-find-file)
-   ("C-c C-f" . counsel-git)
-   ("s-O" . counsel-git)
    ("C-c f" . counsel-describe-function)
-   ("C-c g" . counsel-git-grep)
-   ("C-c a" . counsel-ag)
-   ("C-S" . counsel-ag))
+   ("s-a" . counsel-ag))
   :ensure t)
 
 (use-package flx
@@ -108,5 +104,32 @@
       (ivy-read "imenu items:"
                 (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
                 :action (lambda (k) (goto-char k))))))
+
+(use-package helm
+  :init
+  (setq helm-M-x-fuzzy-match t
+	helm-buffers-fuzzy-matching t
+	helm-recentf-fuzzy-match t)
+  :bind
+  (("M-y" . helm-show-kill-ring)
+   )
+  :ensure t)
+
+(use-package helm-descbinds
+  :bind
+  (("C-h b" . helm-descbinds))
+  :ensure t)
+
+(use-package ag
+  :ensure t)
+
+(use-package helm-projectile
+  :ensure t)
+
+(use-package projectile
+  :config
+  (setq projectile-completion-system 'ivy)
+  :ensure t)
+
 
 (provide 'core-editor)

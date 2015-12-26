@@ -1,7 +1,8 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/")
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
 

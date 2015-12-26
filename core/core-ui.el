@@ -32,10 +32,8 @@
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
   :ensure t)
 
-(use-package beacon
-  :init (beacon-mode 1)
-  :config
-  (setq beacon-push-mark 35)
+(use-package smooth-scrolling
+  :init (require 'smooth-scrolling)
   :ensure t)
 
 ;; start maximized

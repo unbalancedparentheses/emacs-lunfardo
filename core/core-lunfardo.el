@@ -1,3 +1,4 @@
+(load-file (concat user-emacs-directory "core/core-path.el"))
 (require 'core-package)
 
 (require 'core-osx)
@@ -16,5 +17,7 @@
 (require 'core-bindings)
 
 (require 'core-ui)
+
+(require 'core-layers)
 
 (provide 'core-lunfardo)

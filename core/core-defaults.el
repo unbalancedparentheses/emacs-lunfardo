@@ -1,3 +1,6 @@
+;; always load newest byte code
+(setq load-prefer-newer t)
+
 ;; welcome message
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)

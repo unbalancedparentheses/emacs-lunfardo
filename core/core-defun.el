@@ -25,11 +25,6 @@
   (interactive)
   (find-file (concat user-emacs-directory "init.el")))
 
-(defun lunfardo/load-layers ()
-  (mapc 'load-file
-        (f--files (concat user-emacs-directory "layers")
-                  (s-ends-with?  "config.el" it)
-                  t)))
 
 (defun open-line-above ()
   "Open a line above the line the point is at.

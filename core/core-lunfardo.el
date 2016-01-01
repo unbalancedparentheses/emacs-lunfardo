@@ -19,6 +19,8 @@
 
 (require 'core-ui)
 
+(require 'core-vim)
+
 (require 'core-layers)
 
 (provide 'core-lunfardo)

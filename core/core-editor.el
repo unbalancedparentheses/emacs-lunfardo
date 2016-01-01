@@ -1,5 +1,5 @@
 (setq prettify-symbols-unprettify-at-point t)
-(global-prettify-symbols-mode 1)q
+(global-prettify-symbols-mode 1)
 
 ;; cleanup whitespace on save
 (use-package whitespace-cleanup-mode

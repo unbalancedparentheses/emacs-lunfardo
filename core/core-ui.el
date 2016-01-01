@@ -4,7 +4,7 @@
   :ensure t)
 
 (global-visual-line-mode 1)
-(set-face-attribute 'linum nil :height 100)
+
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)
@@ -12,10 +12,6 @@
 
 ;; highlight current line
 (global-hl-line-mode 1)
-
-(global-prettify-symbols-mode 1)
-
-(set-face-attribute 'default nil :height 120)
 
 (use-package powerline
   :config
@@ -39,6 +35,9 @@
 (use-package smooth-scrolling
   :init (require 'smooth-scrolling)
   :ensure t)
+
+(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'linum nil :height 100)
 
 ;; start maximized
 (toggle-frame-maximized)

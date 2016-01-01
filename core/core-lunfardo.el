@@ -1,7 +1,9 @@
 (load-file (concat user-emacs-directory "core/core-path.el"))
 (require 'core-package)
 
-(require 'core-osx)
+(when (eq system-type 'darwin)
+  (require 'core-osx))
+
 (require 'core-defun)
 
 (require 'core-defaults)

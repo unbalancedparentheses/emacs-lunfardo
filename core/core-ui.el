@@ -1,6 +1,6 @@
-(use-package nlinum
+(use-package linum
   :init
-  (add-hook 'prog-mode-hook 'nlinum-mode)
+  (add-hook 'prog-mode-hook 'linum-mode)
   :ensure t)
 
 (global-visual-line-mode 1)

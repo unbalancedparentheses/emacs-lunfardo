@@ -38,4 +38,6 @@
 
 (global-set-key (kbd "<f9>") 'indent-buffer)
 
+(global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)
+
 (provide 'core-bindings)

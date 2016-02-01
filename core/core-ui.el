@@ -1,17 +1,16 @@
-(use-package nlinum
+(use-package linum
   :init
-  (add-hook 'prog-mode-hook 'nlinum-mode)
+  (add-hook 'prog-mode-hook 'linum-mode)
   :ensure t)
 
 (global-visual-line-mode 1)
-
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
 ;; highlight current line
-(global-hl-line-mode 1)
+;; (global-hl-line-mode 1)
 
 (use-package powerline
   :config

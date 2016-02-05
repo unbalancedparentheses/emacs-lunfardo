@@ -6,7 +6,7 @@
 (use-package company-go
   :ensure t)
 
-(use-package go-test
+(use-package gotest
   :ensure t)
 
 (use-package go-projectile

@@ -1,4 +1,4 @@
 (use-package yaml-mode
   :mode
-  ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode)
+  ("\\.yaml" . yaml-mode)
   :ensure t)

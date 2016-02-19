@@ -10,11 +10,13 @@
 (scroll-bar-mode 0)
 
 ;; highlight current line
-;; (global-hl-line-mode 1)
+(global-hl-line-mode 1)
 
-(use-package powerline
-  :config
-  (powerline-default-theme)
+(use-package smart-mode-line
+  :init
+  (setq sml/no-confirm-load-theme t)
+  (setq sml/theme 'dark)
+  (sml/setup)
   :ensure t)
 
 (use-package material-theme

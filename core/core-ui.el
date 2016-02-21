@@ -37,7 +37,7 @@
   :init (require 'smooth-scrolling)
   :ensure t)
 
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 140)
 (set-face-attribute 'linum nil :height 100)
 
 ;; start maximized

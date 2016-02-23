@@ -34,7 +34,7 @@ can skip the whole manual and just type in your favorite shell the
 following command:
 
 ```bash
-git clone https://github.com/unbalancedparentheses/emacs-lunfardo.git ~/.emacs.d/ 
+git clone --depth=1 https://github.com/unbalancedparentheses/emacs-lunfardo.git ~/.emacs.d/ 
 ```
 
 ## key bindings

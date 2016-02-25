@@ -26,7 +26,7 @@
 (global-set-key (kbd "s-O") 'projectile-find-file)
 
 (global-set-key (kbd "s-f") 'swiper)
-(global-set-key (kbd "s-F") 'helm-projectile-ag)
+(global-set-key (kbd "s-F") 'helm-do-grep-ag)
 
 (global-set-key (kbd "s-l") 'er/expand-region)
 

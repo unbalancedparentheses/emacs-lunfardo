@@ -24,7 +24,7 @@
 (global-set-key (kbd "s-g") 'goto-line)
 
 (global-set-key (kbd "s-f") 'swiper)
-(global-set-key (kbd "s-F") 'helm-do-grep-ag)
+(global-set-key (kbd "s-F") 'counsel-git-grep)
 
 (global-set-key (kbd "s-l") 'er/expand-region)
 
@@ -44,10 +44,23 @@
 (global-set-key (kbd "s-y") 'counsel-yank-pop)
 
 (global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)
+(global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "<f9>") 'indent-buffer)
 (global-set-key (kbd "<f12>") 'helm-flycheck)
 
+(global-set-key (kbd "C-l") 'er/expand-region)
+(global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-d") 'mc/mark-next-like-this)
+(global-set-key (kbd "s-D") 'mc/mark-previous-like-this)
+(global-set-key (kbd "s-L") 'mc/edit-lines)
+
+(global-set-key (kbd "s-z") 'undo-tree-undo)
+(global-set-key (kbd "s-Z") 'undo-tree-redo)
+(global-set-key (kbd "s-u") 'undo-tree-visualize)
+
+(global-set-key (kbd "s-h") 'anzu-query-replace)
+(global-set-key (kbd "s-/") 'evilnc-comment-or-uncomment-lines)
+(global-set-key (kbd "C-h b") 'helm-descbinds)
+(global-set-key (kbd "<f10>") 'magit-status)
+
 (provide 'core-bindings)
-
-
-;; add ivy to magit

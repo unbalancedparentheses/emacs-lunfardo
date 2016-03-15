@@ -6,8 +6,6 @@
   :ensure t)
 
 (use-package helm-descbinds
-  :bind
-  (("C-h b" . helm-descbinds))
   :ensure t)
 
 (use-package helm-ag

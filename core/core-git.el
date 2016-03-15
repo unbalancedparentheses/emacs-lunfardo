@@ -4,8 +4,6 @@
   :ensure t)
 
 (use-package magit
-  :bind
-  (("<f10>" . magit-status))
   :ensure t)
 
 (use-package magit-gh-pulls

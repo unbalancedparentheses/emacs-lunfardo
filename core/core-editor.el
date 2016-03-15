@@ -35,9 +35,6 @@
 
 (use-package undo-tree
   :init (undo-tree-mode t)
-  :bind (("s-z" . undo-tree-undo)
-         ("s-Z" . undo-tree-redo)
-         ("s-u" . undo-tree-visualize))
   :ensure t)
 
 (use-package hungry-delete
@@ -47,12 +44,9 @@
 (use-package anzu
   :init
   (global-anzu-mode +1)
-  :bind
-  (("s-h" . anzu-query-replace))
   :ensure t)
 
 (use-package evil-nerd-commenter
-  :bind ("s-/" . evilnc-comment-or-uncomment-lines)
   :ensure t)
 
 (use-package counsel
@@ -62,22 +56,18 @@
   :ensure t)
 
 (use-package swiper
-  :init
-  (ivy-mode 1)
-  :config
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-wrap t)
   :ensure t)
 
 (use-package ivy
   :init
   (ivy-mode 1)
-  ;; show recently killed buffers when calling `ivy-switch-buffer'
   (setq ivy-use-virtual-buffers t)
-  (setq ivy-re-builders-alist '((t . ivy--regex-plus))) ; default
+  (setq ivy-re-builders-alist '((t . ivy--regex-plus)))
+  (setq ivy-wrap t)
   (setq ivy-initial-inputs-alist nil)
   (define-key ivy-minibuffer-map (kbd "<C-tab>") 'ivy-next-line)
-  (define-key ivy-minibuffer-map (kbd "<C-S-tab>") 'ivy-previous-line))
+  (define-key ivy-minibuffer-map (kbd "<C-S-tab>") 'ivy-previous-line)
+  (setq magit-completing-read-function 'ivy-completing-read))
 
 (use-package ag
   :ensure t)

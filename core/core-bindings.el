@@ -23,8 +23,6 @@
 (global-set-key (kbd "s-p") 'counsel-M-x)
 (global-set-key (kbd "s-g") 'goto-line)
 
-(global-set-key (kbd "s-O") 'projectile-find-file)
-
 (global-set-key (kbd "s-f") 'swiper)
 (global-set-key (kbd "s-F") 'helm-do-grep-ag)
 
@@ -36,8 +34,20 @@
 (global-set-key (kbd "s-r") 'ivy-imenu-goto)
 (global-set-key (kbd "s-e") 'evil-mode)
 
-(global-set-key (kbd "<f9>") 'indent-buffer)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "s-o") 'counsel-find-file)
+(global-set-key (kbd "s-O") 'counsel-git)
+(global-set-key (kbd "s-a") 'counsel-ag)
+(global-set-key (kbd "s-A") 'helm-projectile-ag)
+(global-set-key (kbd "C-c f") 'counsel-describe-function)
+(global-set-key (kbd "s-y") 'counsel-yank-pop)
 
 (global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)
+(global-set-key (kbd "<f9>") 'indent-buffer)
+(global-set-key (kbd "<f12>") 'helm-flycheck)
 
 (provide 'core-bindings)
+
+
+;; add ivy to magit

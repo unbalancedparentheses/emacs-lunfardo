@@ -56,12 +56,6 @@
   :ensure t)
 
 (use-package counsel
-  :bind
-  (("M-x" . counsel-M-x)
-   ("C-x C-f" . counsel-find-file)
-   ("s-o" . counsel-find-file)
-   ("C-c f" . counsel-describe-function)
-   ("s-a" . counsel-ag))
   :ensure t)
 
 (use-package flx
@@ -81,8 +75,7 @@
   ;; show recently killed buffers when calling `ivy-switch-buffer'
   (setq ivy-use-virtual-buffers t)
   (setq ivy-re-builders-alist '((t . ivy--regex-plus))) ; default
-  ;; (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
-
+  (setq ivy-initial-inputs-alist nil)
   (define-key ivy-minibuffer-map (kbd "<C-tab>") 'ivy-next-line)
   (define-key ivy-minibuffer-map (kbd "<C-S-tab>") 'ivy-previous-line))
 
@@ -96,6 +89,5 @@
   :config
   (setq projectile-completion-system 'ivy)
   :ensure t)
-
 
 (provide 'core-editor)

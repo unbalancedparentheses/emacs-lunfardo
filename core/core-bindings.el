@@ -43,11 +43,6 @@
 (global-set-key (kbd "C-c f") 'counsel-describe-function)
 (global-set-key (kbd "s-y") 'counsel-yank-pop)
 
-(global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)
-(global-set-key (kbd "<f6>") 'ivy-resume)
-(global-set-key (kbd "<f9>") 'indent-buffer)
-(global-set-key (kbd "<f12>") 'helm-flycheck)
-
 (global-set-key (kbd "C-l") 'er/expand-region)
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-d") 'mc/mark-next-like-this)
@@ -61,6 +56,12 @@
 (global-set-key (kbd "s-h") 'anzu-query-replace)
 (global-set-key (kbd "s-/") 'evilnc-comment-or-uncomment-lines)
 (global-set-key (kbd "C-h b") 'helm-descbinds)
+
+(global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "<f8>") 'global-aggressive-indent-mode)
+(global-set-key (kbd "<f9>") 'indent-buffer)
 (global-set-key (kbd "<f10>") 'magit-status)
+(global-set-key (kbd "<f12>") 'helm-flycheck)
 
 (provide 'core-bindings)

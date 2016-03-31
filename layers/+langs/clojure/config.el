@@ -1,6 +1,4 @@
 (use-package clojure
-  :init
-  (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
   :mode
   ("\\.clj\\'" . clojure-mode))
 

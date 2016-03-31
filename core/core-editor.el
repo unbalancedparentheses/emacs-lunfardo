@@ -29,8 +29,6 @@
   :ensure t)
 
 (use-package aggressive-indent
-  :init
-  (global-aggressive-indent-mode 1)
   :ensure t)
 
 (use-package undo-tree

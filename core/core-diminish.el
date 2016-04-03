@@ -1,25 +1,29 @@
 (use-package diminish
   :ensure t)
 
-(diminish 'helm-mode)
-(diminish 'yas-minor-mode)
-(diminish 'eldoc-mode)
-(diminish 'company-mode)
-(diminish 'projectile-mode)
-(diminish 'flyspell-mode)
-(diminish 'smartparens-mode)
-(diminish 'flycheck-mode)
-(diminish 'subword-mode)
-(diminish 'visual-hl)
-(diminish 'ivy-mode)
-(diminish 'anzu-mode)
-(diminish 'undo-tree-mode)
-(diminish 'whitespace-cleanup-mode)
-(diminish 'wrap-mode)
-(diminish 'highlight-symbol-mode)
-(diminish 'volatile-highlights-mode)
-(diminish 'visual-line-mode)
-(diminish 'hungry-delete-mode)
-(diminish 'auto-revert-mode)
+(setq diminish-modes '(helm-mode
+                   yas-minor-mode
+                   eldoc-mode
+                   company-mode
+                   projectile-mode
+                   flyspell-mode
+                   smartparens-mode
+                   flycheck-mode
+                   subword-mode
+                   visual-hl
+                   ivy-mode
+                   anzu-mode
+                   undo-tree-mode
+                   whitespace-cleanup-mode
+                   wrap-mode
+                   highlight-symbol-mode
+                   volatile-highlights-mode
+                   visual-line-mode
+                   hungry-delete-mode
+                   auto-revert-mode))
+
+(mapcar #'(lambda (mode)
+            (diminish mode))
+        diminish-modes)
 
 (provide 'core-diminish)

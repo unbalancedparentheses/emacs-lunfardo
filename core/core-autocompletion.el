@@ -41,4 +41,7 @@
   (global-set-key  (kbd "<C-tab>") 'yas/insert-snippet)
   :ensure t)
 
+(use-package auto-yasnippet
+  :ensure t)
+
 (provide 'core-autocompletion)

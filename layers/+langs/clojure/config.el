@@ -1,4 +1,6 @@
 (use-package clojure
+  :init
+  (add-hook 'clojure-mode-hook 'lisp-family-modes)
   :mode
   ("\\.clj\\'" . clojure-mode))
 

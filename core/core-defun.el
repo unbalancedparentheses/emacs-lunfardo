@@ -166,4 +166,9 @@ Otherwise point moves to beginning of line."
   (custom-set-faces
    `(fringe ((t (:background ,(face-background 'default)))))))
 
+(defun lisp-family-modes ()
+  (disable-smartparens)
+  (paredit-mode)
+  (paxedit-mode))
+
 (provide 'core-defun)

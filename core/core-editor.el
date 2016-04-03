@@ -18,6 +18,9 @@
 (use-package smartparens
   :init
   (smartparens-global-mode t)
+  :config
+  (defun disable-smartparens ()
+      (smartparens-mode -1))
   :ensure t)
 
 ;; highlighting portions relating to the operations.

@@ -11,9 +11,6 @@
 (global-set-key (kbd "C-s") 'swiper)
 
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
-(global-set-key  (kbd "<C-tab>") 'ivy-switch-buffer)
-(global-set-key  (kbd "<C-iso-lefttab>") 'ivy-switch-buffer)
-(global-set-key  (kbd "<C-S-tab>") 'ivy-switch-buffer)
 
 (global-set-key [(shift return)] 'open-line-below)
 (global-set-key [(control shift return)] 'open-line-above)

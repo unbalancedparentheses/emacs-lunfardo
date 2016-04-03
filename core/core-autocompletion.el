@@ -36,7 +36,9 @@
 
 (use-package yasnippet
   :init
-  (yas-global-mode 1)
+  (yas-global-mode t)
+  :config
+  (global-set-key  (kbd "<C-tab>") 'yas/insert-snippet)
   :ensure t)
 
 (provide 'core-autocompletion)

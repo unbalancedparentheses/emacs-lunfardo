@@ -78,4 +78,9 @@
   (setq projectile-completion-system 'ivy)
   :ensure t)
 
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-separator "/")
+(setq uniquify-after-kill-buffer-p t)
+
 (provide 'core-editor)

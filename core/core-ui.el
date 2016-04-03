@@ -3,15 +3,6 @@
   (add-hook 'prog-mode-hook 'linum-mode)
   :ensure t)
 
-(global-visual-line-mode 1)
-
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-
-;; highlight current line
-(global-hl-line-mode 1)
-
 (use-package smart-mode-line
   :init
   (setq sml/no-confirm-load-theme t)
@@ -39,6 +30,21 @@
 
 (set-face-attribute 'default nil :height 140)
 (set-face-attribute 'linum nil :height 100)
+
+(global-visual-line-mode 1)
+
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+
+;; highlight current line
+(global-hl-line-mode 1)
+
+(setq frame-title-format '("%b (%m)"))
+(setq-default cursor-type 'bar)
+
+(fringe-mode 1)
+(add-hook 'after-init-hook #'set-fringe-background)
 
 ;; start maximized
 (toggle-frame-maximized)

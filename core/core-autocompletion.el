@@ -10,7 +10,10 @@
         company-show-numbers t
         company-tooltip-limit 10
         company-selection-wrap-around t
-        company-tooltip-flip-when-above t)
+        company-tooltip-flip-when-above t
+        company-echo-delay 0
+        company-tooltip-align-annotations t)
+
   (define-key company-active-map (kbd "TAB") 'company-complete-selection)
   (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
   (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
@@ -33,7 +36,7 @@
 
 (use-package yasnippet
   :init
-  (yas-global-mode)
+  (yas-global-mode 1)
   :ensure t)
 
 (provide 'core-autocompletion)

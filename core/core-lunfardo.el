@@ -18,6 +18,7 @@
 (require 'core-bindings)
 
 (require 'core-ui)
+(require 'core-diminish)
 
 (require 'core-vim)
 

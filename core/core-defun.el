@@ -160,4 +160,10 @@ Otherwise point moves to beginning of line."
               (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
               :action (lambda (k) (goto-char k)))))
 
+(defun set-fringe-background ()
+  "Set the fringe background to the same color as the regular background."
+  (interactive)
+  (custom-set-faces
+   `(fringe ((t (:background ,(face-background 'default)))))))
+
 (provide 'core-defun)

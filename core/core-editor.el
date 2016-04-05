@@ -1,6 +1,3 @@
-(setq prettify-symbols-unprettify-at-point t)
-(global-prettify-symbols-mode 1)
-
 ;; cleanup whitespace on save
 (use-package whitespace-cleanup-mode
   :init
@@ -20,7 +17,7 @@
   (smartparens-global-mode t)
   :config
   (defun disable-smartparens ()
-      (smartparens-mode -1))
+    (smartparens-mode -1))
   :ensure t)
 
 ;; highlighting portions relating to the operations.
@@ -85,5 +82,8 @@
 (setq uniquify-buffer-name-style 'forward)
 (setq uniquify-separator "/")
 (setq uniquify-after-kill-buffer-p t)
+
+(setq prettify-symbols-unprettify-at-point t)
+(global-prettify-symbols-mode t)
 
 (provide 'core-editor)

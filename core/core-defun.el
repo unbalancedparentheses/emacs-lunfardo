@@ -149,17 +149,6 @@ Otherwise point moves to beginning of line."
                         (list (cons (concat prefix (if prefix ".") (car elm))
                                     (copy-marker (cdr elm))))))))
 
-(defun ivy-imenu-goto ()
-  "Go to buffer position"
-  (interactive)
-  (let ((imenu-auto-rescan t) items)
-    (unless (featurep 'imenu)
-      (require 'imenu nil t))
-    (setq items (imenu--make-index-alist t))
-    (ivy-read "imenu items:"
-              (ivy-imenu-get-candidates-from (delete (assoc "*Rescan*" items) items))
-              :action (lambda (k) (goto-char k)))))
-
 (defun set-fringe-background ()
   "Set the fringe background to the same color as the regular background."
   (interactive)

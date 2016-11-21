@@ -28,7 +28,7 @@
 (global-set-key (kbd "s-N") 'switch-to-scratch)
 (global-set-key (kbd "s-n") 'new-empty-buffer)
 
-(global-set-key (kbd "s-r") 'ivy-imenu-goto)
+(global-set-key (kbd "s-r") 'counsel-imenu)
 (global-set-key (kbd "s-e") 'evil-mode)
 
 (global-set-key (kbd "M-x") 'counsel-M-x)

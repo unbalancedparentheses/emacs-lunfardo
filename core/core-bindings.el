@@ -1,5 +1,8 @@
 (cua-mode t)
 
+;; disable fucking emacs suspend/free
+(global-set-key (kbd "C-x C-z") nil)
+
 (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning-of-line)
 (global-set-key (kbd "RET") 'newline-and-indent)
 

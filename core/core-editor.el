@@ -47,6 +47,10 @@
 (use-package evil-nerd-commenter
   :ensure t)
 
+;; use smex so that counsel-M-x sorts the commands by use
+(use-package smex
+  :ensure t)
+
 (use-package counsel
   :ensure t)
 

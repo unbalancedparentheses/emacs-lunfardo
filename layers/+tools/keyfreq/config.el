@@ -1,7 +1,7 @@
 (use-package keyfreq
   :init
-  (keyfreq-mode 1)
-  (keyfreq-autosave-mode 1)
+  (keyfreq-mode 0)
+  (keyfreq-autosave-mode 0)
   :config
   (setq keyfreq-excluded-commands
         '(self-insert-command

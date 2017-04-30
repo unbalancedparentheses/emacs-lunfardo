@@ -54,7 +54,6 @@
 (global-set-key (kbd "s-u") 'undo-tree-visualize)
 
 (global-set-key (kbd "s-h") 'anzu-query-replace)
-(global-set-key (kbd "s-/") 'evilnc-comment-or-uncomment-lines)
 (global-set-key (kbd "C-h b") 'helm-descbinds)
 
 (global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)

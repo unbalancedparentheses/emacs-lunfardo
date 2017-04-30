@@ -37,3 +37,8 @@
   (define-key paxedit-mode-map (kbd "C-@") 'paxedit-symbol-copy)
   (define-key paxedit-mode-map (kbd "C-#") 'paxedit-symbol-kill)
   :ensure t)
+
+(use-package lispy
+  :init
+  (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+  :ensure t)

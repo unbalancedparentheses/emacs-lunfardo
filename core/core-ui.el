@@ -11,8 +11,12 @@
   :ensure t)
 
 (use-package material-theme
+  :ensure t)
+(use-package gruvbox-theme
   :init
-  (load-theme 'material t)
+  (load-theme 'gruvbox t)
+  :ensure t)
+(use-package leuven-theme
   :ensure t)
 
 (use-package yascroll

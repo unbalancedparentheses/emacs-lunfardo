@@ -21,6 +21,7 @@
 (global-set-key (kbd "s-I") 'lunfardo/open-init)
 (global-set-key (kbd "s-w") 'kill-buffer-and-window)
 (global-set-key (kbd "s-p") 'counsel-M-x)
+(global-set-key (kbd "s-P") 'projectile-switch-project)
 (global-set-key (kbd "s-g") 'goto-line)
 
 (global-set-key (kbd "s-f") 'swiper)

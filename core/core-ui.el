@@ -10,13 +10,9 @@
   (sml/setup)
   :ensure t)
 
-(use-package material-theme
-  :ensure t)
-(use-package gruvbox-theme
-  :init
-  (load-theme 'gruvbox t)
-  :ensure t)
 (use-package leuven-theme
+  :init
+  (load-theme 'leuven t)
   :ensure t)
 
 (use-package yascroll

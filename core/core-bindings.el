@@ -21,7 +21,7 @@
 (global-set-key (kbd "s-I") 'lunfardo/open-init)
 (global-set-key (kbd "s-w") 'kill-buffer-and-window)
 (global-set-key (kbd "s-p") 'counsel-M-x)
-(global-set-key (kbd "s-P") 'projectile-switch-project)
+(global-set-key (kbd "s-P") 'counsel-projectile-switch-project)
 (global-set-key (kbd "s-g") 'goto-line)
 
 (global-set-key (kbd "s-f") 'swiper)
@@ -40,7 +40,7 @@
 (global-set-key (kbd "s-o") 'counsel-find-file)
 (global-set-key (kbd "s-O") 'counsel-git)
 (global-set-key (kbd "s-a") 'counsel-ag)
-(global-set-key (kbd "s-A") 'helm-projectile-ag)
+(global-set-key (kbd "s-A") 'counsel-projectile-ag)
 (global-set-key (kbd "C-c f") 'counsel-describe-function)
 (global-set-key (kbd "s-y") 'counsel-yank-pop)
 

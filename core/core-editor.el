@@ -79,6 +79,11 @@
   (setq projectile-completion-system 'ivy)
   :ensure t)
 
+(use-package counsel-projectile
+  :config
+  (counsel-projectile-on)
+  :ensure t)
+
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 (setq uniquify-separator "/")

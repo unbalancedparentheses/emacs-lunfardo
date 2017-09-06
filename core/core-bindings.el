@@ -24,8 +24,7 @@
 (global-set-key (kbd "s-P") 'counsel-projectile-switch-project)
 (global-set-key (kbd "s-g") 'goto-line)
 
-(global-set-key (kbd "s-f") 'swiper)
-(global-set-key (kbd "s-F") 'counsel-git-grep)
+(global-set-key (kbd "s-f") 'counsel-grep-or-swiper)
 
 (global-set-key (kbd "s-l") 'er/expand-region)
 

@@ -3,29 +3,27 @@
   (add-hook 'prog-mode-hook 'linum-mode)
   :ensure t)
 
-(use-package smart-mode-line
-  :init
-  (setq sml/no-confirm-load-theme t)
-  (setq sml/theme 'dark)
-  (sml/setup)
-  :ensure t)
+;; (use-package smart-mode-line
+;;   :init
+;;   (setq sml/no-confirm-load-theme t)
+;;   (setq sml/theme 'dark)
+;;   (sml/setup)
+;;   :ensure t)
 
-(use-package leuven-theme
-  :init
-  (load-theme 'leuven t)
-  :ensure t)
+;; (use-package leuven-theme
+;;   :init
+;;   (load-theme 'leuven t)
+;;   :ensure t)
 
-(use-package yascroll
-  :init (global-yascroll-bar-mode)
+
+(use-package dracula-theme
+  :init
+  (load-theme 'dracula t)
   :ensure t)
 
 (use-package rainbow-delimiters
   :init
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-  :ensure t)
-
-(use-package smooth-scrolling
-  :init (require 'smooth-scrolling)
   :ensure t)
 
 (set-face-attribute 'default nil :height 140)
@@ -36,6 +34,9 @@
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
+
+(set-fringe-background)
+(set-fringe-style '(8 . 0))
 
 ;; highlight current line
 (global-hl-line-mode 1)

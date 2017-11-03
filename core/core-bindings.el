@@ -18,14 +18,15 @@
 (global-set-key [(shift return)] 'open-line-below)
 (global-set-key [(control shift return)] 'open-line-above)
 
+(global-set-key (kbd "s-c") 'comment-dwim)
+
 (global-set-key (kbd "s-I") 'lunfardo/open-init)
 (global-set-key (kbd "s-w") 'kill-buffer-and-window)
 (global-set-key (kbd "s-p") 'counsel-M-x)
 (global-set-key (kbd "s-P") 'counsel-projectile-switch-project)
 (global-set-key (kbd "s-g") 'goto-line)
 
-(global-set-key (kbd "s-f") 'swiper)
-(global-set-key (kbd "s-F") 'counsel-git-grep)
+(global-set-key (kbd "s-f") 'counsel-grep-or-swiper)
 
 (global-set-key (kbd "s-l") 'er/expand-region)
 

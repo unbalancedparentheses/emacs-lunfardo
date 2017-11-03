@@ -58,8 +58,6 @@
   (add-hook 'erlang-mode-hook 'add-pretty-lambda)
   (add-hook 'erlang-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
   (add-hook 'erlang-mode-hook 'flycheck-mode)
-  (add-hook 'erlang-mode-hook #'setup-ivy-erlang-complete)
-  (add-hook 'erlang-mode-hook #'company-erlang-init)
 
   :mode
   ("\\.erl\\'" . erlang-mode)

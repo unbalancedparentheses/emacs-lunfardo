@@ -18,7 +18,7 @@
 (global-set-key [(shift return)] 'open-line-below)
 (global-set-key [(control shift return)] 'open-line-above)
 
-(global-set-key (kbd "s-c") 'comment-dwim)
+(global-set-key (kbd "s-/") 'comment-dwim)
 
 (global-set-key (kbd "s-I") 'lunfardo/open-init)
 (global-set-key (kbd "s-w") 'kill-buffer-and-window)

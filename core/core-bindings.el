@@ -41,7 +41,7 @@
 (global-set-key (kbd "s-o") 'counsel-find-file)
 (global-set-key (kbd "s-O") 'counsel-git)
 (global-set-key (kbd "s-a") 'counsel-ag)
-(global-set-key (kbd "s-A") 'counsel-projectile-ag)
+(global-set-key (kbd "s-F") 'counsel-rg)
 (global-set-key (kbd "C-c f") 'counsel-describe-function)
 (global-set-key (kbd "s-y") 'counsel-yank-pop)
 

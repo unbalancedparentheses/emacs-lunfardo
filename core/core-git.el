@@ -8,8 +8,6 @@
 
 (use-package magit-gh-pulls
   :init
-  (require 'magit-gh-pulls)
-  (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
   :ensure t)
 
 (use-package git-timemachine

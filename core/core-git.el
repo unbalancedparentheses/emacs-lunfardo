@@ -6,10 +6,6 @@
 (use-package magit
   :ensure t)
 
-(use-package magit-gh-pulls
-  :init
-  :ensure t)
-
 (use-package git-timemachine
   :ensure t)
 

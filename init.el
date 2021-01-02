@@ -5,6 +5,19 @@
 ;;;
 ;;; code:
 
+
+;; path should start on the home directory
+;; expand region
+;; anzu
+;; evil mode
+
+;; multiple-cursors-mode
+;; browse-kill-ring
+;; show-paren-model
+;; lsp-mode
+;; rainbow-delimiters-mode
+;; smartparens-mode
+
 ;; always load newest byte code
 (setq load-prefer-newer t)
 
@@ -28,6 +41,49 @@
   (package-install 'use-package))
 
 (require 'use-package)
+
+(use-package exec-path-from-shell
+  :init (exec-path-from-shell-initialize)
+  :ensure t)
+
+(use-package crux
+  :ensure t)
+
+(use-package smartparens
+  :init (smartparens-global-mode)
+  :ensure t)
+
+
+
+;;;
+;; autocomplete
+(use-package company
+  :init (global-company-mode)
+
+  :config
+  (define-key company-active-map (kbd "TAB") 'company-complete-selection)
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+  (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "<S-tab>") 'company-complete-common-or-cycle-backward)
+  (define-key company-active-map (kbd "<backtab>") 'company-complete-common-or-cycle-backward)
+  (global-set-key "\t" 'company-indent-or-complete-common)
+
+  :ensure t)
+
+;; adds fuzzy matching to company powered by flx
+(use-package company-flx
+  :init (company-flx-mode +1)
+  :ensure t)
+
+;; sort completion candidates by previous completion choices
+(use-package company-statistics
+  :init
+  (company-statistics-mode)
+  :ensure t)
+
+;;;
+
 
 ;; start maximized
 (toggle-frame-maximized)
@@ -150,6 +206,10 @@
 (use-package evil
   :ensure t)
 
+;; find and replace
+(use-package anzu
+  :ensure t)
+
 ;; bindings
 (cua-mode t)
 
@@ -165,12 +225,12 @@
 
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 
-(global-set-key [(shift return)] 'open-line-below)
-(global-set-key [(control shift return)] 'open-line-above)
+(global-set-key [(shift return)] 'crux-smart-open-line)
+(global-set-key [(control shift return)] 'crux-smart-open-line-above)
 
 (global-set-key (kbd "s-/") 'comment-dwim)
 
-(global-set-key (kbd "s-I") 'lunfardo/open-init)
+(global-set-key (kbd "s-I") 'crux-find-user-init-file)
 (global-set-key (kbd "s-w") 'kill-buffer-and-window)
 (global-set-key (kbd "s-p") 'counsel-M-x)
 (global-set-key (kbd "s-P") 'counsel-projectile-switch-project)
@@ -181,7 +241,9 @@
 (global-set-key (kbd "s-l") 'er/expand-region)
 
 (global-set-key (kbd "s-N") 'switch-to-scratch)
-(global-set-key (kbd "s-n") 'new-empty-buffer)
+(global-set-key (kbd "s-n") 'crux-create-scratch-buffer)
+
+(global-set-key (kbd "C-tab") 'crux-other-window-or-switch-buffer)
 
 (global-set-key (kbd "s-r") 'counsel-imenu)
 (global-set-key (kbd "s-e") 'evil-mode)
@@ -208,16 +270,6 @@
 (global-set-key (kbd "<f9>") 'indent-buffer)
 (global-set-key (kbd "<f10>") 'magit-status)
 
-;; expand region
-;; anzu
-;; evil mode
-
-;; multiple-cursors-mode
-;; browse-kill-ring
-;; show-paren-model
-;; lsp-mode
-;; rainbow-delimiters-mode
-;; smartparens-mode
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -226,7 +278,7 @@
  '(custom-safe-themes
    '("c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" default))
  '(package-selected-packages
-   '(julia-mode zenburn-theme yalinum whitespace-cleanup-mode use-package undo-tree sublime-themes subatomic-theme selectrum-prescient rainbow-delimiters multiple-cursors magit ivy-rich guide-key git-timemachine git-gutter flycheck expand-region evil counsel consult-selectrum centaur-tabs avy)))
+   '(anzu company-statistics company-flx company smartparens which-key crux realgud exec-path-from-shell flycheck-julia julia-repl docker julia-mode zenburn-theme yalinum whitespace-cleanup-mode use-package undo-tree sublime-themes subatomic-theme selectrum-prescient rainbow-delimiters multiple-cursors magit ivy-rich guide-key git-timemachine git-gutter flycheck expand-region evil counsel consult-selectrum centaur-tabs avy)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

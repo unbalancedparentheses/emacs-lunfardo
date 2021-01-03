@@ -8,14 +8,13 @@
 ;; browse-kill-ring
 ;; show-paren-model
 ;; lsp-mode
-;; rainbow-delimiters-mode
-;; smartparens-mode
 
 ;; always load newest byte code
 (setq load-prefer-newer t)
 
 ;;;;;
 ;; package
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
@@ -40,9 +39,6 @@
 
 ;;;;;
 ;; ui
-
-;; start maximized
-(toggle-frame-maximized)
 
 ;; theme
 (use-package dracula-theme
@@ -80,6 +76,9 @@
   :ensure t)
 
 (global-visual-line-mode 1)
+
+;; start maximized
+(toggle-frame-maximized)
 
 ;;;;;
 ;; autocomplete
@@ -122,6 +121,9 @@
 ;;;;;
 ;; editor
 
+;; set home as default directory
+(setq default-directory "~/")
+
 ;; welcome message
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
@@ -152,9 +154,6 @@
 (use-package anzu
   :ensure t)
 
-;; auto save on lost focus
-(add-hook 'after-focus-change-function (lambda () (save-some-buffers t)))
-
 (use-package flycheck
   :init
   (global-flycheck-mode)
@@ -168,6 +167,14 @@
   :init
   (global-whitespace-cleanup-mode t)
   :ensure t)
+
+(use-package super-save
+  :init
+  (super-save-mode +1)
+  :ensure t)
+
+;; auto save on lost focus
+(add-hook 'after-focus-change-function (lambda () (save-some-buffers t)))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -190,6 +197,7 @@
 
 ;;;;;
 ;; git
+
 (use-package magit
   :ensure t)
 
@@ -201,7 +209,40 @@
   :ensure t)
 
 ;;;;;
+;; programming languages
+
+(use-package ranger
+  :init
+  (setq ranger-override-dired t
+        ranger-cleanup-eagerly t
+        ranger-dont-show-binary t)
+  :ensure t)
+
+(use-package erlang
+  :ensure t)
+
+(use-package julia-mode
+  :ensure t)
+
+(use-package elixir-mode
+  :config
+  (progn
+    (setq elixir-basic-offset 4)
+    (setq elixir-smie-indent-basic 4))
+  :ensure t)
+
+(use-package rust-mode
+  :ensure t)
+
+(use-package go-mode
+  :config
+  (add-hook 'before-save-hook 'gofmt-before-save)
+  :ensure t)
+
+
+;;;;;
 ;; bindings
+
 (cua-mode t)
 
 ;; disable fucking emacs suspend/free
@@ -254,8 +295,26 @@
 
 (global-set-key (kbd "s-h") 'anzu-query-replace)
 
-(global-set-key (kbd "<f2>") 'rename-this-buffer-and-file)
+(global-set-key (kbd "<f2>") 'crux-rename-buffer-and-file)
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "<f8>") 'global-aggressive-indent-mode)
 (global-set-key (kbd "<f9>") 'indent-buffer)
 (global-set-key (kbd "<f10>") 'magit-status)
+
+
+(global-set-key (kbd "s-t") 'crux-visit-shell-buffer)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(go-mode elixir-mode ranger julia-mode julia erlang super-save tree-sitter git-timemachine git-gutter magit smartparens multiple-cursors expand-region avy undo-tree whitespace-cleanup-mode flycheck anzu evil company-statistics company-flx company counsel ivy rainbow-delimiters dracula-theme crux exec-path-from-shell use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
